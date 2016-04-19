@@ -1,0 +1,654 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Microsoft Yahei;
+}
+
+html, body {
+    height: 100%;
+}
+
+img {
+    display: block;
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.ban-bj {
+    display: none;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.3rem;
+    text-align: center;
+    position: absolute;
+    background: #d8d8d8;
+    color: #fff;
+    left: 0;
+    top: 0;
+}
+
+header span {
+    position: absolute;
+    left: 0.36rem;
+    top: 0.25rem;
+    width: 0.35rem;
+    height: 0.3rem;
+    display: block;
+    background: url("../images/sangang.png") no-repeat 0 50%;
+    background-size: 100% 100%;
+}
+
+header b {
+    font-size: 0.3rem;
+    color: #333333;
+    font-weight: 400;
+}
+
+header ul {
+    width: 100%;
+    line-height: 0.26rem;
+    position: absolute;
+    top: 0.8rem;
+    height: 2rem;
+    background: #f2f2f2;
+    display: none;
+    z-index: 111;
+}
+
+header ul li {
+    height: 0.42rem;
+    margin: 0.1rem;
+    line-height: 0.42rem;
+    float: left;
+    border-radius: 50%;
+}
+
+header .nav-ul li.font a {
+    font-size: 0.23rem;
+}
+
+header .nav-ul li:nth-child(2) {
+    margin-left: 1.1rem;
+}
+
+header .nav-ul li:nth-child(3) a {
+    color: #3a93ff;
+}
+
+header .nav-ul li.nav2 {
+    margin-left: 0.4rem;
+}
+
+header .nav-ul li:nth-child(5) {
+    margin-left: 0.1rem;
+}
+
+header .nav-ul li:nth-child(9) {
+    margin-left: 0.1rem;
+}
+
+header ul li a {
+    color: #000000;
+    font-size: 0.27rem;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    color: #3a93ff;
+    font-size: 0.27rem;
+    text-decoration: none;
+}
+
+header .nav-img {
+    position: absolute;
+    width: 1.4rem;
+    left: 50%;
+    margin-left: -0.7rem;
+    z-index: 222;
+}
+
+/*轮播*/
+.ban-inner {
+    position: absolute;
+    width: 100%;
+    top: 0.8rem;
+    height: 2.7rem;
+    background: url("../images/zhuoyuejiaoyu-yidongduanbeij.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+/*课程规划*/
+.Course-box {
+    position: absolute;
+    width: 100%;
+    height: 19.6rem;
+    top: 3.5rem;
+    background: #f7f7f7;
+}
+
+.Course-box div {
+    margin-top: 0.4rem;
+}
+
+.Course-box h2 {
+    text-align: center;
+    width: 100%;
+    color: #000;
+    font-size: 0.45rem;
+    margin: 0 auto;
+    padding-top: 0.3rem;
+}
+
+.Course-box h1 {
+    text-align: center;
+    width: 100%;
+    color: #0086f8;
+    font-size: 0.3rem;
+    margin: 0 auto;
+    padding-top: 0.1rem;
+}
+
+.Course-box p {
+    width: 6rem;
+    margin: 0 auto;
+    color: #000;
+    padding-top: 0.1rem;
+    font-size: 0.26rem;
+    text-align: justify;
+}
+
+.Course-box h3 {
+    width: 5rem;
+    margin: 0 auto;
+    color: #0086f8;
+    padding-top: 0.1rem;
+    font-size: 0.26rem;
+    text-align: center;
+}
+
+.plan-box {
+    position: absolute;
+    width: 100%;
+    height: 20rem;
+    top: 8.5rem;
+    background: #f7f7f7;
+}
+
+.plan-box img {
+    width: 5rem;
+    margin: 0 auto;
+}
+
+/*中考目标班*/
+.beikao-box {
+    position: absolute;
+    width: 100%;
+    top: 24.5rem;
+    height: 14rem;
+    font-size: 0.4rem;
+    background: #fff;
+}
+
+.beikao-box p {
+    width: 6rem;
+    margin: 0 auto;
+    color: #000;
+    padding-top: 0.25rem;
+    font-size: 0.3rem;
+    text-align: center;
+}
+
+.beikao-box h2 {
+    width: 5rem;
+    margin: 0 auto;
+color: #000;
+padding-top: 0.4rem;
+font-size: 0.45rem;
+text-align: center;
+}
+
+.whole-foot {
+    width: 100%;
+    padding-top: 0.4rem;
+}
+
+.whole-foot-left {
+    width: 100%;
+    height: 3.6563rem;
+}
+
+#outer, #outer1, #outer2, #outer3, #outer4 {
+    position: relative;
+    width: 6.4rem;
+    height: 3.6563rem;
+    overflow: hidden;
+}
+
+#inner, #inner1, #inner2, #inner3, #inner4 {
+    width: 100%;
+    height: 3.6563rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    zoom: 1;
+}
+
+#inner div img, #inner1 div img, #inner2 div img, #inner3 div img, #inner4 div img {
+    width: 100%;
+    height: 3.7031rem;
+}
+
+#inner div, #inner1 div, #inner2 div, #inner3 div, #inner4 div img {
+    width: 6.4rem;
+    float: left;
+}
+
+#tip, #tip1, #tip2, #tip3, #tip4 {
+    position: absolute;
+    width: 84px;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -42px;
+}
+
+#tip li, #tip1 li, #tip2 li, #tip3 li, #tip4 li {
+    float: left;
+    background: #8cbcf7;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#tip li.select, #tip1 li.select, #tip2 li.select, #tip3 li.select, #tip4 li.select {
+    background: #3a93ff;
+}
+
+.whole-foot-right {
+    background: #fff;
+    height: 3rem;
+}
+
+.whole-foot-right h1 {
+    font-size: 0.4rem;
+    color: #3a93ff;
+    line-height: 0.5rem;
+    padding: 0.2rem;
+}
+
+.whole-foot-right p {
+    text-align: left;
+    font-size: 0.3rem;
+    color: #3a93ff;
+    margin-left: 0.2rem;
+    line-height: 0.5rem;
+}
+
+.whole-foot-right ul {
+    list-style: disc;
+    margin-top: 0.3rem;
+}
+
+.whole-foot-right ul li {
+    width: 5.6rem;
+    text-align: left;
+    font-size: 0.27rem;
+    color: #000;
+    margin-left: 0.75rem;
+    line-height: 0.44rem;
+}
+
+/*2*/
+.beikao-box1 {
+    position: absolute;
+    width: 100%;
+    top: 38.5rem;
+    height: 14rem;
+    font-size: 0.4rem;
+    background: #fff;
+}
+
+.whole-cent-right {
+    background: #f9e715;
+    height: 3.4rem;
+}
+
+.whole-cent-right h1 {
+    font-size: 0.4rem;
+    color: #3a93ff;
+    line-height: 0.5rem;
+    padding: 0.2rem;
+    margin-left: 0.2rem;
+}
+
+.whole-cent-right p {
+    text-align: left;
+    font-size: 0.3rem;
+    color: #3a93ff;
+    margin-left: 0.4rem;
+    line-height: 0.5rem;
+}
+
+.whole-cent-right ul {
+    list-style: disc;
+    margin-top: 0.3rem;
+}
+
+.whole-cent-right ul li {
+    width: 5.6rem;
+    text-align: left;
+    font-size: 0.27rem;
+    color: #000;
+    margin-left: 0.75rem;
+    line-height: 0.44rem;
+}
+
+/*3*/
+.beikao-box2 {
+    position: absolute;
+    width: 100%;
+    top: 45.53rem;
+    height: 14rem;
+    font-size: 0.4rem;
+}
+
+.beikao-box2 .whole-cent-right {
+    background: #3a93ff;
+    height: 4.7rem;
+}
+
+.beikao-box2 .whole-cent-right h1 {
+    font-size: 0.4rem;
+    color: #fff;
+    line-height: 0.5rem;
+    padding: 0.2rem;
+    margin-left: 0.2rem;
+}
+
+.beikao-box2 .whole-cent-right p {
+    text-align: left;
+    font-size: 0.3rem;
+    color: #fff;
+    margin-left: 0.4rem;
+    line-height: 0.5rem;
+}
+
+.beikao-box2 .whole-cent-right ul {
+    list-style: disc;
+    margin-top: 0.3rem;
+}
+
+.beikao-box2 .whole-cent-right ul li {
+    width: 5.6rem;
+    text-align: left;
+    font-size: 0.27rem;
+    color: #fff;
+    margin-left: 0.75rem;
+    line-height: 0.44rem;
+}
+
+/*3*/
+.beikao-box3 {
+    position: absolute;
+    width: 100%;
+    top: 53.89rem;
+    height: 14rem;
+    font-size: 0.4rem;
+}
+
+.beikao-box3 .whole-cent-right {
+    background: #fff;
+    height: 5.9rem;
+}
+
+.beikao-box3 .whole-cent-right h1 {
+    font-size: 0.4rem;
+    color: #3a93ff;
+    line-height: 0.5rem;
+    padding: 0.2rem;
+    margin-left: 0.2rem;
+}
+
+.beikao-box3 .whole-cent-right p {
+    text-align: left;
+    font-size: 0.3rem;
+    color: #3a93ff;
+    margin-left: 0.4rem;
+    line-height: 0.5rem;
+}
+
+.beikao-box3 .whole-cent-right ul {
+    list-style: disc;
+    margin-top: 0.3rem;
+}
+
+.beikao-box3 .whole-cent-right ul li {
+    width: 5.6rem;
+    text-align: left;
+    font-size: 0.27rem;
+    color: #000;
+    margin-left: 0.75rem;
+    line-height: 0.44rem;
+}
+
+.beikao-box3 .whole-foot-left {
+    position: relative;
+}
+
+.beikao-box3 .whole-foot-left .img3 {
+    width: 1.6rem;
+    position: absolute;
+    top: 6.8rem;
+    left: 50%;
+    margin-left: -0.8rem;
+    z-index: 112221;
+}
+
+/*疑问解答*/
+.yinan-box {
+    position: absolute;
+    width: 100%;
+    top: 64rem;
+    height: 14rem;
+    font-size: 0.4rem;
+    background: #fff;
+}
+
+.yinan-box h1 {
+    width: 1.6rem;
+    font-size: 0.4rem;
+    color: #000;
+    margin: 0 auto;
+    padding-bottom: 0.3rem;
+}
+
+.yinan-box div.div1 img {
+    width: 6.4rem;
+}
+
+.yinan-box div.div2 img {
+    width: 4rem;
+    position: absolute;
+    top: 4.7rem;
+    left: 0.4rem;
+    z-index: 2;
+}
+
+.yinan-box div.div3 img {
+    width: 6.4rem;
+    position: absolute;
+    top: 6.6rem;
+    left: 0;
+}
+
+/*留下您的电话获取我们的信息*/
+.phone-box {
+    position: absolute;
+    width: 100%;
+    top: 77rem;
+    height: 7rem;
+    background: #eec857;
+}
+
+.phone-box h1 {
+    top: 3.5rem;
+    padding-top: 0.2rem;
+    text-align: center;
+    font-size: 0.4rem;
+    color: #000;
+}
+
+.phone-details span {
+    float: left;
+    display: block;
+    font-size: 0.35rem;
+    padding: 0.2rem;
+}
+
+.phone-details input {
+    padding: 0 0.1rem;
+    display: block;
+    float: right;
+    width: 3.8rem;
+    height: 0.4rem;
+    margin-left: 0.2rem;
+    font-size: 0.3rem;
+}
+
+.phone-details .nianji, .dianhua {
+    margin-left: 0.7rem;
+}
+
+.phone-message span {
+    display: block;
+    font-size: 0.35rem;
+    padding: 0.2rem;
+}
+
+.phone-message textarea {
+    padding-left: 2%;
+    width: 98%;
+    border: 0;
+    height: 1.7rem;
+    font-size: 0.3rem;
+}
+
+.phone-but button {
+    position: absolute;
+    width: 1.4844rem;
+    height: 0.4688rem;
+    left: 50%;
+    margin-left: -0.7422rem;
+    border: none;
+    border-radius: 0.4688rem;
+    background: #3a93ff;
+    color: #ffffff;
+    bottom: 0.4rem;
+}
+
+/*课程推荐 */
+.beikao-box4 {
+    position: absolute;
+    width: 100%;
+    top: 84.3rem;
+    height: 7rem;
+}
+
+.beikao-box4 h1 {
+    top: 3.5rem;
+    padding: 0.2rem;
+    text-align: center;
+    font-size: 0.4rem;
+    color: #000;
+}
+
+.beikao-box4 .recom-but {
+    width: 2rem;
+    margin: -0.3rem auto 0;
+}
+
+.beikao-box4 .recom-bnt {
+    width: 2rem;
+    border: none;
+    background: #f9e715;
+    height: 0.6rem;
+    color: #000;
+    border-radius: 0.6rem;
+}
+
+/*底部*/
+.foot-box {
+    position: absolute;
+    width: 100%;
+    top: 90.5rem;
+    height: 3.5rem;
+}
+
+.foot-box ul li h4 {
+    top: 3.5rem;
+    padding-top: 0.2rem;
+    text-align: center;
+    font-size: 0.2rem;
+}
+
+.foot-box ul li p {
+    top: 3.5rem;
+    padding-top: 0.2rem;
+    text-align: center;
+    font-size: 0.2rem;
+}
+
+.foot-box ul li.foot-li img {
+    width: 0.3281rem;
+    height: 0.4375rem;
+    margin: 0 auto;
+}
+
+.foot-li1 {
+    margin-top: 0.3rem;
+    float: left;
+    width: 2.1rem;
+    height: 0.4375rem;
+}
+
+.foot-li1 img {
+    width: 0.4531rem;
+    margin: 0 auto;
+}
+
+.foot-li2 {
+    margin-top: 0.4rem;
+    float: left;
+    width: 1.8rem;
+    height: 0.4375rem;
+}
+
+.foot-li2 img {
+    width: 0.4531rem;
+    margin: 0 auto;
+}
+
+.foot-li3 {
+    margin-top: 0.20rem;
+    margin-left: 0.3rem;
+    float: left;
+    width: 1.6rem;
+    height: 0.4375rem;
+}
+
+.foot-li3 img {
+    width: 0.9844rem;
+    margin: 0 auto;
+}
