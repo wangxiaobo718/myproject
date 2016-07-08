@@ -97,7 +97,8 @@ oTimer = setInterval(function () {
     oHua.style.opacity = 1;
     clearInterval(oTimer);
 }, 3000);
-bind(oHua, "touchstart", fnStart, false);
+//bind(oHua, "touchstart", fnStart, false);
+bind(oHua, "touchend", fnStart_end, false);
 bind(liaojie, "touchstart", fnStart1, false);
 bind(xiaotou, "touchstart", fnStart2, false);
 bind(jingli_tou, "touchstart", fnStart3, false);
@@ -105,7 +106,10 @@ bind(benshi, "touchstart", fnStart4, false);
 bind(xiao, "touchstart", fnStart5, false);
 bind(ceshi, "touchstart", fnStart6, false);
 $(".page1").css("top", wH * -77);
-function fnStart() {
+//function fnStart(){
+//    fnStart_end()
+//}
+function fnStart_end() {
     addClass(one, "pageShow");
     $(".page").css("top", wH);
 
