@@ -291,7 +291,7 @@ function fnStart4() {
 }
 
 function fnStart5() {
-    alert(1)
+    //alert(1)
     oTimer16 = setInterval(function () {
         //$(".page1 ").css("top", 0);
         $("body").removeClass("over_scr");
