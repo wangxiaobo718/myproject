@@ -142,6 +142,7 @@ img {
     to {
         -webkit-transform: none;
         transform: none;
+        opacity: 1;
     }
 }
 
@@ -150,13 +151,13 @@ img {
     animation-name: bounceInDown;
 }
 
-/*.page .bo_box {*/
-    /*opacity: 1;*/
-    /*-webkit-animation: 1.5s 1s bounceInDown alternate;*/
-    /*animation: 1.5s 1s bounceInDown alternate;*/
-    /*-webkit-animation-fill-mode: forwards;*/
-    /*animation-fill-mode: forwards;*/
-/*}*/
+.page .bo_box {
+    opacity: 0;
+    -webkit-animation: 1.5s 1s bounceInDown alternate;
+    animation: 1.5s 1s bounceInDown alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
 
 @-webkit-keyframes zoomInUp {
     from {
