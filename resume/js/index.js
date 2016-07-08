@@ -1,18 +1,4 @@
 // JavaScript Document
-var scrollTop = $("body").scrollTop();//body设置为fixed之后会飘到顶部，所以要动态计算当前用户所在高度
-$("body").css({
-    'overflow':'hidden',
-    'position': 'relative',
-    'top': scrollTop*-1
-});
-//$loadMask.css('top',scrollTop);//设置遮罩层top值
-
-/*取消后设置回来*/
-//$("body").css({
-//    'overflow':'auto',
-//    'position': 'static',
-//    'top': 'auto'
-//});
 function id(obj) {
     return document.getElementById(obj);
 }
