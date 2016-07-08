@@ -66,13 +66,14 @@ img {
 
 .page .bo {
     position: absolute;
-    top: 2%;
+    top: 1rem;
     left: 50%;
     margin-left: -349px;
     -webkit-animation: 1s 2s bo infinite alternate;
     animation: 1s 2s bo infinite alternate;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    opacity: 1;
 }
 
 @keyframes bounceInDown {
