@@ -8,7 +8,6 @@ body {
     color: #666;
     position: relative;
     overflow: hidden;
-
 }
 
 .over_scr{
@@ -29,11 +28,9 @@ img {
     background: url("../img/bi_1.png") no-repeat;
     font-size: 26px;
     z-index: 10;
-    /*display: none;*/
 }
 .pageShow {
     transition: 0.6s;
-    /*top: 1125px;*/
 }
 
 #one, #tow {
@@ -207,7 +204,7 @@ img {
 
 .page .ren {
     position: absolute;
-    top: 16%;
+    top: 11rem;
     left: 50%;
     opacity: 0;
     margin-left: -368px;
@@ -244,9 +241,8 @@ img {
 
 .page .yun {
     position: absolute;
-    top: 56rem;
-    left: 9.5rem;
-    /*margin-left: -220px;*/
+    top: 53.8rem;
+    left: 9.4rem;
     -webkit-animation: 1s 2s yun;
     animation: 1s 2s yun;
     -webkit-animation-fill-mode: forwards;
@@ -344,7 +340,7 @@ img {
     width: 100%;
     position: relative;
     left: 0;
-    top: -2000px;
+    top: 2000px;
     overflow: hidden;
     background: url("../img/bj_2.png") no-repeat;
     font-size: 26px;
@@ -528,7 +524,7 @@ img {
 @keyframes con {
     0% {
         opacity: 1;
-        transform: translateY(600px);
+        transform: translateY(1200px);
     }
 
     100% {
@@ -541,7 +537,7 @@ img {
 @-webkit-keyframes con {
     0% {
         opacity: 1;
-        -webkit-transform: translateY(600px);
+        -webkit-transform: translateY(1200px);
     }
 
     100% {
@@ -613,7 +609,9 @@ img {
     100% {
         opacity: 1!important;
     }
-
+    to{
+        opacity: 1!important;
+    }
 }
 
 @-webkit-keyframes jinbian {
@@ -624,6 +622,9 @@ img {
         opacity: 0.5!important;
     }
     100% {
+        opacity: 1!important;
+    }
+    to{
         opacity: 1!important;
     }
 }
@@ -650,7 +651,7 @@ img {
 }
 .zi_wo {
     position: absolute;
-    top: 8rem;
+    top: 5rem;
     left: 50%;
     margin-left: -217px;
     opacity: 0;
@@ -665,14 +666,12 @@ img {
 
 .ziwo_jieshao {
     position: relative;
-    /*margin-top: -1rem;*/
     margin-top: 3.5rem;
 }
 
 .chunv {
     position: absolute;
-    /*top: 44rem;*/
-    margin-top: 44rem;
+    margin-top: 42rem;
     left: 50%;
     margin-left: -192px;
     opacity: 0;
@@ -682,10 +681,13 @@ img {
     animation: 3s 1.5s jinbian;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-transition:3s;
+    transition:3s;
+    opacity: 1;
 }
 .zwpj {
     position: absolute;
-    top: 48rem;
+    top: 47rem;
     left: 5rem;
     opacity: 0;
 }
@@ -774,7 +776,7 @@ img {
 }
 
 .you_1 {
-    top: 51rem;
+    top: 50rem;
 
 }
 
@@ -791,7 +793,7 @@ img {
     animation-fill-mode: forwards;
 }
 .you_2 {
-    top: 54rem;
+    top: 53rem;
 
 }
 .you_2_2{
@@ -802,7 +804,7 @@ img {
 }
 
 .you_3 {
-    top: 57rem;
+    top: 56rem;
 }
 .you_3_3{
     -webkit-animation: 1s  zuo-;
@@ -902,7 +904,7 @@ img {
 }
 .xiaotou {
     position: absolute;
-    top: 65rem;
+    top: 63rem;
     left: 50%;
     margin-left: -58px;
     opacity: 0;
@@ -935,6 +937,9 @@ img {
     animation: 3s 3.5s jinbian;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+}
+.chuowo_show{
+    opacity: 1 !important;
 }
 .chuowo2 {
     -webkit-animation: 1s 0s jinbian1;
@@ -1314,7 +1319,7 @@ img {
     position: absolute;
     width: 690px;
     left: 50%;
-    margin-top:100px;
+    margin-top:4rem;
     margin-left: -345px;
 }
 .page5 p{
@@ -1326,14 +1331,14 @@ img {
     position: absolute;
     width: 690px;
     left: 52%;
-    margin-top: 250px;
+    margin-top: 12rem;
     margin-left: -345px;
 }
 .he_box{
     position: absolute;
     width: 700px;
     left: 50%;
-    margin-top: 480px;
+    margin-top: 26rem;
     margin-left: -350px;
 }
 .he_box img{
@@ -1342,8 +1347,10 @@ img {
     margin: 0 3px;
     opacity:0;
     transform: rotate(-180deg);
-    /*-webkit-animation: shan 1s linear 0s  forwards;*/
-    /*animation: shan 1s linear 0s  forwards;*/
+    -webkit-animation: 1s 2s shan infinite alternate;
+    animation: 1s 2s shan infinite alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 .img_jinbian{
     -webkit-animation: jinbian 1s linear 0s  forwards;
@@ -1384,7 +1391,7 @@ img {
 }
 @keyframes shan {
     0% {
-        opacity: 0;
+        opacity: 0.2;
     }
     30% {
         opacity: 0.3;
@@ -1401,7 +1408,7 @@ img {
 }
 @-webkit-keyframes shan {
     0% {
-        opacity: 0;
+        opacity: 0.2;
     }
     30% {
         opacity: 0.3;

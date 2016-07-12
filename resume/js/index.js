@@ -134,6 +134,7 @@ function fnStart_end() {
 
 function fnStart1() {
     $(".page2").css("display", "block");
+
     addClass(tow, "page1_2");
     $(".page1_2").css("top", wH);
     addClass(three, "page2_2");
@@ -141,15 +142,20 @@ function fnStart1() {
     oTimer3 = setInterval(function () {
         $(".zi_wo").addClass("zi_wo1");
         $(".nav_top1").addClass("nav_show1");
-        $(".chuowo").addClass("chuowo1");
+        //$(".chuowo").addClass("chuowo1");
         $(".xiaotou").addClass("xiaotou_1");
         $(".you_1").addClass("you_1_1");
         $(".you_2").addClass("you_2_2");
         $(".you_3").addClass("you_2_2");
         $(".zwpj").addClass("zwpj1");
         $(".chunv").addClass("chunv1");
+        $(".page1").css({
+            display:"none",
+            top:wH
+        });
         oTimer5 = setInterval(function () {
             $(".xiaotou").addClass("xiaotou_2");
+            //$(".chuowo").addClass("chuowo_show");
             clearInterval(oTimer5);
         }, 4000);
         clearInterval(oTimer3);
@@ -158,7 +164,7 @@ function fnStart1() {
 }
 function fnStart2() {
     $(".xiaotou").addClass("xiaotou_3");
-    $(".chuowo").addClass("chuowo2");
+    //$(".chuowo").addClass("chuowo2");
     $(".chunv").addClass("you_3_3");
     $(".you_1").addClass("you_3_3");
     $(".you_3").addClass("you_3_3");
@@ -179,7 +185,6 @@ function fnStart2() {
         clearInterval(oTimer7);
     }, 2600);
     oTimer2 = setInterval(function () {
-        //$(".page2").css("display","none");
         $("#four").css({
             opacity: 1,
             display: "block"
@@ -223,14 +228,10 @@ function reset() {
     $(".wuyi_3").css("opacity", 0);
 }
 function fnStart3() {
-    oTimer8 = setInterval(function () {
-        $(".page1").css({
-            top: 0,
-            display: "block"
-        });
-        clearInterval(oTimer8);
-
-    }, 1000);
+    $(".page1").css({
+        top: 0,
+        display: "block"
+    });
     $("#four").addClass("page3_1");
     oTimer9 = setInterval(function () {
         $("#four").css({
@@ -291,33 +292,28 @@ function fnStart4() {
         $(".wuyi_3").css("opacity", 1);
         clearInterval(oTimer15);
     }, 2000);
-    //reset();
 }
 
 function fnStart5() {
-    //alert(1)
+    $(".page1").css({
+        top: 0,
+        display: "block"
+    });
     oTimer16 = setInterval(function () {
-        //$(".page1 ").css("top", 0);
         $("body").removeClass("over_scr");
         clearInterval(oTimer16);
-
     }, 1000);
 
     $(".page4").css("top", -4000);
-
-    oTimer17 = setInterval(function () {
-        $(".page1").css({
-            top:"0",
-            display:"block"
-        });
-        clearInterval(oTimer17);
-    }, 1);
     addClass(tow, "page1_1");
     reset();
 }
 //测试
 function fnStart6(){
-    //$img_len=$(".he_box img").length;
+    $(".page1").css({
+        display:"none",
+        top:wH
+    });
     addClass(tow, "page1_2");
     $(".page1_2").css("top", wH);
     oTimer17 = setInterval(function () {
@@ -350,7 +346,6 @@ function fnStart6(){
         $(".he_box img:nth-of-type(5)").addClass("img_ro");
         $(".he_box img:nth-of-type(5)").addClass("img_jinbian");
         clearInterval(oTimer22);
-
     }, 1200);
     oTimer23 = setInterval(function () {
         $(".he_box img:nth-of-type(6)").addClass("img_ro");
