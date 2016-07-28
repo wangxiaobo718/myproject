@@ -1491,15 +1491,15 @@ img {
 }
 .page6 .zuopin,.page7 .yuewo{
     position: absolute;
-    width: 680px;
+    width: 600px;
     top: 5rem;
     left: 50%;
-    margin-left: -340px;
+    margin-left: -300px;
 }
 .page6 .shang,.page7 .shang1{
     position: absolute;
     width: 500px;
-    bottom: 3rem;
+    bottom: 1rem;
     left: 50%;
     margin-left: -250px;
 }
