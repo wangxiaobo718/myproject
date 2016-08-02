@@ -68,11 +68,11 @@ img {
     top: 1rem;
     left: 50%;
     margin-left: -349px;
-    -webkit-animation: 1s 2s bo infinite alternate;
-    animation: 1s 2s bo infinite alternate;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    opacity: 1;
+    /*-webkit-animation: 1s 2s bo infinite alternate;*/
+    /*animation: 1s 2s bo infinite alternate;*/
+    /*-webkit-animation-fill-mode: forwards;*/
+    /*animation-fill-mode: forwards;*/
+    /*opacity: 1;*/
 }
 
 @keyframes bounceInDown {
@@ -149,8 +149,7 @@ img {
     -webkit-animation-name: bounceInDown;
     animation-name: bounceInDown;
 }
-
-.page .bo_box {
+.page .bo_box1{
     opacity: 0;
     -webkit-animation: 1.5s 1s bounceInDown alternate;
     animation: 1.5s 1s bounceInDown alternate;
@@ -204,12 +203,15 @@ img {
     animation-name: zoomInUp;
 }
 
-.page .ren {
+.page #ren {
     position: absolute;
     top: 11rem;
     left: 50%;
     opacity: 0;
     margin-left: -368px;
+
+}
+.ren1{
     -webkit-animation: 1.5s zoomInUp alternate;
     animation: 1.5s zoomInUp alternate;
     -webkit-animation-fill-mode: forwards;
@@ -245,6 +247,8 @@ img {
     position: absolute;
     top: 53.8rem;
     left: 9.4rem;
+}
+.yun1{
     -webkit-animation: 1s 2s yun;
     animation: 1s 2s yun;
     -webkit-animation-fill-mode: forwards;
@@ -320,21 +324,20 @@ img {
     -webkit-transform-origin: center bottom;
     transform-origin: center bottom;
 }
-
-.page .hua {
+.hua_box {
     position: absolute;
     bottom: 4%;
     margin-left: 600px;
-    -webkit-animation: 1s 3s bounce infinite;
-    animation: 1s 3s bounce infinite;
+    display: none;
+}
+.hua_box1{
+    -webkit-animation: 1s 0s bounce infinite;
+    animation: 1s 0s bounce infinite;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    /*opacity: 0;*/
+    display: block;
 }
 
-.hua_box {
-    opacity: 0;
-}
 
 /*�ڶ�ҳ*/
 .page1 {
@@ -1540,16 +1543,17 @@ img {
     height: 100%;
     position: absolute;
     z-index: 11;
-    background: #ccc;
+    background: url("../img/bj_2.png") no-repeat;
 }
 .loadBox{
-    width: 80%;
-    margin: 0 10%;
+    width: 400px;
+   margin-left: -200px;
     height: 10px;
     background: #fff;
     border-radius: 10px;
     position: absolute;
     top:40%;
+    left: 50%;
     overflow: hidden;
 }
 .progress{

@@ -27,14 +27,14 @@
 </div>
 <!--第一页-->
 <section class="page" id="one">
-    <div class="bo_box">
+    <div id="bo_box">
         <img src="img/bobo.png" class="bo">
     </div>
     <img src="img/yun.png" class="yun" id="yun">
-    <img src="img/ren.png" class="ren">
+    <img src="img/ren.png" id="ren">
 
     <div class="hua_box" id="hua_box">
-        <img src="img/shanghua.png" class="hua">
+        <img src="img/shanghua.png">
     </div>
 </section>
 <!--第二页-->
@@ -166,7 +166,13 @@
                     if (num == arr.length && loading) {
                         main.removeChild(loading);
                         loading = null;
-
+                        addClass(bo_box, "bo_box1");
+                        addClass(ren, "ren1");
+                        addClass(yun, "yun1");
+                        oTimer = setInterval(function () {
+                            clearInterval(oTimer);
+                            addClass(oHua, "hua_box1");
+                        }, 3000);
                     }
                 }, false)
 

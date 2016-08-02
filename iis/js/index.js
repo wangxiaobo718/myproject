@@ -46,6 +46,8 @@ document.body.style.height = view().h + "px";
 //滑屏
 var one = id("one");
 var oHua = id("hua_box");
+var bo_box = id("bo_box");
+var ren = id("ren");
 var nav_show = id("nav_show");
 var foot_show = id("foot_show");
 var content = id("content");
@@ -94,10 +96,7 @@ var oTimer,
 if (wH == 1125 + "px") {
     yun.style.top = 54 + "rem";
 }
-oTimer = setInterval(function () {
-    oHua.style.opacity = 1;
-    clearInterval(oTimer);
-}, 3000);
+
 bind(oHua, "touchmove", fnStart, false);
 bind(oHua, "touchend", fnStart_end, false);
 bind(liaojie, "touchend", fnStart1, false);
