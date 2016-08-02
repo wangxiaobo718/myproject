@@ -18,6 +18,13 @@
 </style>
 
 <body>
+<div id="main">
+    <div id="loading">
+        <div class="loadBox">
+            <span class="progress"></span>
+        </div>
+    </div>
+</div>
 <!--第一页-->
 <section class="page" id="one">
     <div class="bo_box">
@@ -135,7 +142,38 @@
 <script src="js/zepto.min.js"></script>
 <script src="js/index.js"></script>
 <script>
-//    alert(1)
+    function getEle(ele) {
+        return document.querySelector(ele);
+    }
+    var main = getEle("#main");
+    var arr = ['01.png', '001.png', '002.png', '003.png', '004.png', '4bj.png', '005.png', '006.png', '007.png', '008.png',
+        'ba.png', 'ban.png','benshi.png','bobo.png','bobode.png','ceshi.png','chunv.png','chuowo.png',"yun.png", "ren.png",
+        "shanghua.png", "top.png","zuixin.png"];
+    var num = 0;
+    var progress = getEle(".progress");
+    var loading = getEle("#loading");
+    function fnLoad() {
+        for (var i = 0; i < arr.length; i++) {
+            var oImg = new Image();
+            /*创建图片实例*/
+            oImg.src = "img/" + arr[i];
+            oImg.onload = function () {/*图片加载成功就会触发onload事件*/
+                num++;
+                /*图片加载成功之后num累加*/
+                progress.style.width = num / arr.length * 100 + "%";
+                /*已经加载的图片占所有图片的百分比,这个和进度条是同步的*/
+                progress.addEventListener("webkitTransitionEnd", function () {
+                    if (num == arr.length && loading) {
+                        main.removeChild(loading);
+                        loading = null;
+
+                    }
+                }, false)
+
+            }
+        }
+    }
+    fnLoad();
 
 
 </script>
