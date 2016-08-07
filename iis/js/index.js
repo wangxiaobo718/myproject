@@ -1,4 +1,4 @@
-
+// JavaScript Document
 function id(obj) {
     return document.getElementById(obj);
 }
@@ -47,7 +47,6 @@ document.body.style.height = view().h + "px";
 var one = id("one");
 var oHua = id("hua_box");
 var bo_box = id("bo_box");
-var c1 = id("c1");
 var ren = id("ren");
 var nav_show = id("nav_show");
 var foot_show = id("foot_show");
@@ -116,11 +115,12 @@ one.addEventListener('touchmove', function (event) {
 function fnStart_end() {
     addClass(one, "pageShow");
     $(".page").css("opacity", 0);
+
     oTimer4 = setInterval(function () {
         $(".page1").css("top", 0);
         clearInterval(oTimer4);
     }, 10);
-
+    //addClass(tow, "page1_1");
     //第二页添加动画
     oTimer1 = setInterval(function () {
         $(".pageShow").css({
@@ -145,7 +145,7 @@ function fnStart1() {
     oTimer3 = setInterval(function () {
         $(".zi_wo").addClass("zi_wo1");
         $(".nav_top1").addClass("nav_show1");
-
+        //$(".chuowo").addClass("chuowo1");
         $(".xiaotou").addClass("xiaotou_1");
         $(".you_1").addClass("you_1_1");
         $(".you_2").addClass("you_2_2");
@@ -158,7 +158,7 @@ function fnStart1() {
         });
         oTimer5 = setInterval(function () {
             $(".xiaotou").addClass("xiaotou_2");
-
+            //$(".chuowo").addClass("chuowo_show");
             clearInterval(oTimer5);
         }, 4000);
         clearInterval(oTimer3);
@@ -167,7 +167,7 @@ function fnStart1() {
 }
 function fnStart2() {
     $(".xiaotou").addClass("xiaotou_3");
-
+    //$(".chuowo").addClass("chuowo2");
     $(".chunv").addClass("you_3_3");
     $(".you_1").addClass("you_3_3");
     $(".you_3").addClass("you_3_3");
@@ -316,9 +316,6 @@ function fnStart6() {
     $(".page1").css({
         display: "none",
         top: wH
-    });
-    $(".page5").css({
-        display: "block",
     });
     addClass(tow, "page1_2");
     $(".page1_2").css("top", wH);

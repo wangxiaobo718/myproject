@@ -8,7 +8,6 @@ body {
     color: #666;
     position: relative;
     overflow: hidden;
-    z-index: -1;
 }
 
 .over_scr{
@@ -28,9 +27,8 @@ img {
     overflow: hidden;
     background: url("../img/bi_1.png") no-repeat;
     font-size: 26px;
-    z-index: -2;
+    z-index: 10;
 }
-
 .pageShow {
     transition: 0.6s;
 }
@@ -331,7 +329,6 @@ img {
     bottom: 4%;
     margin-left: 600px;
     display: none;
-    z-index: 999999;
 }
 .hua_box1{
     -webkit-animation: 1s 0s bounce infinite;
@@ -1322,7 +1319,6 @@ img {
     font-size: 26px;
     z-index: 999;
     overflow-y: scroll;
-    display: none;
 }
 .youyuan_1{
     position: absolute;
