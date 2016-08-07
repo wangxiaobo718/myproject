@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=750,user-scalable=no"/>
     <title></title>
-    <!-- 不让浏览器缓存-->
-    <!--<meta http-equiv="Pragma" content="no-cache"/>-->
-    <!--<meta http-equiv="Cache-Control" content="no-cache"/>-->
-    <!--<meta http-equiv="Expires" content="0"/>-->
-    <!--<meta http-equiv="Cache-Control" content="max-age=7200"/>-->
-    <!--<meta http-equiv="Expires" content="Mon, 20 Jul 2009 23:00:00 GMT"/>-->
-    <!-- 不让浏览器缓存-->
     <link href="css/index.css" rel="stylesheet"/>
-
 </head>
 <style id="css">
 </style>
@@ -25,6 +17,7 @@
         </div>
     </div>
 </div>
+
 <!--第一页-->
 <section class="page" id="one">
     <div id="bo_box">
@@ -32,11 +25,12 @@
     </div>
     <img src="img/yun.png" class="yun" id="yun">
     <img src="img/ren.png" id="ren">
-
     <div class="hua_box" id="hua_box">
         <img src="img/shanghua.png">
     </div>
+    <canvas id="c1" ></canvas>
 </section>
+
 <!--第二页-->
 <section class="page1" id="tow">
     <img src="img/top.png" class="nav_top " id="nav_show">
@@ -142,6 +136,60 @@
 <script src="js/zepto.min.js"></script>
 <script src="js/index.js"></script>
 <script>
+    var oC = document.getElementById('c1');
+    var oGC = oC.getContext('2d');
+    oC.width=view().w;
+    oC.height=view().h;
+    var setArr = [];   //收集所有元素的集合(绘制的图形)
+
+    setInterval(function(){
+
+        oGC.clearRect(0,0,oC.width,oC.height);
+
+        for(var i=0;i<setArr.length;i++){
+            setArr[i].r -=1.4;
+            setArr[i].c4 -= 0.014;
+            if( setArr[i].c4 <= 0 ){
+                setArr.splice(i,1);
+            }
+        }
+
+        for(var i=0;i<setArr.length;i++){
+            oGC.beginPath();
+            oGC.fillStyle = 'rgba('+setArr[i].c1+','+setArr[i].c2+','+setArr[i].c3+','+setArr[i].c4+')';
+            oGC.moveTo(setArr[i].x , setArr[i].y);
+            oGC.arc( setArr[i].x , setArr[i].y , setArr[i].r , 0 , 360*Math.PI/180,false );
+            oGC.closePath();
+            oGC.fill();
+        }
+
+    },1000/60);
+
+    setInterval(function(){
+
+        var x = Math.floor(Math.random()*oC.width);
+        var y = Math.floor(Math.random()*oC.height);
+        var r = 80;
+        var c1 = Math.floor(Math.random()*255);
+        var c2 = Math.floor(Math.random()*255);
+        var c3 = Math.floor(Math.random()*255);
+        var c4 = 0.8;
+
+        setArr.push({
+            x : x,
+            y : y,
+            r : r,
+            c1 : c1,
+            c2 : c2,
+            c3 : c3,
+            c4 : c4
+        });
+
+    },500);
+
+
+
+
     function getEle(ele) {
         return document.querySelector(ele);
     }
@@ -167,6 +215,7 @@
                     if (num == arr.length && loading) {
                         main.removeChild(loading);
                         loading = null;
+                        main.style.display="none";
                         addClass(bo_box, "bo_box1");
                         addClass(ren, "ren1");
                         addClass(yun, "yun1");
