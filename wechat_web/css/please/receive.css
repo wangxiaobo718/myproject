@@ -1,0 +1,85 @@
+html {
+    font-family: Helvetica;
+}
+
+body {
+    position: relative;
+}
+
+.bg_box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #000;
+    height: auto;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.box {
+    position: relative;
+    text-align: center;
+}
+
+.box .bg_img {
+    margin-top: 0.45rem;
+    width: 2.625rem;
+}
+
+.box .x {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.45rem;
+    width: 0.1rem;
+}
+
+.box p {
+    position: absolute;
+    left: 50%;
+}
+
+.box .p1 {
+    width: 1.6rem;
+    margin-left: -0.8rem;
+    top: 0.77rem;
+    font-size: 0.12rem;
+}
+
+.box .p2 {
+    width: 1.8rem;
+    margin-left: -0.9rem;
+    top: 0.93rem;
+    color: #efc645;
+    font-size: 0.15rem;
+    letter-spacing: 0.01rem;
+}
+
+.box p.p2 span, p.p3 span {
+    font-size: 0.17rem;
+}
+
+.box .p3 {
+    width: 1.8rem;
+    margin-left: -0.9rem;
+    top: 1.13rem;
+    color: #efc645;
+    font-size: 0.15rem;
+    letter-spacing: 0.01rem;
+}
+.box .p4{
+    width: 1.8rem;
+    top:3.28rem;
+    margin-left: -0.9rem;
+    color: #000;
+    font-size: 0.119rem;
+    border-bottom: 1px solid #d7d7d7;
+    line-height: 0.2rem;
+}
+.box .btn_re{
+    position: absolute;
+    top: 3.7rem;
+    left: 50%;
+    margin-left: -1.05rem;
+    width: 2.1rem;
+
+}

@@ -1,0 +1,78 @@
+.gift_box {
+    height: 100%;
+    width: 100%;
+    padding: 1.083rem 0.3rem;
+    box-sizing: border-box;
+}
+
+.gift_box .six_box {
+    background: url("../../images/act/please/gift/six_box.png") no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 12.5rem;
+    text-align: right;
+}
+
+.gift_box .six_box p:nth-of-type(1) {
+    padding: 1.458rem 0.83rem 0.2rem 0;
+    font-size:1.25rem;
+    color: #fffefe;
+    font-weight: 600;
+}
+.gift_box .six_box p:nth-of-type(2){
+    font-size:0.75rem;
+    color: #fffefe;
+    padding-right: 0.83rem;
+    letter-spacing: 0.035rem;
+}
+.gift_box .six_box a{
+    display: block;
+    text-align: center;
+    width: 7.91rem;
+    height: 1.6rem;
+    background: #ff0b5b;
+    border-radius: 1.6rem;
+    line-height: 1.6rem;
+    margin:4.9rem 0.83rem 0 0;
+    float: right;
+    font-size:1.04rem;
+    color: #fff;
+    border: 1px solid #e8b694;
+}
+.card_box{
+    background: url("../../images/act/please/gift/gift_box.png") no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 12.5rem;
+    text-align: right;
+    margin-top: 0.5rem;
+}
+.gift_box .card_box p:nth-of-type(1) {
+    padding: 1.458rem 0.83rem 0.2rem 0;
+    font-size:1.25rem;
+    color: #fffefe;
+    font-weight: 600;
+}
+.gift_box .card_box p:nth-of-type(2){
+    font-size:2.291rem;
+    color: #ff8e22;
+    padding-right: 0.83rem;
+    letter-spacing: 0.035rem;
+}
+.gift_box .card_box p:nth-of-type(2) span{
+    font-size:1.458rem;
+}
+.gift_box .card_box a{
+    display: block;
+    text-align: center;
+    width: 7.91rem;
+    height: 1.6rem;
+    background: #f1b938;
+    border-radius: 1.6rem;
+    line-height: 1.6rem;
+    margin:2.8rem 0.83rem 0 0;
+    float: right;
+    font-size:1.04rem;
+    color: #fff;
+    border: 1px solid #e7cd90;
+}

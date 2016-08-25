@@ -1,0 +1,205 @@
+html {
+    font-family: Helvetica;
+}
+/*ÀñÆ·¿¨*/
+.top_box {
+    width: 100%;
+    height: auto;
+    padding: 0.125rem 0.04rem 0.2rem;
+    box-sizing: border-box;
+    background: #f2f2f2;
+}
+
+.gift_fist {
+    background-size: 100% 100%;
+    height: 1.5rem;
+    position: relative;
+}
+.six_box {
+    text-align: right;
+}
+.six_box p:nth-of-type(1) {
+    padding: 0.08rem 0.1rem 0 0;
+    font-size:0.15rem;
+    color: #fffefe;
+    font-weight: 600;
+}
+.six_box p:nth-of-type(2){
+    font-size:0.09rem;
+    color: #fffefe;
+    padding-right:0.1rem;
+    letter-spacing: 0.0005rem;
+}
+.six_box p:nth-of-type(3) {
+    font-size:0.175rem;
+    color: #ff0b5b;
+    padding:0.001rem 0.1rem 0 0;
+    letter-spacing: 0.0025rem;
+}
+.six_box p:nth-of-type(3) span{
+    font-size:0.28rem;
+}
+.card_box {
+    text-align: right;
+}
+.card_box p:nth-of-type(1) {
+    padding: 0.08rem 0.1rem 0 0;
+    font-size:0.15rem;
+    color: #fffefe;
+    font-weight: 600;
+}
+.card_box p:nth-of-type(2){
+    font-size:0.09rem;
+    color: #fffefe;
+    padding-right:0.1rem;
+    letter-spacing: 0.0005rem;
+}
+.card_box p:nth-of-type(3) {
+    font-size:0.17rem;
+    color: #ff8e22;
+    padding:0 0.1rem 0 0;
+    letter-spacing: 0.0005rem;
+}
+.card_box p:nth-of-type(3) span{
+    font-size:0.28rem;
+}
+.price_1,.price_2, .price_3,.price_4 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.2rem;
+    overflow: hidden;
+    right: 0.09rem;
+    bottom: 0.125rem;
+    text-align: center;
+    border-radius: 0.017rem;
+}
+.price_1 .img1,.price_2 .img1,.price_3 .img1,.price_4 .img1 ,.img_gray,.img_red {
+    position: absolute;
+    width: 0.2rem;
+    left: 0;
+}
+.img_gray,.img_red{
+    display: none;
+}
+/*.price_1 span,.price_2 span,.price_3 span,.price_4 span{*/
+    /*display: inline-block;*/
+
+
+/*}*/
+
+.price_1 .img2,.price_2 .img2 ,.price_3 .img2,.price_4 .img2{
+    position: absolute;
+    width: 0.2rem;
+    right: 0;
+}
+
+.price_1 input,.price_2 input,.price_3 input,.price_4 input {
+    line-height: 0.21rem;
+    font-size:0.14rem;
+    color: #525151;
+    width: 0.415rem;
+    text-align: center;
+    background: #f2f3f3;
+    border: none;
+}
+
+.gift_last {
+    background: url("../../images/act/please/index/gift_box.png") no-repeat;
+    background-size: 100% 100%;
+    height: 1.5rem;
+    margin-top: 0.125rem;
+    position: relative;
+}
+
+/*Ð´ÐÄÒâ¿¨*/
+.foot_box {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 0.09rem 0;
+    background: #fff;
+}
+
+.foot_box .pay {
+    position: relative;
+    height: 0.64rem;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.foot_box .pay div {
+    height: 0.175rem;
+    width: 100%;
+}
+.foot_box .pay div .total{
+font-size: 0.2rem;
+}
+.foot_box .pay div img {
+    position: absolute;
+    width: 0.2rem;
+    top: 0.14rem;
+    left: 0.1rem;
+}
+
+.foot_box .pay div span {
+    position: absolute;
+    font-size: 0.18rem;
+    line-height: 0.17rem;
+}
+
+.foot_box .pay div span.span1 {
+    top: 0.15rem;
+    left: 0.375rem;
+    letter-spacing:0.023rem;
+    font-weight: 600;
+    color: #525151;
+}
+
+.foot_box .pay div span.span2 {
+    color: #f1bb05;
+    top: 0.15rem;
+    right: 0.09rem;
+}
+
+.foot_box .pay p {
+    position: absolute;
+    top: 0.38rem;
+    left: 0.375rem;
+    font-size: 0.07rem;
+    letter-spacing: 0.085rem;
+    color: #989797;
+    margin-bottom: 0.125rem;
+}
+.foot_box .card{
+    text-align: center;
+}
+.foot_box .card img {
+    width: 2.85rem;
+    margin: 0.2rem 0 0.075rem ;
+}
+.foot_box .card p{
+    font-size: 0.1rem;
+    color: #5d5d5d;
+}
+/*ÂÖ²¥Í¼*/
+.swiper-container {
+    height: 1.75rem;
+    overflow: hidden;
+}
+
+.swiper-container .swiper-slide {
+    height: 100%;
+    position: relative;
+}
+.swiper-container .swiper-slide>img {
+    width: 100%;
+}
+.six_box{
+    position: absolute;
+    top: 0;
+    right:0;
+}
+.price_1,.price_2,.price_3,.price_4{
+    position: absolute;
+    top: 1rem;
+}

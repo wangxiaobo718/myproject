@@ -1,0 +1,115 @@
+html {
+    font-family: Helvetica;
+}
+
+.input_box {
+    position: relative;
+    width: 100%;
+    height: 4.1rem;
+    background: url("../../images/act/please/goPay/big_bg.png") no-repeat;
+    background-size: 100%;
+    padding: 0.35rem 0.2rem;
+    box-sizing: border-box;
+}
+
+.input_cent {
+    padding: 0.675rem 0.4rem 0.95rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3.4rem;
+    background-size: 100%;
+}
+
+img.neme_bg {
+    width: 1.375rem;
+}
+
+.input_box>img{
+    position: absolute;
+    left: 0.6rem;
+    width: 1.975rem;
+}
+.input_box>img.Uline{
+    top: 1.71rem;
+}
+
+.input_box>img.Uline1{
+    top: 2.01rem;
+}
+.input_box>img.Uline2{
+    top: 2.311rem;
+}
+.name_text {
+    font-size: 0.1rem;
+    border: 0;
+    background: none;
+    position: absolute;
+    top: 1.086rem;
+    left: 1.3rem;
+    color: #ffffff;
+}
+.Myname_text {
+    font-size: 0.1rem;
+    border: 0;
+    background: none;
+    position: absolute;
+    top: 2.6rem;
+    left: 1.46rem;
+    width: 1.1rem;
+    color: #ffffff;
+    text-align: right;
+}
+.input_box form textarea {
+    margin-top: 0.2rem;
+    font-size: 0.12rem;
+    resize: none;
+    width: 1.975rem;
+    height: 0.875rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    text-align: justify;
+    line-height: 0.3rem;
+    overflow-y:hidden;
+}
+.foot_pay{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.foot_pay .pay{
+    position: relative;
+    top: 0.175rem;
+}
+.foot_pay .pay img{
+    position: absolute;
+    width: 0.2rem;
+    height: 0.2rem;
+    top: 0;
+    left: 0.25rem;
+}
+.foot_pay .pay  span {
+    font-size: 0.16rem;
+    position: absolute;
+}
+.foot_pay .pay  span.span1{
+    left: 0.525rem;
+    font-weight: 500;
+    color: #525151;
+}
+.foot_pay .pay  span.span2{
+    right: 0.265rem;
+    top: -0.02rem;
+    font-size: 0.19rem;
+    color: #f1bb05;
+}
+.foot_pay .pay  span.span2 small{
+    font-size: 0.14rem;
+}
+.foot_pay .card{
+    text-align: center;
+}
+.foot_pay .card img {
+    width: 2.85rem;
+    margin: 0.5rem 0 0.075rem ;
+}
