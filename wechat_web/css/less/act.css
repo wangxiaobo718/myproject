@@ -1048,24 +1048,29 @@ a * {
 }
 .act-fit .time-axis-horizontal {
   background: #fafafa url('/images/act/fit/fit-lace-gray.png') repeat-x;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  padding-top: 0.16rem;
+  padding-bottom: 0.16rem;
 }
 .act-fit .time-axis-horizontal .friend-num {
   color: #e5d09d;
   vertical-align: baseline;
 }
 .act-fit .time-axis-horizontal h2 {
-  font-size: 0.18rem;
+  font-size: 0.16rem;
   line-height: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   text-align: center;
 }
-.act-fit .time-axis-horizontal h5,
-.act-fit .time-axis-horizontal p {
+.act-fit .time-axis-horizontal h5 {
   color: #b3b3b3;
   font-size: 0.14rem;
   line-height: 22px;
+  text-align: center;
+}
+.act-fit .time-axis-horizontal p {
+  color: #b3b3b3;
+  font-size: 0.13rem;
+  line-height: 20px;
   text-align: center;
 }
 .act-fit .time-axis-horizontal .time-axis {
@@ -1159,7 +1164,7 @@ a * {
   font-size: 0.13rem;
   float: left;
   width: 0.22rem;
-  height: 2rem;
+  height: 1.1rem;
   margin: 0.05rem 0.088rem;
   padding: 3px;
   text-align: center;
@@ -1354,7 +1359,7 @@ a * {
   text-align: center;
 }
 .act-fit .welcome-user {
-  background-color: #474747;
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   font-size: 0.14rem;
   height: 0.46rem;
@@ -1366,6 +1371,7 @@ a * {
 }
 .act-fit .welcome-user .box {
   width: 56%;
+  width: 92%;
   height: 0.46rem;
   margin: 0 auto;
   overflow: hidden;
@@ -1373,20 +1379,25 @@ a * {
 .act-fit .welcome-user .user-info {
   float: left;
   height: 0.46rem;
-  text-align: center;
   overflow: hidden;
+  text-align: left;
 }
 .act-fit .welcome-user .user-info span {
+  color: #fff;
+  display: inline-block;
+  font-size: 0.12rem;
   line-height: 0.46rem;
+  /*.lh(.18rem); .c(#212121);*/
 }
 .act-fit .welcome-user .user-info .u-name {
+  color: #fff;
   display: inline-block;
   max-width: 0.98rem;
   width: auto;
-  height: 0.46rem;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  /* .lh(.18rem); .c(#535e87); .mt(.05rem);*/
 }
 .act-fit .welcome-user .user-box {
   border-radius: 50%;
@@ -1849,7 +1860,7 @@ a * {
 }
 .alert-share-default .btn-share-bg {
   display: block;
-  height: 1.65rem;
+  height: 1.4rem;
   width: 100%;
 }
 .alert-share-default .btn-share-bg img {
@@ -2413,7 +2424,7 @@ a * {
     width: 74%;
   }
   .alert-share-default .btn-share-bg {
-    height: 1.5rem;
+    height: 1.25rem;
   }
   .icon-key-white {
     left: 2%;
@@ -2460,7 +2471,7 @@ a * {
     height: 162px;
   }
   .alert-share-default .btn-share-bg {
-    height: 1.2rem;
+    height: 1.05rem;
   }
   /*
     .alert-buy {
@@ -2498,7 +2509,7 @@ a * {
 }
 @media screen and (device-width: 360px) {
   .alert-share-default .btn-share-bg {
-    height: 1.4rem!important;
+    height: 1.2rem!important;
   }
   .act-12ask .info {
     margin: .1rem .05rem 0 .15rem;

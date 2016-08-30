@@ -6,6 +6,13 @@ $(function(){
         $(".transportCollaspe").addClass("collaspe");
         $(".transport-list").show();
     }
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 4,
+        paginationClickable: true,
+        spaceBetween: 30,
+        freeMode: true
+    });
     getOrderDetail(ordermainno,orderno);
     function getOrderDetail(ordermainno,orderno){
         var statusClass;
@@ -23,10 +30,11 @@ $(function(){
                         for (var i = 0; i < orderList.length; i++) {
                             var on="";
                             if(data.ORDER_NO==orderList[i].ORDER_NO){
-                                on="on";
+                                on="swiper-slide-active";
                             }
-                            var on = "swiper-slide";
-                            $(".swiper-wrapper").append('<li class='+on+'>' +
+
+                            //var on = "swiper-slide";
+                            $(".swiper-wrapper").append('<li class="swiper-slide '+on+'">' +
                                 '<a href="javascript:void(0);">' +
                                 '<i>' + orderList[i].ORDER_NO + '</i>' +
                                 '<span>第' +
@@ -62,27 +70,30 @@ $(function(){
                     $(".order-list").html("");
                     for (var i = 0; i < product.length; i++) {
                         var p=product[i];
+                        var unit=p.GROUP_TYPE==2?"套":"盒";
                         $(".order-list").append('<li>' +
                             '<p class="clearfix">' +
                             '<em>' + p.PRODUCT_NAME + '</em><strong>X&nbsp;' + p.QUANTITY + '</strong><i class="price">¥' + p.TOTAL_PRICE + '</i>' +
                             '</p>' +
-                            (data.ORDER_CLASS==1?'<span>￥' + p.UNIT_PRICE + '/盒</span>':'') +
+                            (data.ORDER_CLASS==1?'<span>￥' + p.UNIT_PRICE + '/'+unit+'</span>':'') +
                             '</li>');
                     }
                     $(".order-location dl dt span").first().text(data.CONSIGNEE_NAME);
                     $(".order-location dl dt span").next().text(data.CONSIGNEE_PHONE);
 
-                    var addr="<span class='address'>"+data.CONSIGNEE_ADDR+"</span>";
+                    var addr="<span class='address'>"+data.CONSIGNEE_ADDR+" "+data.CONSIGNEE_HOUSENUM+"</span>";
                     addr+=" <i class='label'>"+getAddress_AddressType(data.ADDRESS_TYPE)+"</i>";
                     $(".order-location dl dd").addClass("address-box").html(addr);
 
 
                     $(".order-other li .price em").html(data.FREIGHT);
                     $(".order-other li .coupon-btn span em").html(data.cashTicketAmount);
+                    $(".order-other li .giftBalance-btn span em").html(data.giftBalanceAmount);
+
                     <!--配送时间-->
                     $(".order-other li .delivery-time span em").html(data.DELIVER_DATE_SHOW);
                     $(".order-total em").html(data.QUANTITY);
-                    $(".order-total span em").html(data.TOTAL_AMOUNT);
+                    $(".order-total span em").html(data.PAY_AMOUNT);
                     $(".order-number p").first().find("em").html(data.ORDER_MAIN_NO);
                     $(".order-number p").next().find("em").html(data.CREATE_TIME);
                     statusClass=data.statusClass;

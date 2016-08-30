@@ -39,6 +39,21 @@ $(document).ready(function() {
         if(source==6){
             sa.track('lcjiance',{dataFrom:'乐纯主文2'});
         }
+        if(source==7){
+            sa.track('lcjiance',{dataFrom:'优惠券到期提醒'});
+        }
+        if(source==8){
+            sa.track('lcjiance',{dataFrom:'乐纯12问'});
+        }
+        if(source==21){
+            sa.track('lcjiance',{dataFrom:'首页优惠券点击'});
+        }
+        if(source==22){
+            sa.track('lcjiance',{dataFrom:'首页余额点击'});
+        }
+        if(source==23){
+            sa.track('lcjiance',{dataFrom:'首页乐享活动点击'});
+        }
 
     },1000);
     //微信支付按钮

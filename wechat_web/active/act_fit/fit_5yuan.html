@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5元换购</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telephone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <link rel="stylesheet" href="/css/act.min.css?v=14">
+</head>
+<body>
+<article class="wrap container act-fit act-5yuan" id="act_fit">
+    <section class="pic">
+        <img src="/images/act/fit/5yuan.jpg" style="margin:0 auto">
+    </section>
+    <section class="clearfix btn-box">
+        <a class="clearfix btn-toredeem" id="btn-5yuanbuy" href="javascript:void(0);">
+            <img src="/images/act/fit/btn-5yuan.png">
+        </a>
+    </section>
+</article>
+<!--弹窗-->
+<div class="alert-common alert-share-default" id="message_pay">
+    <div class="bg"></div>
+    <div class="cont" style="height:auto;">
+        <div class="act-fit c-box">
+            <a class="clearfix btn-share-bg js-btn-share" href="">
+                <img src="/images/act/fit/fit-5yuan.jpg">
+            </a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/libary/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/libary/jquery.md5.js"></script>
+<script src="/js/dev/Global.js?v=12"></script>
+<script src="/js/dev/active/active.js?v=15"></script>
+<script src="/js/dev/active/activePv.js?v=7"></script>
+<script src="/js/dev/Analysis.js?v=28"></script>
+<script type="text/javascript">
+    $(function(){
+        var bindcode=GetQueryString("bindcode");
+        var source=GetQueryString("source");
+        var sign=GetQueryString("s");
+        var level="1";
+        var types="1";
+        var isnews="1";
+        invokeApi("mallactive/isjoinactive",{"bindcode":bindcode},"",function(ret){
+            var data = eval(ret);
+            if (data.error_code != null) {
+            } else {
+                var url="";
+                if(data.status==1){
+                    url="/active/act_fit/"+data.version+"/fit_invite.html?bindcode="+bindcode+"&source="+source+"&s="+sign+"&level="+level+"&types="+types;
+                }
+                if(data.status==2){
+                    url="/active/act_fit/"+data.version+"/fit_medal.html?bindcode="+bindcode+"&level="+level+"&types="+types+"&source="+source;
+                }
+                if(url!="") {
+                    $("#message_pay a").attr("href",url);
+                    $("#message_pay").addClass("on");
+                }
+            }
+        });
+    })
+</script>
+</body>
+</html>

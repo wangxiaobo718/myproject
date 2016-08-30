@@ -1,0 +1,170 @@
+<!doctype html>
+<html class="bg-white">
+<head>
+    <meta charset="UTF-8">
+    <title>micrsoft活动</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+
+    <link rel="stylesheet" href="/css/global.css?v=0">
+    <link rel="stylesheet" href="/css/common.css?v=0">
+    <link rel="stylesheet" href="/css/style.css?v=20">
+
+    <!-- js插件 -->
+    <script src="/js/libary/jquery-1.9.1.min.js"></script>
+    <script src="/js/libary/jquery.md5.js"></script>
+    <!-- 自定义插件 -->
+    <script src="/js/libary/common.js?v=1"></script>
+    <script src="/js/libary/TouchSlide.1.1.js"></script>
+    <!--开发脚本-->
+    <script src="/js/dev/Global.js?v=23"></script>
+    <script src="/js/dev/city/city.js?v=4"></script>
+    <script src="/js/dev/city/loadcity.js?v=1"></script>
+</head>
+<body class="act-micr-box">
+<article class="wrap">
+    <section class="active-box act-micrsoft" id="actMicrsoft">
+        <div class="clearfix img-box"><img src="/images/act/micrsoft/micr02.jpg" /></div>
+        <div class="clearfix btn-box">
+            <a class="btn" id="btnUse" href="javascript:void(0);">马上领用，预计<i></i>送达</a>
+            <a class="btn btn-white" id="btnLater" href="/account/active_list.html">稍后领用</a>
+        </div>
+    </section>
+</article>
+<!-- 地址 -->
+<section class="alert address-alert">
+    <section class="bg"></section>
+    <section class="close-alert"></section>
+    <section class="address">
+        <section class="address-head">
+            <span>地址</span>
+            <em class="new-address-btn">新建地址</em>
+        </section>
+        <section class="address-main">
+            <ul></ul>
+        </section>
+        <ul class="address-btn clearfix">
+            <li class="back">返回</li>
+            <!--<li class="del"></li>-->
+            <li class="submit">确认</li>
+        </ul>
+    </section>
+</section>
+<!-- 新建地址 -->
+<section class="alert new-alert">
+    <section class="bg"></section>
+    <section class="close-alert"></section>
+    <section class="address-tips">
+        <i class="icon-home"></i>创建一个收货地址，只支持北京地区用户配送
+        <i class="icon-triangle"></i>
+    </section>
+    <section class="new-address">
+        <input type="hidden" id="newaddressid" value="">
+        <section class="address-head">
+            <span>地址</span>
+        </section>
+        <ul class="new-form-box on">
+            <li class="clearfix">
+                <label for="">配送地址</label>
+                <div class="select-box">
+                    <span class="icon-select-up"><i></i></span>
+                    <select id="ProvinceId"></select>&nbsp;
+                    <input type="hidden" id="ProvinceIdValue" value="110000">
+                    <input type="hidden" id="ProvinceIdText">
+                </div>
+                <div class="select-box">
+                    <span class="icon-select-up"><i></i></span>
+                    <select id="CityId"></select>&nbsp;
+                    <input type="hidden" id="CityIdValue"  value="110100">
+                    <input type="hidden" id="CityIdText">
+                </div>
+                <div class="select-box">
+                    <span class="icon-select-up"><i></i></span>
+                    <select id="AreaId"></select>
+                    <input type="hidden" id="AreaIdValue"  value="-1">
+                    <input type="hidden" id="AreaIdText">
+                </div>
+            </li>
+            <li class="clearfix">
+                <label for="">详细地址</label>
+                <input type="text" id="newaddress" maxlength="200" placeholder="请输入详细地址和房间号">
+            </li>
+            <li class="clearfix">
+                <label for="">姓名</label>
+                <input type="text" id="newname" maxlength="20" placeholder="请输入姓名">
+            </li>
+            <li class="clearfix">
+                <label for="">手机</label>
+                <input type="tel" id="newphone" maxlength="11" placeholder="请输入手机号">
+            </li>
+            <li class="clearfix">
+                <label for="">备注标签</label>
+                <section class="new-head clearfix">
+                    <span class="on" addresstype="1">家</span>
+                    <span addresstype="2">公司</span>
+                    <span addresstype="3">朋友</span>
+                </section>
+            </li>
+        </ul>
+
+        <ul class="address-btn clearfix">
+            <li class="back">取消</li>
+            <li class="del"></li>
+            <li class="submit">确认</li>
+        </ul>
+    </section>
+</section>
+<!-- 弹框 -->
+<!--#include virtual = "/message.html" -->
+</body>
+<script>
+    $(function(){
+        $("#ProvinceId").val("110000");
+        $("#CityId").val("110100");
+        $("#ProvinceId").attr("disabled","disabled");
+        $("#CityId").attr("disabled","disabled");
+        invokeApi("mallactive/getactivedeliverdate",{},"",function(ret){
+            var data = eval(ret);
+            if (data.error_code != null) {
+                window.top.location.href = "/404.html";
+            } else {
+                if (data!=null) {
+                    if(data.status==0){
+                        alert(data.message);
+                        window.location.href="/";
+                    }
+
+                    $("#btnUse i").text(data.date);
+                }
+            }
+        });
+
+        // 滚动条滚动到一定距离标题固定
+        $(window).on('touchstart touchmove touchend scroll',function(){
+            //获取窗口的滚动条的垂直位置
+            var scrollH = $(window).scrollTop();
+            var height = $('.order-tab li').height();
+            if( scrollH >= height){
+                $('.order-tab').addClass('fixed');
+            }else{
+                $('.order-tab').removeClass('fixed');
+            }
+            // event.preventDefault();
+        });
+        var bindcode=GetQueryString("bindcode");
+        var success=GetQueryString("success");
+        if(success=="2"){
+            $("#btnUse").text("已经领取，查看订单");
+            $("#btnLater").hide();
+        }
+
+    });
+</script>
+<script src="/js/dev/Common.js?v=2"></script>
+<script src="/js/dev/active/active.js?v=15"></script>
+<script type="text/javascript" src="/js/dev/Analysis.js?v=7"></script>
+</html>

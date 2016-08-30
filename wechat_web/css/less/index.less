@@ -148,7 +148,7 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
+article, aside, canvas, details, embed,
 figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
@@ -157,7 +157,7 @@ time, mark, audio, video {
 input[type=submit],input[type=reset],select {
     -webkit-appearance: none;
 }
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -237,6 +237,10 @@ a{
 .icon-long-buy {
     .bimg('../images/icon-long-buy.png'); .bz(100%);
 }
+.icon-search {
+    .bimg('/images/icon-search.png'); .bz(100%); .dib;
+    .w(1rem); .h(1rem); .mt(-.5rem); .pos-a; .t(50%); .l(20px);
+}
 /* common class */
 .wrap{ .pos-r; .m(0 auto); .minw(320px); .maxw(640px);}
 .container { .bgc(@c-bg); .m(0 auto); }
@@ -266,7 +270,7 @@ a{
     }
     .countdown-box { .db;}
 }
-.countdown-box { .dn; .bgc(@c-f); .br(8px); .opacity(90); .w(8.2rem); .pos-a; .l(0); .t(0); .z(2);
+.countdown-box { background:rgba(255,255,255,0.9); .dn; .br(8px); .w(8.2rem); .pos-a; .l(0); .t(0); .z(2);
     .title { .bgc(#BFBEBE); border-top-left-radius: 8px; border-top-right-radius: 8px;
         .c(@c-f); .fs(1rem); .hlh(1.8rem); .tc;
     }
@@ -279,7 +283,7 @@ a{
 .entrace-wrap{ .bgc(@c-f); .bor-t(1px solid #cfcfcf); .bor-b(1px solid #cfcfcf); .pt(8px); .pb(8px); .mb(8px); }
 .entrace-box {
     li { .bor-l(1px solid #f2f2f2); box-sizing:border-box;
-        .fl; .w(33.3%); .p(15px); .tc;
+        .fl; .w(33.3%); .p(10px); .tc;
     }
     .entrace {
         .c(#959595);
@@ -288,6 +292,31 @@ a{
         i { .dib; }
     }
 }
+// 首页地址前置
+.address-before-box { .bgc(#1d1c20); .c(@c-f); .fs(.96rem); .hlh(40px);
+    .m(auto); .p(2px 10px); .pos-f; .t(0); .r(0); .l(0); .tc; .z(1000); .break;
+    /*span { display:inline-flex}
+    .address-info { .hlh(16px); .w(58%); .oh; }
+    */
+    .address-title { .c(#ffdd30); .mr(6px); }
+    .address-info:after {
+        .bimg('/images/icon-arrow-b-w.png'); .bz(60%); .dib; content: "";
+        .w(1.3rem); .hlh(1rem); .ml(8px); .mt(7px); .vm;
+    }
+    .address-time { .c(#ffdd30); .fs(.6rem); .mr(3px);}
+}
+.address-search { .bgc(#f2f2f2); .dn; .w(100%); .h(100%); .pos-a; .t(0); .l(0); .z(100001);
+    .search-box { .bgc(@c-main); .c(@c-0); .m(0 auto); .p(10px); .pos-r;
+        .input-search { .bgc(@c-f); .br(6px); .c(@c-3); .hlh(26px); .w(100%); .m(0 auto); .ti(36px);}
+    }
+    .title { .bgc(#d9d9d9); .c(@c-f); .fs(.83rem); .hlh(26px); .pl(12px); }
+    .search-list { .bgc(#f2f2f2); .c(@c-6); .p(0 10px); .maxh(33rem); overflow-x:hidden; overflow-y:auto;
+        li { .bor-b(1px solid @c-d); .pt(10px); .pb(10px); }
+        h4 { .c(@c-0); .fs(.93rem); .lh(20px);}
+        p { .c(@c-9); .fs(.6rem); .lh(17px);}
+    }
+}
+.address-search.on{ .db; }
 /* iphone common */
 @media only screen
 and (min-device-width : 320px)

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telephone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <link rel="stylesheet" href="/css/act.min.css?v=14">
+    <script type="text/javascript" src="/js/libary/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/js/libary/jquery.md5.js"></script>
+    <script type="text/javascript" src="/js/dev/Global.js?v=23"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="/js/dev/wechat/WeixinJsApi.js?v=3"></script>
+    <script type="text/javascript" src="/js/dev/wechat/WeixinFitShare.js?v=21"></script>
+</head>
+<body class="hidden">
+<article class="wrap container act-fit act-fit-fix" id="act_fit">
+    <section class="invite-top-pic">
+        <img src="/images/act/fit/fit07.png?v=2" alt="" style="margin-top:5px;">
+        <div class="alert-common alert-tips">
+            <div class="bg"></div>
+            <div class="cont">
+                <p class="top01"></p>
+            </div>
+        </div>
+    </section>
+    <section class="btn-box invite-btn-box">
+        <!--<p class="buy-word"><span>100万乐纯奶票免费送出</span></p>-->
+        <a class="clearfix btn-buy-milk js-btn-share"  href="javascript:void(0);"></a>
+    </section>
+    <!-- time-axis-box -->
+    <section class="clearfix time-axis-horizontal">
+        <h2>您离免费领取乐纯只差<span class="friend-num" id="friend-balance">0</span>个好友</h2>
+        <!--<p>"微信群/私信邀请有效噢"</p>-->
+        <p>目前您的<span class="friend-num" id="friend-already">0</span><span class="friend-num">个</span>朋友已经</p>
+        <p>通过您的邀请链接换购乐纯新用户大礼包</p>
+        <!--<p>(数字持续更新中)</p>-->
+        <div class="time-axis">
+            <dl class="time-num">
+                <dd class="num-dd cur-num">
+                    <div class="num-box num-top" style="color:#fff;"><span>好友</span><span>参与数</span></div>
+                </dd>
+                <dd class="num-dd" id="L3">
+                    <div class="num-box"><span class="num">3</span>个</div>
+                </dd>
+                <dd class="num-dd" id="L6">
+                    <div class="num-box"><span class="num">6</span>个</div>
+                </dd>
+                <dd class="num-dd" id="L9">
+                    <div class="num-box"><span class="num">9</span>个</div>
+                </dd>
+                <dd class="num-dd" id="L18">
+                    <div class="num-box"><span class="num">18</span>个</div>
+                </dd>
+                <dd class="num-dd" id="L36">
+                    <div class="num-box"><span class="num">36</span>个</div>
+                </dd>
+            </dl>
+            <div class="time-scroll">
+                <div class="axis">
+                    <div class="cs"></div>
+                    <div class="cur-sign"></div>
+                </div>
+            </div>
+            <dl class="time-gift">
+                <dd class="gift-dd cur-gift" style="background-color: #eec546; border:1px solid #eec546; color:#fff;"><em></em><i style="background:url(../../images/act/fit/icon-triangle-active1.png) no-repeat;background-size:50%;"></i>您的礼物</dd>
+                <dd class="gift-dd" id="g3"><em></em><i></i>30元奶票</dd>
+                <dd class="gift-dd" id="g6"><em></em><i></i>60元奶票</dd>
+                <dd class="gift-dd" id="g9"><em></em><i></i> 6 盒装包邮</dd>
+                <dd class="gift-dd" id="g18"><em></em><i></i> 12 盒装包邮</dd>
+                <dd class="gift-dd" id="g36"><em></em><i></i>400元包月套装</dd>
+            </dl>
+        </div>
+    </section>
+    <section class="lace-box"></section>
+
+    <section class="info invite-info">
+        <p class="buy-word"><span>游戏规则</span></p>
+        <p>当您的朋友点开您的专属链接并支付5块钱，即邀请成功。邀请8个好友就能免费获得价值96元的乐纯六盒装送货上门。邀请的好友越多，奖品价值越高。</p>
+        <p>目前乐纯已开通30个城市的配送：北京市、上海市、武汉市、成都市、重庆市、苏州市、深圳市、广州市、大连市、天津市、温州市、南京市、宁波市、无锡市、常州市、东莞市、西安市、合肥市、太原市、佛山市、扬州市、南通市、嘉兴市、厦门市、沈阳市。</p>
+        <a class="clearfix btn-buy" id="btn-prize" href="javascript:void(0);">立即兑奖，只有一次机会噢</a>
+        <p class="ls-p" style="margin-bottom:0">本次活动截止至<span id="endTime"></span>，邀请通道将于截止日期关闭</p>
+        <section class="clearfix pic">
+            <img src="/images/act/fit/fit15.jpg">
+        </section>
+    </section>
+    </section>
+    <section class="more-info">
+        <section class="clearfix more-btn-box">
+            <div class="more-pic top-more-pic">
+                <a class="btn-more" id="btn_more_1" href="javascript:void(0);">点击查看更多口碑</a>
+            </div>
+            <div class="more-pic" id="more_pic_1">
+                <img src="/images/act/fit/slide01.jpg" alt="">
+                <img src="/images/act/fit/slide03.jpg" alt="">
+                <img src="/images/act/fit/slide04.jpg" alt="">
+                <a class="btn-more" id="btn_more_2" href="javascript:void(0);">点击查看更多口碑</a>
+            </div>
+            <div class="more-pic" id="more_pic_2">
+                <img src="/images/act/fit/slide05.jpg" alt="">
+                <img src="/images/act/fit/slide06.jpg" alt="">
+                <img src="/images/act/fit/slide07.jpg" alt="">
+                <a class="btn-more" id="btn_more_3" href="javascript:void(0);">点击查看更多口碑</a>
+            </div>
+            <div class="more-pic" id="more_pic_3">
+                <img src="/images/act/fit/slide08.jpg" alt="">
+                <img src="/images/act/fit/slide09.jpg" alt="">
+                <img src="/images/act/fit/slide10.jpg" alt="">
+            </div>
+        </section>
+    </section>
+    <section class="info" id="info">
+        <h2 class="icon-box"><i class="icon-triangle"></i>关于活动，务必知道的一些事</h2>
+        <div class="info-cont">
+            <h4>问：支付5元钱获得的乐纯大礼包在哪里呢？ </h4>
+            <p>答：小伙伴您好，支付5元钱获得的乐纯大礼包不用输入兑换码，已经在您的账户中了，您直接下单购买选择优惠券，点击获得的奶票就可以了。记得使用噢。</p>
+            <h4>问：未来具体可以购买的乐纯产品是？</h4>
+            <p>答：十二种不同口味的乐纯滤乳清酸奶，推荐蜂蜜原味、椰子玫瑰、香草榛子等超人气口味噢。</p>
+            <h4>问：活动的时间期限？</h4>
+            <p>答：8月24日开始，为期7天。</p>
+            <h4>问：邀请好友订购的奖品的所有细节？</h4>
+            <p>答：是这样哒。您支付5元的时候默认获得60元新用户礼包（20元现金券+40元包月券）的机会。当您发送链接给好友后，好友首次点开并支付（即如果您的好友事先被邀请过就不作数哦），则视作邀请成功。邀请3个好友，将获得30元乐纯优惠券，邀请6个好友，将获得60元乐纯优惠券，邀请9个好友，将获得乐纯六盒装一套，邀请18个好友，将获得乐纯六盒装两套，最高可邀请36个好友获得400元乐纯包月套装。</p>
+            <h4>问：邀请好友作战的奖品什么时候送出？</h4>
+            <p>答：活动设置实时兑奖机制，您可通过邀请人数界面下方按钮实时兑换，兑换的奖品将在24小时内到达您的微信账户中噢。</p>
+            <h4>问：怎么购买乐纯酸奶呢？</h4>
+            <p>答：关注我们的微信账号后（乐纯的伙伴们）点击下面—立即购买—选择商品加入购物车—结算—确认商品信息—添加收货地址和姓名电话—点击支付就可以了。</p>
+            <h4>问：订购的5元钱可以退款吗？</h4>
+            <p>答：这5元钱一旦付出，不能退款。请谨慎投资。</p>
+            <h4>问：这28个城市具体包含了哪些？</h4>
+            <p>答：包括北京、常州、成都、重庆、大连、东莞、佛山、广州、合肥、嘉兴、南京、南通、宁波、上海、深圳、苏州、沈阳、太原、天津、温州、无锡、武汉、西安、厦门、扬州。
+                具体可咨询客服。</p>
+            <h4>问：什么是“零脂肪”滤乳清酸奶？</h4>
+            <p>答：“零脂肪”滤乳清酸奶（Strained Non-fat Yogurt），使用新鲜生牛乳，它的特点是将普通酸奶中的乳清（就是大家在酸奶里见到的“水”）滤去，通过脱脂离心机脱脂技术（类似洗衣机脱水技术啦）将牛奶中的脂肪脱去，得到天然醇厚的高蛋白“零脂肪”酸奶。</p>
+            <h4>问：希腊酸奶是酸奶品种吗？</h4>
+            <p>答：是这样的。希腊酸奶（Greek Yogurt）是一个高营养高成本的酸奶品种，它的特点是滤乳清的工艺，而不是菌种或者奶源的产地。
+                PS：它也不是希腊人发明的噢。它被欧美人俗称为希腊酸奶，是因为第一个将滤乳清酸奶市场化的乳业公司是来自希腊的FAGE公司。在网上搜索Greek Yogurt，会发现滤乳清希腊酸奶是在欧美健康达人群体中最受欢迎的日常食品之一哟。</p>
+            <h4>问：乐纯奶源在哪里呢？</h4>
+            <p>答：是这样的，在小批次生产时，乐纯使用北京北六环农科院下的开放牧场的鲜奶源噢；乐纯同时与华夏畜牧（美国谷物协会在中国的示范农场）签订了战略合作协议，在大批次生产时，使用业内公认最高标准的华夏畜牧奶源。</p>
+            <h4>问：乐纯的菌种是哪里的？</h4>
+            <p>答：是这样的，咱们目前使用的乳酸菌是进口自丹麦的科汉森公司。科汉森是目前全世界最大、最权威的专业益生菌研发公司噢。</p>
+            <h4>问：为什么希腊代餐酸奶这么稠？</h4>
+            <p>答：希腊蜂蜜酸奶是采用传统的滤乳清工艺，将酸奶中的水分滤出，得到3倍浓缩的酸奶，经浓缩的酸奶营养成分更高，质地更稠厚，风味更香醇，没有任何添加剂呢。</p>
+            <h4>问：乐纯酸奶的保质期是？</h4>
+            <p>答：咱们酸奶的保质期呢，理论值是在低温环境（2.5℃）中，可以保存15天左右。但是由于每个人的冰箱制冷效果不同，存储的食品的效果会不同的。</p>
+        </div>
+    </section>
+</article>
+<!--默认share弹窗-->
+<div class="alert-common alert-share-default on" id="alert_share_default">
+    <div class="bg"></div>
+    <!--<a class="off" href="javascript:void(0);">×</a>-->
+    <div class="cont">
+        <div class="act-fit c-box">
+            <a class="clearfix btn-share-bg js-btn-share" href="javascript:void(0);" style="margin-top:8px;">
+                <img src="/images/act/fit/fit09.jpg?v=5">
+            </a>
+            <!--
+            <a class="clearfix btn-share-bg" href="/" style="height:auto!important;">
+                <img src="/images/act/fit/fit09-btn.jpg?v=1">
+            </a>-->
+        </div>
+    </div>
+</div>
+<!--最终share弹窗-->
+<div class="alert-common alert-share" id="alert_share">
+    <div class="bg"></div>
+    <a class="off" href="javascript:void(0);">×</a>
+    <div class="cont">
+        <div class="img-box">
+            <p class="share-word">继续继续，加油加油！</p>
+            <img src="/images/act/fit/share.png" alt="">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/dev/active/active.js?v=15"></script>
+
+<script>
+    var issubscribe=1;
+    $(function(){
+        var bindcode=GetQueryString("bindcode");
+        var fitHeight = $("#act_fit").height() + 20 + "px";
+        $(".alert-share-default,.alert-share,body").css({
+            height: fitHeight
+        });
+        if(bindcode!="") {
+            var c = getCookie("lechunbindcode");
+            if (c == null) {
+                setCookie("lechunbindcode",bindcode);
+            }
+        }
+        invokeApi("mallactive/getactiveinvite",{"bindcode":bindcode},"",function(ret){
+            var data = eval(ret);
+            if (data.error_code != null) {
+                window.top.location.href = "/404.html?err="+data.error_code+"&"+data.error_msg;
+            } else {
+                if(data.count==0 &&data.baseCount==0){
+                    //var u=window.location.href;
+                    //window.location.href= u.replace("fit_invite.html","fit.html")
+                }
+                var count=data.count;
+                issubscribe=data.issubscribe;
+                var baseCount=9;//data.baseCount;
+                var endTime="2016.08.31";//data.endTime;
+                var b=baseCount-count;
+                if(b<0){
+                    b=0;
+                }
+                $("#friend-balance").text(b);
+                $("#friend-already").text(count);
+                $("#endTime").text(endTime);
+                setInvite(count);
+            }
+        });
+    });
+    //倒计时
+    var i = 30;
+    var intervalid;
+    intervalid = setInterval("fun()", 1000);
+    function fun() {
+        if (i == 0) {
+
+            if(issubscribe==1) {
+                window.location.href = "http://wechat.lechun.cc?source=1";
+            }else{
+                window.location.href = "http://wechat.lechun.cc/active/act_fit/fit_attention.html";
+            }
+            clearInterval(intervalid);
+        }
+        //$(".btn-box p i").html(i);
+        i--;
+    }
+
+    function setInvite(count){
+        if(count==0){
+            return ;
+        }
+        if(count<3){
+            $(".cur-sign,.cs").addClass("cs1");
+            return;
+        }
+        if(count==3){
+            $(".cur-sign,.cs").addClass("cs2");
+            $("#L3").addClass("cur-num").siblings().removeClass("cur-num");
+            $("#g3").addClass("cur-gift").siblings().removeClass("cur-gift");
+            return;
+        }
+        if(count>3 && count<6){
+            $(".cur-sign,.cs").addClass("cs3");
+            $("#L3").addClass("cur-num").siblings().removeClass("cur-num");
+            $("#g3").addClass("cur-gift").siblings().removeClass("cur-gift");
+            return;
+        }
+        if(count==6){
+            $(".cur-sign,.cs").addClass("cs4");
+            $("#L6").addClass("cur-num").siblings().removeClass("cur-num");
+            $("#g6").addClass("cur-gift").siblings().removeClass("cur-gift");
+            return;
+        }
+        if(count>6 && count<9){
+            $(".cur-sign,.cs").addClass("cs5");
+            $("#L6").addClass("cur-num").siblings().removeClass("cur-num");
+            $("#g6").addClass("cur-gift").siblings().removeClass("cur-gift");
+            return;
+        }
+        if(count==9){
+            $(".cur-sign,.cs").addClass("cs6");
+            $("#L9").addClass("cur-num").siblings().removeClass("cur-num");
+            $("#g9").addClass("cur-gift").siblings().removeClass("cur-gift");
+            return;
+        }
+        if(count>9 && count<18){
+            $(".cur-sign,.cs").addClass("cs7");
+            $("#L9").addClass("cur-num").siblings().removeClass("cur-num");
+            $("#g9").addClass("cur-gift").siblings().removeClass("cur-gift");
+            return;
+        }
+        if(count==18){
+            $(".cur-sign,.cs").addClass("cs8");
+            $("#L18").addClass("cur-num").siblings().removeClass("cur-num");
+            $("#g18").addClass("cur-gift").siblings().removeClass("cur-gift");
+            return;
+        }
+        if(count>18 && count<36){
+            $(".cur-sign,.cs").addClass("cs9");
+            $("#L18").addClass("cur-num").siblings().removeClass("cur-num");
+            $("#g18").addClass("cur-gift").siblings().removeClass("cur-gift");
+            return;
+        }
+        if(count>=36){
+            $(".cur-sign,.cs").addClass("cs10");
+            $("#L36").addClass("cur-num").siblings().removeClass("cur-num");
+            $("#g36").addClass("cur-gift").siblings().removeClass("cur-gift");
+            return;
+        }
+    }
+</script>
+<script src="/js/dev/active/activePv.js?v=7"></script>
+<script src="/js/dev/Analysis.js?v=7"></script>
+</body>
+</html>

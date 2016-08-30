@@ -329,6 +329,17 @@ a * {
   background: url('../images/icon-long-buy.png') no-repeat;
   background-size: 100%;
 }
+.icon-search {
+  background: url('/images/icon-search.png') no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-top: -0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+}
 /* common class */
 .wrap {
   position: relative;
@@ -378,11 +389,9 @@ a * {
   display: block;
 }
 .countdown-box {
+  background:rgba(255,255,255,0.9);
   display: none;
-  background-color: #fff;
   border-radius: 8px;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
   width: 8.2rem;
   position: absolute;
   left: 0;
@@ -436,7 +445,7 @@ a * {
   box-sizing: border-box;
   float: left;
   width: 33.3%;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
 }
 .entrace-box .entrace {
@@ -453,6 +462,108 @@ a * {
 }
 .entrace-box .entrace i {
   display: inline-block;
+}
+.address-before-box {
+  background-color: #1d1c20;
+  color: #fff;
+  font-size: 0.96rem;
+  height: 40px;
+  line-height: 40px;
+  margin: auto;
+  padding: 2px 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  z-index: 1000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /*span { display:inline-flex}
+    .address-info { .hlh(16px); .w(58%); .oh; }
+    */
+}
+.address-before-box .address-title {
+  color: #ffdd30;
+  margin-right: 6px;
+}
+.address-before-box .address-info:after {
+  background: url('/images/icon-arrow-b-w.png') no-repeat;
+  background-size: 60%;
+  display: inline-block;
+  content: "";
+  width: 1.3rem;
+  height: 1rem;
+  line-height: 1rem;
+  margin-left: 8px;
+  margin-top: 7px;
+  vertical-align: middle;
+}
+.address-before-box .address-time {
+  color: #ffdd30;
+  font-size: 0.6rem;
+  margin-right: 3px;
+}
+.address-search {
+  background-color: #f2f2f2;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100001;
+}
+.address-search .search-box {
+  background-color: #e5d09d;
+  color: #000;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+.address-search .search-box .input-search {
+  background-color: #fff;
+  border-radius: 6px;
+  color: #333;
+  height: 26px;
+  line-height: 26px;
+  width: 100%;
+  margin: 0 auto;
+  text-indent: 36px;
+}
+.address-search .title {
+  background-color: #d9d9d9;
+  color: #fff;
+  font-size: 0.83rem;
+  height: 26px;
+  line-height: 26px;
+  padding-left: 12px;
+}
+.address-search .search-list {
+  background-color: #f2f2f2;
+  color: #666;
+  padding: 0 10px;
+  max-height: 33rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.address-search .search-list li {
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.address-search .search-list h4 {
+  color: #000;
+  font-size: 0.93rem;
+  line-height: 20px;
+}
+.address-search .search-list p {
+  color: #999;
+  font-size: 0.6rem;
+  line-height: 17px;
+}
+.address-search.on {
+  display: block;
 }
 /* iphone common */
 /* iphone6-6p */

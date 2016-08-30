@@ -20,11 +20,11 @@ var browser={
   	if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
     browser.versions.iPhone ){	   
     	var myHTML = document.querySelector("html"),
-		myWidth = window.innerWidth;			
+		myWidth = window.innerWidth;
 		myHTML.style.fontSize = 3 * myWidth / 80 + 'px';
 		window.onresize = function() {
 			var myHTML = document.querySelector("html"),
-			myWidth = window.innerWidth;
+				myWidth = window.innerWidth;
 			myHTML.style.fontSize = 3 * myWidth / 80 + 'px';
 		}
   }

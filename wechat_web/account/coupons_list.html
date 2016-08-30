@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>优惠券列表</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+	<meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+	
+	<link rel="stylesheet" href="/css/global.css?v=0">
+    <link rel="stylesheet" href="/css/common.css?v=0">
+	<link rel="stylesheet" href="/css/style.css?v=20">
+
+	<!-- js插件 -->
+	<script src="/js/libary/jquery-1.9.1.min.js"></script>
+    <script src="/js/libary/jquery.md5.js"></script>
+	<!-- 自定义插件 -->
+	<script src="/js/libary/common.js?v=1"></script>
+	<script src="/js/libary/TouchSlide.1.1.js"></script>
+    <!--开发脚本-->
+    <script src="/js/dev/Global.js?v=23"></script>
+</head>
+<body>
+	<article class="wrap container">
+        <section class="pay-wechat coupon-exchange">
+            <div class="get-coupons">
+                <input class="coupon-code" type="text" placeholder="手动输入优惠码兑换优惠券" />
+                <input class="btn btn-confirm btn-exchange" type="button" value="兑换" />
+            </div>
+        </section>
+        <section class="coupon-main">
+            <ul class="coupon-list"></ul>
+            <div class="more-coupons">
+                没有更多的券了 <a href="#" id="morecash"><em>查看过期优惠券</em> <i class="enter-key"></i></a>
+            </div>
+        </section>
+	</article>
+
+    <!--优惠券详情-->
+    <section class="alert-bg" id="cashticket-bg"></section>
+    <div class="clearfix popup-coupon-detail" style="display: none;">
+        <h2>优惠券使用细则</h2>
+        <div class="clearfix popup-content">
+            <ul>
+
+            </ul>
+        </div>
+        <div class="btn-group clearfix">
+            <a class="btn btn-cancel" href="#">知道了</a>
+            <a class="btn btn-confirm" href="/">买买买</a>
+        </div>
+    </div>
+    <!-- 弹框 -->
+    <!--#include virtual = "/message.html" -->
+    <!-- 底部 -->
+    <!--#include virtual="/footer.html" -->
+</body>
+<script>
+    $(function(){
+        // 滚动条滚动到一定距离标题固定
+        $(window).on('touchstart touchmove touchend scroll',function(){
+            //获取窗口的滚动条的垂直位置
+            var scrollH = $(window).scrollTop();
+            var height = $('.order-tab li').height();
+            if( scrollH >= height){
+                $('.order-tab').addClass('fixed');
+            }else{
+                $('.order-tab').removeClass('fixed');
+            }
+            // event.preventDefault();
+        });
+
+
+    });
+</script>
+
+<script src="/js/dev/account/coupons.js?v=3"></script>
+<script src="/js/dev/list/footer.js?v=8"></script>
+<script src="/js/dev/Analysis.js?v=7"></script>
+</html>

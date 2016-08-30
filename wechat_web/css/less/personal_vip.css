@@ -1,0 +1,241 @@
+@import "../style.css";
+
+/*--personal info--*/
+
+/*会员页*/
+.vip-info{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    padding: 1.2rem 2% 0;
+}
+.vip-info li{
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-box-flex: 1;
+    box-flex: 1;
+    width: 33%;
+    margin: 0 2%;
+    background: #f5fbfb;
+    border-radius: 10px;
+    height: 9.0rem;
+}
+.vip-info li a{
+    background: #ffffff;
+    display: block;
+    border-radius: 10px;
+    color: #959595;
+    padding-bottom: 0.5rem;
+    height: 100%;
+}
+.vip-info li p{
+    font-size: 1rem;
+    margin: .6rem 0 .2rem;
+}
+.vip-info li span{
+    font-size: 0.8rem;
+}
+.vip-info li a:before{
+    content: '';
+    background-size: 3.5rem 3.5rem;
+    display: block;
+    width: 100%;
+    padding: 2.5rem 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.vip-info-discount a:before{
+    background: #f5fbfb url("../../images/icon-vip-1.png") center center no-repeat;
+}
+.vip-info-activity a:before{
+    background: #f5fbfb url("../../images/icon-vip-2.png") center center no-repeat;
+}
+.vip-info-new a:before{
+    background: #f5fbfb url("../../images/icon-vip-3.png") center center no-repeat;
+}
+.vip-renew-wrap{
+    margin-top: 20px;
+}
+.vip-renew-wrap-title{
+    width: 20rem;
+    line-height: 2.6rem;
+    background: #e1c990;
+    font-size: 1.1rem;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    padding-left: 1.1rem;
+}
+.vip-renew-wrap-title:after{
+    content: '';
+    width: 2.6rem;
+    height: 2.6rem;
+    background: #f2f2f2;
+    position: absolute;
+    top: 0;
+    right: -1.5rem;
+    -webkit-transform: rotate(45deg);
+}
+.vip-renew-item{
+    background: #ffffff;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-box-pack: center;
+    box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-box-align: center;
+    box-align: center;
+}
+.vip-renew-item h4{
+    width: 1.5rem;
+    overflow: hidden;
+    border-radius: 7px;
+    color: #e1c990;
+    word-wrap: break-word;
+    border: 1px solid #e1c990;
+    text-align: center;
+    padding: 0.6rem 0;
+}
+.renew-item-content{
+    -webkit-box-flex: 1;
+    margin-left: 1rem;
+    text-align: center;
+}
+.renew-item-1 .progress-wrap{
+    width: 80%;
+    margin: 1rem auto;
+    height: .8rem;
+    border-radius: .5rem;
+    border: 1px solid #e1c990;
+    position: relative;
+}
+.renew-item-1 .progress-wrap:before,.renew-item-1 .progress-wrap:after{
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 0;
+}
+.renew-item-1 .progress-wrap:before{
+    background: url("../../images/icon-recharge-1.png") center center no-repeat;
+    background-size: 1rem 1rem;
+    left: -10%;
+}
+.renew-item-1 .progress-wrap:after{
+    background: url("../../images/icon-recharge-2.png") center center no-repeat;
+    background-size: 1rem 1rem;
+    right: -10%;
+}
+.progress-on{
+    width: 0;
+    height: 100%;
+    display: block;
+    background: #e1c990;
+    border-top-left-radius: .4rem;
+    border-bottom-left-radius: .4rem;
+}
+.renew-item-1 a{
+    width: 8rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    display: block;
+    background: #f2f2f2;
+    border-radius: .9rem;
+    position: relative;
+    text-indent: 1rem;
+    margin: 0 auto;
+}
+.renew-item-1 a:before{
+    content: '';
+    background: url("../../images/icon-recharge-3.png") center center no-repeat;
+    background-size: 1rem 1rem;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    position: absolute;
+    top: .3rem;
+    left: .9rem;
+}
+.renew-item-2 .card-wrap{
+    display: -webkit-box;
+}
+.card-wrap a{
+    text-align: left;
+    -webkit-box-flex: 1;
+    width: 33%;
+    height: 2.2rem;
+    display: block;
+    border:.7rem solid #e1c990;
+    margin: 0 1%;
+    padding: .6rem 0 .6rem .2rem;
+    position: relative;
+    opacity: 0.5;
+}
+.card-wrap a em{
+    font-size: 1.11rem;
+}
+.card-wrap a b{
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+.card-wrap a.on{
+    opacity: 1;
+    background: url("../../images/icon-ok-red.png") 92% 2rem no-repeat;
+    background-size: 1rem 1rem;
+}
+.card-wrap a:before,.card-wrap a:after{
+    content: '';
+    width: .7rem;
+    height: 4.4rem;
+    display: block;
+    background: url("../../images/bd-vip-item2.png") left top;
+    background-size: .7rem auto;
+    position: absolute;
+    top: -.5rem;
+}
+.card-wrap a:before{
+    left: -.7rem;
+}
+.card-wrap a:after{
+    right: -.7rem;
+    -webkit-transform: rotate(180deg);
+}
+.store-submit{
+    width: 8rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    display: block;
+    background: #e1c990;
+    border-radius: .9rem;
+    position: relative;
+    margin: 1rem auto 0;
+    color: #ffffff;
+}
+.renew-item-3 a{
+    padding: 0 1.2rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    display: inline-block;
+    border-radius: .9rem;
+    margin-top: 1.5rem;
+}
+.renew-item-3 .mouth-on{
+    background: #e1c990;
+    color: #ffffff;
+}
+.renew-item-3 .mouth-off{
+    background: #f2f2f2;
+}
