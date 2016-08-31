@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>乐纯悠品</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telephone=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <!--<link rel="stylesheet" href="/css/global.css?v=0">-->
+    <!--<link rel="stylesheet" href="/css/common.css?v=0">-->
+    <link rel="stylesheet" href="/css/activity/personal-register.css">
+
+    <!--&lt;!&ndash; js插件 &ndash;&gt;-->
+    <script src="/js/libary/jquery-1.9.1.min.js"></script>
+    <!--<script src="/js/libary/jquery.md5.js"></script>-->
+    <!--&lt;!&ndash; 自定义插件 &ndash;&gt;-->
+    <!--<script src="/js/libary/common.js"></script>-->
+    <!--<script src="/js/libary/TouchSlide.1.1.js"></script>-->
+    <!--&lt;!&ndash;开发脚本&ndash;&gt;-->
+    <script src="/js/dev/Global.js?v=23"></script>
+
+</head>
+<body>
+    <header>
+        <img src="../images/act/vip/vip-head.png">
+    </header>
+    <div class="form-wrap">
+        <form>
+            <section class="name-item">
+                <span class="item-icon"></span>
+                <div>
+                    <label for="name" data-name="姓名">姓 名</label>
+                    <input type="text" value="" name="name" id="name" placeholder="请输入姓名" required="required" class="must-do">
+                </div>
+            </section>
+            <section class="sex-item">
+                <label data-name="性别">性 别</label>
+                <span class="select-radio select-on"><input type="radio" name="sex" id="woman" value="2" checked></span><label for="woman" class="woman"></label>
+                <span class="select-radio"><input type="radio" name="sex" id="man" value="1"></span><label for="man" class="man"></label>
+            </section>
+            <section class="date-item">
+                <label>生 日</label>
+                <div>
+                    <label class="date-info" for="date"></label>
+                    <input type="date" value="2000-01-01" id="date" name="birthday" required>
+                </div>
+            </section>
+            <section class="phone-item">
+                <span class="item-icon"></span>
+                <div>
+                    <label for="phone" data-name="手机">手 机</label>
+                    <input type="text" value="" name="mobile" id="phone" placeholder="请输入手机号" required class="must-do">
+                </div>
+            </section>
+            <section class="money-item">
+                <span class="item-icon"></span>
+                <label>家庭收入</label>
+                <div>
+                    <p><span class="select-radio select-on"><input type="radio" name="incometype" checked value="1"></span><label>5000以下</label></p>
+                    <p><span class="select-radio"><input type="radio" name="incometype" value="2"></span><label>5000-15000</label></p>
+                    <p><span class="select-radio"><input type="radio" name="incometype" value="3"></span><label>15000-30000</label></p>
+                    <p><span class="select-radio"><input type="radio" name="incometype" value="4"></span><label>30000以上</label></p>
+                </div>
+            </section>
+            <section class="address-item">
+                <span class="item-icon"></span>
+                <div>
+                    <label data-name="居住地">居住地</label>
+                    <input type="text" name="address" id="address" placeholder="请输入居住地" required class="must-do">
+                </div>
+            </section>
+            <section class="job-item">
+                <span class="item-icon"></span>
+                <div>
+                    <label data-name="所属行业">所属行业</label>
+                    <input type="text" name="industry" id="job" placeholder="请输入所属行业" required class="must-do">
+                </div>
+            </section>
+            <section class="child-item">
+                <span class="item-icon"></span>
+                <div>
+                    <div class="child-wrap">
+                        <label>是否有小孩</label>
+                        <span class="select-radio"><input type="radio" name="kidAge" class="child-on" value=""></span><label>是</label>
+                        <span class="select-radio select-on"><input type="radio" name="kidage" class="child-off" value="-1" checked></span><label>否</label>
+                    </div>
+                    <select class="age-select">
+                        <option value="0">0岁</option>
+                        <option value="1">1岁</option>
+                        <option value="2">2岁</option>
+                        <option value="3">3岁</option>
+                        <option value="4">4岁</option>
+                        <option value="5">5岁</option>
+                        <option value="6">6岁</option>
+                        <option value="7">7岁</option>
+                        <option value="8">8岁</option>
+                        <option value="9">9岁</option>
+                        <option value="10">10岁</option>
+                        <option value="11">11岁</option>
+                        <option value="12">12岁</option>
+                        <option value="12+">12岁以上</option>
+                    </select>
+                </div>
+            </section>
+            <section class="ques1-item">
+                <span class="item-icon"></span>
+                <div>
+                    <label data-name="第一次从哪里听说乐纯?">第一次从哪里听说乐纯?</label>
+                    <textarea cols="3" required name="knownScene" class="must-do"></textarea>
+                </div>
+            </section>
+            <section class="ques2-item">
+                <span class="item-icon"></span>
+                <div>
+                    <label data-name="您最喜欢什么场景下吃乐纯?">您最喜欢什么场景下吃乐纯?</label>
+                    <textarea cols="3" required name="eatScene" class="must-do"></textarea>
+                </div>
+            </section>
+            <section class="ques3-item">
+                <span class="item-icon"></span>
+                <div>
+                    <label data-name="您什么时候回想起要买乐纯?">您什么时候回想起要买乐纯?</label>
+                    <textarea cols="3" required name="buyScene" class="must-do"></textarea>
+                </div>
+            </section>
+            <section class="ques4-item">
+                <span class="item-icon"></span>
+                <div>
+                    <label data-name="用两个词描述乐纯给您的感觉">用两个词描述乐纯给您的感觉</label>
+                    <textarea cols="3" required name="evulate" class="must-do"></textarea>
+                </div>
+            </section>
+            <input type="button" value="提交信息,升级会员" class="submit-btn">
+            <p class="tips">*以上都为必填项</p>
+        </form>
+    </div>
+    <div class="vip-box">
+        <div class="vip-box-wrap">
+            <span></span>
+            <p>撒花~您已成功激活会员<br/>5元余额已到达您的账户啦</p>
+            <a href="javascript:void(0)">去我的会员中心看看</a>
+        </div>
+    </div>
+
+</body>
+<!--<script src="/js/libary/jquery-1.9.1.min.js"></script>-->
+<script src="/js/dev/account/personal-register.js"></script>
+<!--<script src="/js/dev/list/footer.js?v=8"></script>-->
+<!--<script src="/js/dev/Analysis.js?v=7"></script>-->
+</html>

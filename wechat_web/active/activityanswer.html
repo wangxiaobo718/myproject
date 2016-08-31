@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问题反馈奶票入账</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telephone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <script src="/js/libary/jquery-1.9.1.min.js"></script>
+    <!--开发js-->
+    <script src="/js/dev/Global.js?v=23"></script>
+    <link rel="stylesheet" href="../css/global.css?v=0">
+    <link rel="stylesheet" href="../css/common.css?v=0">
+    <link rel="stylesheet" href="../css/style.css?v=26">
+</head>
+<body>
+<article class="wrap container act-box act-old-user-box">
+        <section class="tips">
+            <p class="icon-box"><i class="icon-ok"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;感谢您作为常购用户给乐纯提的建议！</p>
+            <p>&nbsp;&nbsp;一张45元的包月奶票已经放入您的账户。</p>
+        </section>
+        <section class="clearfix info">
+            <img src="../images/act/milk-ticket-50.jpg" alt="">
+            <p class="buy-word"><span>包月或满360元即可直接抵扣噢</span></p>
+            <img src="../images/act/milk-word.jpg" alt="">
+        </section>
+        <section class="clearfix btn-box">
+            <a class="icon-box btn btn-buy" id="showOrder" href="/"><i class="icon-key"></i>点击立即使用奶票</a>
+            <p><i>5</i> 秒后跳转至乐纯商城</p>
+        </section>
+    </article>
+    <script>
+        window.onload = function(){
+            //setTimeout("window.location.href='http://wechat.lechun.cc'",5000);
+        };
+
+
+        var i = 10;
+        var intervalid;
+        intervalid = setInterval("setTime()", 1000);
+        function setTime() {
+            if (i == 0) {
+                window.location.href = "/";
+                clearInterval(intervalid);
+            }
+            $(".btn-box p i").html(i);
+            i--;
+        }
+
+    </script>
+<script type="text/javascript" src="/js/dev/Analysis.js?v=7"></script>
+</body>
+</html>

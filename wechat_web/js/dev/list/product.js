@@ -16,7 +16,7 @@ var curCount=0;
 // 加
 $('body').on('click','.pro-price .increase',function(){
     var obj=$(this);
-
+    var boxTips="";
     var isProduct=1;
     var limitCount=$(".limit-buy").attr("count");
     var pid=$("#productid").val();
@@ -25,14 +25,20 @@ $('body').on('click','.pro-price .increase',function(){
         pid=$(p).val();
         isProduct=0;
     }
-
+    var area=getCookie("lechuncookieaddress");
+    var areaId=0;
+    var address="";
+    if(area!=null){
+        areaId=area.split("|")[0];
+        address=area.split("|")[1];
+    }
     var numVal = $(".f-cart em").html();
 
     if(numVal>=100){
         showMessage("已超过购物车上限");
         return;
     }
-    invokeApi("mallshoppingcart/addcart",{"productid":pid,"quantity":1,"isproduct":isProduct},Math.random(),function(ret) {
+    invokeApi("mallshoppingcart/addcart",{"productid":pid,"quantity":1,"isproduct":isProduct,"areaId":areaId,"address":address},Math.random(),function(ret) {
         var data = eval(ret);
         if (data.error_code != null) {
             window.top.location.href = "404.html";
@@ -43,7 +49,20 @@ $('body').on('click','.pro-price .increase',function(){
                 $(obj).addClass("unincrease").removeClass("increase");
             }
             if(data.status=="1") {
-
+                var kcStr=data.kcStr;
+                var delay=data.delay;
+                if(delay>0){
+                    storeTips($(this));
+                    boxTips = '<em class="done">'+kcStr.split("|")[1]+'</em>';
+                    //$(obj).siblings('.store-tips').html(kcStr.split("|")[0]);
+                    $(".list-tips em").text(delay);
+                    $('.list-tips').show();//弹出购物车右上角tips
+                    $(obj).siblings('.store-tips').show();
+                }else{
+                    boxTips = '';
+                    $('.list-tips').hide;//弹出购物车右上角tips
+                    $(obj).siblings('.store-tips').hide();
+                }
                 $(".f-cart em").html(data.count);
 
                 /****************************************飞的效果**********************************/

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #FFFFFF">
+<head>
+    <meta charset="UTF-8">
+    <title>抢奶票</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telephone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <script src="/js/libary/jquery-1.9.1.min.js"></script>
+    <script src="/js/libary/jquery.md5.js"></script>
+    <!--开发js-->
+    <script src="/js/dev/Global.js?v=23"></script>
+    <link rel="stylesheet" href="../css/global.css?v=0">
+    <link rel="stylesheet" href="../css/common.css?v=0">
+    <link rel="stylesheet" href="../css/style.css?v=26">
+</head>
+<body>
+<article class="wrap container act-box">
+        <section class="tips">
+            <p class="icon-box"><i class="icon-ok"></i>　　恭喜您成功抢到奶票！</p>
+            <p>以下4张超值奶票已经放入您的账户</p>
+        </section>
+        <section class="clearfix info">
+            <p>1. 首先，第一次体验，您有了这张20元零限制奶票。</p>
+            <img src="../images/act/milk-ticket-20-30.jpg" alt="">
+            <p>2. 如果吃了喜欢，还给您准备了第二张零限制奶票。</p>
+            <img src="../images/act/milk-ticket-15-60.jpg" alt="">
+            <p>3. 如果吃了两次都喜欢，您可以用这张45元奶票包月。</p>
+            <img src="../images/act/milk-ticket-45.jpg" alt="">
+            <p>4. 当吃乐纯成为习惯，您还可用这张120元奶票长订。</p>
+            <img src="../images/act/milk-ticket-120.jpg" alt="">
+        </section>
+        <section class="clearfix btn-box">
+            <!--<p class="buy-word"><span>是时候，体验三盒鲜奶提炼出一盒的乐纯了</span></p>-->
+            <a class="icon-box btn btn-buy" id="showOrder" href="/"><i class="icon-key"></i>立即使用奶票</a>
+            <p><i>5</i> 秒后跳转至乐纯商城</p>
+        </section>
+        <!--<section class="clearfix pic-info">
+            <img src="images/act/img-act-01.jpg" alt="">
+            <p>真正零添加：它和瓜果蔬菜一样干净新鲜，</p>
+            <p>配料表：鲜牛奶，五种乳酸菌，没了。</p>
+            <img src="images/act/img-act-02.jpg" alt="">
+            <p>欧美最潮：三三三倍鲜奶和活性乳酸菌精萃1盒</p>
+            <p>拥有超强饱腹感的300%优质蛋白质</p>
+            <img src="images/act/img-act-03.jpg" alt="">
+            <p>它是40万健康达人生活的一部分，</p>
+            <p>下午或晚上饿了时的完美食物</p>
+        </section>-->
+    </article>
+    <script>
+        var p=GetQueryString("p");
+        window.onload = function(){
+            if(p=="1"){
+                $("#showOrder").text("立即使用奶票");
+            }
+            if(p=="2"){
+                $("#showOrder").text("点击进入商城");
+            }
+            if(p=="3"||p=="4"||p=="5"||p=="6"){
+                $("#showOrder").text("点击使用奶票");
+            }
+
+
+            //setTimeout("window.location.href='http://wechat.lechun.cc'",5000);
+        };
+        $(document).ready(function () {
+            invokeApi("mallcashticket/fastsendcashticket",{"p":p},Math.random(),function(ret) {
+                var data = eval(ret);
+                if (data.error_code != null) {
+                    window.top.location.href = "/404.html";
+                } else {
+
+                }
+            });
+        });
+        var i = 10;
+        var intervalid;
+        intervalid = setInterval("fun()", 1000);
+        function fun() {
+            if (i == 0) {
+                window.location.href = "/";
+                clearInterval(intervalid);
+            }
+            $(".btn-box p i").html(i);
+            i--;
+        }
+    </script>
+<script type="text/javascript" src="/js/dev/Analysis.js?v=7"></script>
+</body>
+</html>

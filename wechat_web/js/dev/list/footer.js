@@ -10,6 +10,11 @@ $(document).ready(function(){
             window.top.location.href = "404.html?"+data.error_code+data.error_msg;
         } else {
             $(".f-cart em").html(data.count);
+            if(data.count%gBeginSaleCount!=0){
+                $(".index-page .f-cart span").show().html("请购买6的倍数~");
+            }else{
+                $(".index-page .f-cart span").hide();
+            }
             var productCount=data.productcount;
             if(productCount!=null && productCount!=undefined) {
                 for (var i = 0; i < data.productcount.length; i++) {
@@ -34,9 +39,37 @@ $(document).ready(function(){
 $(".f-my").on("click",function(){
     window.location.href="/account/personal_info.html";
 });
+//会员中心
+$(".f-vip").on("click",function(){
+    window.location.href="/account/personal_vip.html";
+});
 $(".f-home").on("click",function(){
     window.location.href="/";
 });
+
+
+//会员入口的显示与否
+$(function(){
+    var vipUrl = "http://apitest.lechun.cc:9080/lechunuser/user/isvip";
+    $.ajax({
+        url: vipUrl,
+        type: 'get',
+        dataType: 'jsonp',
+        jsonp: 'callbackjsonp',
+        success: function(res){
+            if(res.code == '10000'){
+                if(res.data.isVipFlag == '1'){
+                    $('.f-vip').show();
+                }else{
+                    $('.f-vip').hide();
+                }
+            }else{
+                alert(res.msg);
+            }
+        }
+    })
+});
+
 //点击购物车，弹层
 $(".f-cart").on('click',function(){
     $(".alert-bg").show();
@@ -44,7 +77,16 @@ $(".f-cart").on('click',function(){
     $("html,body").addClass("hidden");
     $(".topay .unclick").hide();
     $(".topay .unclick em").html(gBeginSaleCount);
-    invokeApi("mallshoppingcart/getcartlist",{},Math.random(),function(ret){
+    var area=getCookie("lechuncookieaddress");
+    var areaId=0;
+    var address="";
+    var boxTips='';
+    if(area!=null){
+        areaId=area.split("|")[0];
+        address=area.split("|")[1];
+    }
+
+    invokeApi("mallshoppingcart/getcartlist",{"areaId":areaId,"address":address},Math.random(),function(ret){
         var data = eval(ret);
         if (data.error_code != null) {
             window.top.location.href = "404.html?"+data.error_code ;
@@ -60,11 +102,28 @@ $(".f-cart").on('click',function(){
                 if(shop.LIMIT_BUY_COUNT!=0 && shop.QUANTITY>=shop.LIMIT_BUY_COUNT){
                     unin="unincrease";
                 }
-                $(".set-list").append('<li><p>'+shop.PRO_NAME+'</p><section class="opera"><i class="increase dyclick '+unin+'"></i>'+
+                if(shop.delay>0 && proDelayList.indexOf(shop.PRO_NAMESx+'口味')<=-1){
+                    proDelayList.push(shop.PRO_NAMESx+'口味');
+                }
+                if(shop.delay>0){
+                    boxTips="block";
+                }else{
+                    boxTips='none';
+                }
+
+                $(".set-list").append('<li><p>'+shop.PRO_NAME+'<em class="done" style="display: '+boxTips+'">今日<br/>抢光</em></p><section class="opera"><i class="increase dyclick '+unin+'"></i>'+
                     '<input type="hidden" name="productid" id="p'+shop.PRODUCT_ID+'" value="'+shop.PRODUCT_ID+'" amount="'+shop.PRO_PRICE+'" cart="1" >'+
                     '<input class="num" type="text" readonly="readonly" limitcount="'+shop.LIMIT_BUY_COUNT+'" value="'+shop.QUANTITY+'">'+
                     '<i class="decrease dyclick"></i></section></li>');
             }
+            //购物车库存提醒
+            if(data.delay>0){
+                listHtml = '你喜欢的'+proDelayList.join('、')+'酸奶抢光啦,会延迟发货哦,本次订单预计<em>最早送达时间为'+ret.maxDeliverDate+'</em>';
+                $(".list-tips").show().html(listHtml);
+            }else{
+                $('.list-tips').hide();//弹出购物车右上角tips
+            }
+
             $(".set-cart em").html(count);
             $(".set-bottom em").html(amount.toFixed(2));
             if(count<gBeginSaleCount ||count%gBeginSaleCount!=0){
@@ -72,8 +131,10 @@ $(".f-cart").on('click',function(){
                 $(".topay .unclick").show();
                 if(count<gBeginSaleCount) {
                     $(".topay .unclick").html("还差<em>"+(gBeginSaleCount - count)+"</em>盒起送，快去凑单哦~");
+                    // $(".f-cart span").html("还差<i>"+(gBeginSaleCount - count)+"</i>盒起送，快去凑单哦~");
                 }else{
                     $(".topay .unclick").html("请购买6的倍数<em></em>~");
+                    // $('.f-cart span').html("请购买6的倍数,还差<i>"+(Math.ceil(data.count/gBeginSaleCount)*gBeginSaleCount-data.count)+"盒</i>~");
                 }
             }else{
                 $(".topay a").first().show();
@@ -89,14 +150,28 @@ $(".f-cart").on('click',function(){
 });
 // 数量加减效果
 var numVal;
+var proDelayList =[];//库存不足产品列表
+var listHtml='';
 // 减
-$('body').on('click','.opera .decrease',function(){
+$('body').on('touchend','.opera .decrease',function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    var obj=$(this);
     var p=$(this).siblings("input[name='productid']");
     var pid=$(p).val();
+    var boxTips="";
+    var area=getCookie("lechuncookieaddress");
+    var areaId=0;
+    var address="";
+    if(area!=null){
+        areaId=area.split("|")[0];
+        address=area.split("|")[1];
+    }
+
     $(this).siblings().removeClass("unincrease");
     $("#p"+pid).siblings().removeClass("unincrease");
     $("#productid").parent().siblings(".pro-price").find(".limit-buy i").removeClass("unincrease").addClass("increase");
-    invokeApi("mallshoppingcart/addcart",{"productid":pid,"quantity":-1},Math.random(),function(ret) {
+    invokeApi("mallshoppingcart/addcart",{"productid":pid,"quantity":-1,"areaId":areaId,"address":address},Math.random(),function(ret) {
         var data = eval(ret);
         if (data.error_code != null) {
             window.top.location.href = "404.html";
@@ -111,6 +186,7 @@ $('body').on('click','.opera .decrease',function(){
                 if(data.count<gBeginSaleCount||data.count%gBeginSaleCount!=0){
                     $(".topay a").first().hide();
                     $(".topay .unclick").show();
+                    $(".index-page .f-cart span").show().html("请购买6的倍数~");
                     if(data.count<gBeginSaleCount) {
                         $(".topay .unclick").html("还差<em>"+(gBeginSaleCount - data.count)+"</em>盒起送，快去凑单哦~");
                     }else{
@@ -121,9 +197,34 @@ $('body').on('click','.opera .decrease',function(){
                     $(".topay a").first().show();
                     $(".topay .unclick").hide();
                     $(".topay .unclick em").html("0");
+                    $(".index-page .f-cart span").hide();
                 }
                 if(data.count<gBeginSaleCount) {
                     getRecommend()
+                }
+                var prosubName=data.productNameSx+'口味';
+                //库存提醒首页展示
+                if(data.delay>0){
+                    storeTips(obj);
+                    $(obj).siblings('.store-tips').show();
+                    obj.parents().parents('li').find('.done').show();
+
+                }else{
+                    for(var i=0;i<proDelayList.length;i++){
+                        if(proDelayList[i] == prosubName){
+                            proDelayList.splice(i,1);
+                        }
+                    }
+                    $(obj).siblings('.store-tips').hide();
+                    $("#p"+pid).siblings('.store-tips').hide();
+                    obj.parents().parents('li').find('.done').hide();
+                }
+                //库存购物车展示
+                if(data.delayAll>0){
+                    listHtml = '你喜欢的'+proDelayList.join('、')+'酸奶抢光啦,会延迟发货哦,本次订单预计<em>最早送达时间为'+data.delayDate+'</em>';
+                    $(".list-tips").show().html(listHtml);
+                }else{
+                    $(".list-tips").hide();
                 }
             }
         }
@@ -135,7 +236,12 @@ $('body').on('click','.opera .decrease',function(){
         $(".opera #p"+pid).siblings('.num').attr("hidden", "hidden");
         $(".opera #p"+pid).siblings('.decrease').attr("hidden", "hidden");
 
+        //点击-，numVal<=1;隐藏库存提醒
+        $(this).siblings('.store-tips').removeClass('store-tips-acted');
+
         numVal = 0;
+        $(".f-cart em").html(numVal);
+        $('.index-page .f-cart span').hide();
         $(this).siblings('.num').val(numVal);
         if(typeof($(p).attr("cart"))!="undefined"){
             $(this).parent().parent("li").remove();
@@ -151,7 +257,11 @@ $('body').on('click','.opera .decrease',function(){
     setCartHeight();
 })
 // 加
-$('body').on('click','section.opera .increase',function(){
+$('body').on('touchend','section.opera .increase',function(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+
     var pool=$(this).parent().parent().parent().hasClass("set-pool");
     var obj=$(this);
     if(!pool) {
@@ -164,6 +274,7 @@ $('body').on('click','section.opera .increase',function(){
     var limitCount=0;
     var p=$(this).siblings("input[name='productid']");
     var pid=$(p).val();
+    var boxTips="";
     if(pid==undefined){
         p=$(this).siblings("input[name='groupid']");
         pid=$(p).val();
@@ -185,7 +296,16 @@ $('body').on('click','section.opera .increase',function(){
         if(numVal>=limitCount)
             return ;
     }
-    invokeApi("mallshoppingcart/addcart",{"productid":pid,"quantity":1,"isproduct":isProduct},Math.random(),function(ret) {
+
+
+    var area=getCookie("lechuncookieaddress");
+    var areaId=0;
+    var address="";
+    if(area!=null){
+        areaId=area.split("|")[0];
+        address=area.split("|")[1];
+    }
+    invokeApi("mallshoppingcart/addcart",{"productid":pid,"quantity":1,"isproduct":isProduct,"areaId":areaId,"address":address},Math.random(),function(ret) {
         var data = eval(ret);
         if (data.error_code != null) {
             window.top.location.href = "404.html";
@@ -201,6 +321,7 @@ $('body').on('click','section.opera .increase',function(){
                 if(data.count<gBeginSaleCount||data.count%gBeginSaleCount!=0){
                     $(".topay a").first().hide();
                     $(".topay .unclick").show();
+                    $(".index-page .f-cart span").show().html("请购买6的倍数~");
                     if(data.count<gBeginSaleCount) {
                         $(".topay .unclick").html("还差<em>"+(gBeginSaleCount - data.count)+"</em>盒起送，快去凑单哦~");
                     }else{
@@ -211,9 +332,34 @@ $('body').on('click','section.opera .increase',function(){
                     $(".topay a").first().show();
                     $(".topay .unclick").hide();
                     $(".topay .unclick em").html("0");
+                    $('.index-page .f-cart span').hide();
                 }
                 if(data.count<gBeginSaleCount) {
                     getRecommend()
+                }
+
+                var prosubName=data.productNameSx+'口味';
+                //库存提醒首页展示
+                if(data.delay>0){
+                    storeTips(obj);
+                    obj.siblings('.store-tips').show();
+                    if(proDelayList.indexOf(prosubName)<=-1){
+                        proDelayList.push(prosubName);
+                    }
+                    obj.parents().parents('li').find('.done').show();
+
+                }else{
+                    obj.siblings('.store-tips').hide();
+                    $("#p"+pid).siblings('.store-tips').hide();
+                    obj.parents().parents('li').find('.done').hide();
+
+                }
+                //库存购物车展示
+                if(data.delayAll>0){
+                    listHtml = '你喜欢的'+proDelayList.join('、')+'酸奶抢光啦,会延迟发货哦,本次订单预计<em>最早送达时间为'+data.delayDate+'</em>';
+                    $(".list-tips").show().html(listHtml);
+                }else{
+                    $(".list-tips").hide();
                 }
 
                 //如果是从凑一凑添加的，需要在界面上添加相应的数据
@@ -221,7 +367,7 @@ $('body').on('click','section.opera .increase',function(){
                     if($(".set-list").find("#p"+pid).val()==undefined){
                         var productName=$(obj).parent().siblings("p").html();
                         var price=$(p).attr("amount");
-                        $(".set-list").append('<li><p>'+productName+'</p><section class="opera"><i class="decrease dyclick"></i>'+
+                        $(".set-list").append('<li><p>'+productName+'</p>'+boxTips+'<section class="opera"><i class="decrease dyclick"></i>'+
                             '<input type="hidden" name="productid" id="p'+pid+'" value="'+pid+'" amount="'+price+'" cart="1" >'+
                             '<input class="num" readonly="readonly" type="text" value="1">'+
                             '<i class="increase dyclick"></i></section></li>');
@@ -350,7 +496,7 @@ function setCartHeight() {
 // 设置弹出层的高度
     var listLength = $('.list-box .set-list li').length,
         listHeight = Math.ceil($('.list-box .set-list li').outerHeight());
-    
+
     if (listLength >= 6) {
         $('.list-box').css({'height': 6 * listHeight + 'px'});
     }else{
@@ -372,3 +518,18 @@ $(function() {
         });
     });
 });
+/*库存提醒动画*/
+function storeTips(item){
+    var itemObj = item.siblings('.store-tips');
+    if(!item.parent('.opera').find('.store-tips-acted').length){
+        itemObj.addClass('store-tips-act');
+        itemObj.bind("webkitAnimationEnd", function() {
+            itemObj.addClass('store-tips-acted').removeClass("store-tips-act");
+        });
+    }else{
+        itemObj.addClass('store-tips-acting');
+        itemObj.bind("webkitAnimationEnd", function() {
+            itemObj.removeClass("store-tips-acting");
+        });
+    }
+}

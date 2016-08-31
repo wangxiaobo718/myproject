@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乐纯活动</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telephone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <link rel="stylesheet" href="/css/act.min.css?v=14">
+</head>
+<body>
+
+<script type="text/javascript" src="/js/libary/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/libary/jquery.md5.js"></script>
+<script type="text/javascript" src="/js/dev/Global.js?v=23"></script>
+<script type="text/javascript">
+    function share(){
+        var type=1;
+        bindCode=GetQueryString("bindcode");
+        var source=GetQueryString("source");
+        invokeApi("mallactive/sharebefore",{"bindcode":bindCode,"source":source,"types":type},"",function(ret){
+            var data = eval(ret);
+            if (data.error_code != null) {
+                //window.top.location.href = "/404.html?err="+data.error_code+"&"+data.error_msg;
+            } else {
+                if(data.status==1){
+                    if(data.version!=undefined) {
+                        window.location.href = "/active/act_fit/" + data.version + "/share_success1.html?bindcode=" + bindCode + "&source=" + source + "&" +
+                                "title=" + data.TITLE + "&url=" + escape(data.URL) + "&digest=" + data.DIGEST + "&imageUrl=" + data.IMAGE_URL;
+                    }else{
+                        window.location.href = "/active/act_fit/share_success1.html?bindcode=" + bindCode + "&source=" + source + "&" +
+                                "title=" + data.TITLE + "&url=" + escape(data.URL) + "&digest=" + data.DIGEST + "&imageUrl=" + data.IMAGE_URL;
+                    }
+                }else {
+                    if(data.version!=undefined) {
+                        window.location.href = "/active/act_fit/" + data.version + "/share_fail.html?bindcode=" + bindCode + "&source=" + source;
+                    }else{
+                        window.location.href = "/active/act_fit/share_fail.html?bindcode=" + bindCode + "&source=" + source;
+                    }
+                }
+            }
+        });
+    }
+    $(function () {
+        share();
+    });
+</script>
+<script type="text/javascript" src="/js/dev/Analysis.js?v=7"></script>
+</body>
+</html>

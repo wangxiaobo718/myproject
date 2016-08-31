@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>余额</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+	<meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+	<link rel="stylesheet" href="/css/global.css?v=0">
+    <link rel="stylesheet" href="/css/common.css?v=0">
+	<link rel="stylesheet" href="/css/style.css?v=20">
+
+	<!-- js插件 -->
+	<script src="/js/libary/jquery-1.9.1.min.js"></script>
+	<script src="/js/libary/jquery.md5.js"></script>
+	<!-- 自定义插件 -->
+	<script src="/js/libary/common.js"></script>
+	<!--开发脚本-->
+	<script src="/js/dev/Global.js?v=23"></script>
+
+</head>
+<body>
+	<article class="wrap container balance-box">
+        <section class="person-info">
+            <p class="title">乐享余额</p>
+            <a class="balance" href="/account/balance.html" id="user_wealth"></a>
+            <div class="icon-circle"></div>
+        </section>
+        <section class="clearfix tab-list">
+            <ul class="clearfix tab-nav">
+                <li class="tab on"><a href="javascript:void(0);"><i class="icon-balance-gift"></i><em>1</em>充值有礼</a></li>
+                <!--<li class="tab"><a href="javascript:void(0);"><i class="icon-balance-card"></i><em>2</em>卡券兑换</a></li>-->
+                <li class="tab"><a href="javascript:void(0);"><i class="icon-balance-record"></i><em>3</em>账单纪录</a></li>
+            </ul>
+            <ul class="clearfix tab-container">
+                <li class="tab-cont on" id="par-value-wrap">
+                    <div id="par-value-box">
+                        <dl class="clearfix par-value-list">
+                            <!--<dd class="par-value" data-status="false">
+                                    <div class="par">储值<strong>999</strong></div>
+                                    <div class="get-value">送￥100<i></i></div>
+                                </dd>
+                                <dd class="par-value on" data-status="true">
+                                    <div class="par">储值<strong>999</strong></div>
+                                    <div class="get-value">送￥100<i></i></div>
+                                </dd>
+                            -->
+                        </dl>
+                    </div>
+                    <div class="error">* 请选择一张储值面值</div>
+                    <div class="clearfix btn-group">
+                        <a class="btn btn-confirm js-btn-confirm" href="javascript:void(0);">立即储值</a>
+                    </div>
+                </li>
+                <li class="tab-cont" id="record-wrap">
+                    <dl class="clearfix record-list">
+                        <!--
+                        <dd class="record-null">
+                            <img src="">
+                            <p>阿偶，暂无记录~</p>
+                        </dd>
+                        <dd class="clearfix record">
+                            <div class="name-box">
+                                <div class="name">消费</div>
+                                <div class="balance-number">余额:<span>0</span></div>
+                            </div>
+                            <div class="money-box">
+                                <div class="date">2016-12-5</div>
+                                <div class="money">-31.00</div>
+                            </div>
+                        </dd>
+                        <dd class="clearfix record">
+                            <div class="name-box">
+                                <div class="name">退款至余额</div>
+                                <div class="balance-number">余额:<span>0</span></div>
+                            </div>
+                            <div class="money-box">
+                                <div class="date">2016-12-5</div>
+                                <div class="money subtract">-31.00</div>
+                            </div>
+                        </dd>-->
+                    </dl>
+                </li>
+            </ul>
+        </section>
+	</article>
+	<!-- 底部 -->
+	<!--#include virtual="/footer.html" -->
+    <!-- 弹框 -->
+    <!--#include virtual = "/message.html" -->
+
+</body>
+
+<script src="/js/dev/account/balance.js?v=9"></script>
+<script src="/js/dev/list/footer.js?v=8"></script>
+<script src="/js/dev/Analysis.js?v=0"></script>
+</html>

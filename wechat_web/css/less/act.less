@@ -509,10 +509,11 @@ a{
     }
     /* 横版时间轴 */
     .time-axis-horizontal {
-        background:#fafafa url('/images/act/fit/fit-lace-gray.png') repeat-x; .pt(.2rem); .pb(.2rem);
+        background:#fafafa url('/images/act/fit/fit-lace-gray.png') repeat-x; .pt(.16rem); .pb(.16rem);
         .friend-num { .c(@c-main); vertical-align: baseline; }
-        h2 { .fs(.18rem); .lh(20px);  .mb(10px); .tc; }
-        h5,p { .c(#b3b3b3); .fs(.14rem); .lh(22px); .tc; }
+        h2 { .fs(.16rem); .lh(20px);  .mb(4px); .tc; }
+        h5 { .c(#b3b3b3); .fs(.14rem); .lh(22px); .tc; }
+        p { .c(#b3b3b3); .fs(.13rem); .lh(20px); .tc; }
         .time-axis { .w(90%); .m(5px auto); }
         .time-num,.time-gift,.time-scroll { .clearfix; }
         .time-num { .w(100%); .p(0 2px);
@@ -535,7 +536,7 @@ a{
         .time-gift { .w(100%); .p(0 5px);
             .gift-dd {
                 .bor(1px solid #b0b0b0); .bgc(@c-f); .br(5px); .c(#b0b0b0); .dbox; .bpc; .fs(.13rem); .fl;
-                .w(.22rem); .h(2rem); .m(.05rem .088rem); .p(3px); .tc; .pos-r; .ls(1px);
+                .w(.22rem); .h(1.1rem); .m(.05rem .088rem); .p(3px); .tc; .pos-r; .ls(1px);
                 i {
                     .bimg('../images/act/fit/icon-triangle1.png'); background-size: 50%;
                     .w(.12rem); .h(.24rem); .pos-a; .t(-12px); .l(50%); .ml(-.11rem); .oh; .z(1);
@@ -604,11 +605,15 @@ a{
     }
     .mt10 { .mt(.12rem); }
     .ls-p { .tc; }
-    .welcome-user { .bgc(#474747); .c(@c-f); .fs(.14rem); .hlh(.46rem); .w(100%); .tc; .pos-f; .z(10);
-        .box { .w(56%); .h(.46rem); .m(0 auto); .oh; }
-        .user-info { .fl; .h(.46rem); .tc; .oh;
-            span { .lh(.46rem);}
-            .u-name { .dib; .maxw(.98rem); .w(auto); .h(.46rem); .break; .oh;}
+    .welcome-user { background:rgba(0,0,0,.7);.c(@c-f); .fs(.14rem); .hlh(.46rem); .w(100%); .tc; .pos-f; .z(10);
+        .box { .w(56%); .w(92%); .h(.46rem); .m(0 auto); .oh; }
+        .user-info { .fl; .h(.46rem); .oh; .tl;
+            span { .c(@c-f); .dib; .fs(.12rem); .lh(.46rem);
+                /*.lh(.18rem); .c(#212121);*/
+            }
+            .u-name { .c(@c-f); .dib; .maxw(.98rem); .w(auto); .break; .oh;
+                /* .lh(.18rem); .c(#535e87); .mt(.05rem);*/
+            }
         }
         .user-box { .br(50%); .fl; .mr(10px); .w(.3rem); .h(.3rem);
             img { .br(50%); .w(100%); .h(100%);}
@@ -762,7 +767,8 @@ a{
         .bor(1px solid #efc645); .bgc(@c-f); .br(50px); .c(#efc645); .db;
         .fs(.2rem); .hlh(.4rem); .w(90%); .m(30px auto 10px auto); .tc;
     }
-    .btn-share-bg { .db; .h(1.65rem); .w(100%);
+    .btn-share-bg { //.h(1.65rem);
+        .db; .h(1.4rem); .w(100%);
         img { .w(100%);}
     }
     .off { .c(@c-f); .db; .fs(.2rem); .pos-a; .t(50px); .l(15px); .z(1000); }
@@ -1292,7 +1298,9 @@ and (-webkit-min-device-pixel-ratio : 2) {
         }
     }
     .alert-share-default {
-        .btn-share-bg { .h(1.5rem); }
+        .btn-share-bg { //.h(1.5rem);
+            .h(1.25rem);
+        }
     }
     .icon-key-white { .l(2%);}
     //12ask
@@ -1333,7 +1341,9 @@ and (-webkit-min-device-pixel-ratio : 2) {
     }
     .alert-share-default {
         .cont { .h(162px);  }
-        .btn-share-bg { .h(1.2rem); }
+        .btn-share-bg { //.h(1.2rem);
+            .h(1.05rem);
+        }
     }
     /*
     .alert-buy {
@@ -1361,7 +1371,7 @@ and (-webkit-min-device-pixel-ratio : 2) {
 //android
 @media screen and (device-width:360px) {
     .alert-share-default {
-        .btn-share-bg { height:1.4rem!important; }
+        .btn-share-bg { height:1.2rem!important; }
     }
     //12ask
     .act-12ask {

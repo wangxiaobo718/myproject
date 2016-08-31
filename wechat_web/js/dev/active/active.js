@@ -46,6 +46,14 @@ $(function(){
         invokeApi("mallactive/insertactivepv",{"page":page,"bindcode":bindcode,"source":source,"level":level,"types":types,"referrer":referrer},"",function(ret){
 
         });
+        //if( $("#AllCityId").val()!="-1"){
+        //    $("#btn-buy").click();
+        //    //$("#alert_buy").addClass("on");
+        //    //$("html,body").addClass("hidden");
+        //}else{
+        //    $("#alert_buy").addClass("on");
+        //    $("html,body").addClass("hidden");
+        //}
     });
     $btnSee.on('click',function(){
         $("#alert_code").addClass("on");
@@ -179,7 +187,7 @@ $(function(){
         var cityId=$("#CityId").val();
         var areaId=$("#AreaId").val();
         var name=$("#newname").val();
-        var address=$("#newaddress").val();
+        var address=$("#newaddress").html();
         var phone=$("#newphone").val();
         var apiUrl="mallconsignee/updateconsigneeaddress";
         if(addressid==""||addressid=="0") {
@@ -245,7 +253,7 @@ $(function(){
                     $("#ProvinceIdText").val("");
                     $("#CityIdText").val("");
                     $("#AreaIdText").val("");
-                    $("#newaddress").val("");
+                    $("#newaddress").html("");
                     $("#newaddressid").val("");
                     $("#newname").val("");
                     $("#newphone").val("");
@@ -277,7 +285,7 @@ $(function(){
                 fillCity($("#CityIdValue").val());
                 fillArea($("#AreaIdValue").val());
 
-                $("#newaddress").val(address.ADDRESS);
+                $("#newaddress").html(address.ADDRESS);
                 $("#newname").val(address.CONSIGNEE_NAME);
                 $("#newphone").val(address.CONSIGNEE_PHONE);
                 $("#newaddressid").val(address.ADDR_ID);
@@ -322,7 +330,7 @@ $(function(){
                     $("#ProvinceIdText").val("");
                     $("#CityIdText").val("");
                     $("#AreaIdText").val("");
-                    $("#newaddress").val("");
+                    $("#newaddress").html("");
                     $("#newname").val("");
                     $("#newphone").val("");
                     $("#newaddressid").val("");
@@ -415,7 +423,7 @@ $(function(){
         fillCity($("#CityIdValue").val());
         fillArea($("#AreaIdValue").val());
 
-        $("#newaddress").val(address);
+        $("#newaddress").html(address);
         $("#newname").val(name);
         $("#newphone").val(phone);
 
@@ -506,7 +514,25 @@ $(function(){
         // /active/act_fit/fit_invite.html
     });
 
-
+    //放弃优惠
+    $("#btn_unbuy").click(function(e){
+        var page="/active/act_fit/unpay";
+        var referrer = document.referrer;
+        var bindcode=GetQueryString("bindcode");
+        var sign=GetQueryString("s");
+        var source=GetQueryString("source");
+        var level=GetQueryString("level");
+        var types=GetQueryString("types");
+        if(level==""){
+            level="1";
+        }
+        if(types==""){
+            types="1";
+        }
+        invokeApi("mallactive/insertactivepv",{"page":page,"bindcode":bindcode,"source":source,"level":level,"types":types,"referrer":referrer},"",function(ret){
+            window.location.href="/";
+        });
+    });
     //activeInfo   bindCode,name,cityId,cityName,sourceUserId
     function activeInfo(bindCode,name,cityId,cityName,from){
         var o = {

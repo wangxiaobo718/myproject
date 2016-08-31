@@ -29,14 +29,23 @@ function getOrderList(page,count,statusClass){
                 var productCount=0;
                 var deliverDate=orderMain.deliverDateShow;
                 var p=orderMain.product;
+                var orderID = orderMain.ORDER_MAIN_NO;
+                var seconds = orderMain.cancelTimes; //待支付倒计时总秒数
+
+                var minute = '<span class="time m">' + '' + '</span>';
+                var second = '<span class="time s">' + '' + '</span>';
+                var timeStr = '<div class="countdown" data-countdown="">订单将在' + minute +
+                    '分<span class="time"></span>' + second +
+                    '秒后取消，请尽快支付哦~</div>';
                 for(var j=0;j<p.length;j++){
                     var product=eval(p[j]);
                     productCount+=parseInt(product.QUANTITY);
+                    var unit=product.GROUP_TYPE==2?"套":"盒";
                     productStr+='<li>'+
                         '<p class="clearfix">'+
                         '<em>'+product.PRODUCT_NAME+'</em><strong>X&nbsp;'+product.QUANTITY+'</strong><i class="price">¥'+product.TOTAL_PRICE+'</i>'+
                         '</p>'+
-                        (orderMain.ORDER_CLASS==1? '<span>￥'+product.UNIT_PRICE+'/盒</span>':'')+
+                        (orderMain.ORDER_CLASS==1? '<span>￥'+product.UNIT_PRICE+'/'+unit+'</span>':'')+
                         '</li>'
                 }
                 prdDetailLinkStr+='<li class="clearfix li-btn">'+
@@ -76,7 +85,11 @@ function getOrderList(page,count,statusClass){
                     if(curOrder.length==3){
                         scheClass="schedule-3";
                     }
-                    sche=cursec+'<section class="schedule '+scheClass+'"><ul class="clearfix">'+sche+'</ul></section>';
+                    if (orderMain.statusClass == 2||orderMain.statusClass == 3||orderMain.statusClass == 4) {
+                        sche = cursec + '<section class="schedule ' + scheClass + '"><ul class="clearfix">' + sche + '</ul></section>';
+                    }else{
+                        sche="";
+                    }
 
                 }
 
@@ -87,6 +100,7 @@ function getOrderList(page,count,statusClass){
                     if (orderMain.statusClass == 1) {
                         btnGroup += '<button id="cancel" class="btn btn-cancel dyclick">取消订单</button><button id="pay" class="btn btn-confirm dyclick">付款</button>';
                     }
+
                     if (orderMain.statusClass == 3) {
                         btnGroup += '<button id="deliver" class="btn btn-cancel dyclick">查看物流</button><button id="confirm" class="btn btn-confirm dyclick">确认收货</button>';
                     }
@@ -95,6 +109,9 @@ function getOrderList(page,count,statusClass){
                     }
                     if (orderMain.statusClass == 2||orderMain.statusClass == 3||orderMain.statusClass == 4) {
                         btnGroup += '<button id="share"   class="btn btn-confirm dyclick">分享红包</button>';
+                        if(orderMain.isEdit==1){
+                            btnGroup += '<button id="orderedit"   class="btn btn-confirm dyclick">修改订单</button>';
+                        }
                     }
                     btnGroup += '</div></section>';
                 }
@@ -108,8 +125,7 @@ function getOrderList(page,count,statusClass){
                     DeliverCount='<div class="pos-r"><i class="sign-pay-num" id="imgdelivercount"><strong>配送<span class="num">'+orderMain.deliverCount+'</span>次</strong></i></div>';
                 }
                 var deliverUl='';
-                if(orderMain.deliverPeriod==1)
-                {
+                if(orderMain.deliverPeriod==1){
                     deliverUl = '<ul class="order-other order-list-other">' +
                         '<li>' +
                         '<a class="delivery-time delivery-time-list" href="javascript:void(0);" title="">' +
@@ -120,8 +136,14 @@ function getOrderList(page,count,statusClass){
                         '</li>' +
                         '</ul>';
                 }
-                $(".order-detail-list").append('<section class="pay-section pay-order clearfix"  orderNo="' + orderMain.ORDER_MAIN_NO +'"openId="'+orderMain.CHANNEL_CUSTOMER_ID+ '" statusClass="' + orderMain.statusClass + '">'+
-                    '<h3 class="order-list-title">'+
+                //待付款判断状态添加倒计时提醒
+                if(orderMain.STATUS == 1 && seconds>0){
+                    countdown(seconds,orderID); //计算倒计时
+                }else{
+                    timeStr="";
+                }
+                $(".order-detail-list").append('<section class="pay-section pay-order clearfix"  curOrderNo="'+orderMain.curorderno+'" orderNo="' + orderMain.ORDER_MAIN_NO +'"openId="'+orderMain.CHANNEL_CUSTOMER_ID+ '" statusClass="' + orderMain.statusClass + '">'+
+                    timeStr+'<h3 class="order-list-title">'+
                     DeliverCount+
                     '<i class="icon icon-gift"></i>'+deliverinfo+
                     '<span class="status">'+orderMain.statusName+'</span>'+
@@ -133,7 +155,7 @@ function getOrderList(page,count,statusClass){
                     '</ul>'+
                     '<section class="order-total">'+
                     '共'+productCount+'件商品&emsp;合计:<span>￥'+orderMain.PAY_AMOUNT+'</span> (含运费¥'+orderMain.FREIGHT+'元)'+
-                '</section>'+sche+btnGroup);
+                    '</section>'+sche+btnGroup);
 
             }
 
@@ -213,7 +235,13 @@ $("body").on("click",".order-list ",function(){
     var statusClass=$(this).parent().attr("statusClass");
     window.location.href="/account/order_detail.html?ordermainno="+orderNo;
 });
-
+//订单修改
+$("body").on("click","#orderedit",function(){
+    var obj=$("#confirm");
+    var orderNo=$(this).parent().parent().attr("orderNo");
+    var curOrderNo=$(this).parent().parent().attr("curOrderNo");
+    window.location.href="/account/order_detail_edit.html?ordermainno="+orderNo+"&orderno="+curOrderNo;
+});
 //分享红包
 $("body").on("click","#share",function(){
     var obj=$(this).parent();
@@ -277,4 +305,21 @@ $("body").on("click","#pay",function(){
         }
     });
 });
+//待付款加倒计方法
+function countdown (i,j){
+    var interTimer = setInterval(function () {
+        if (i > 0) {
+            i--;
+            var m = Math.floor((i / 60) % 60); //计算分
+            var s = Math.floor(i % 60); // 计算秒
+            $("section[orderno='"+j+"']").find(".countdown .m").text(m<10?"0"+m:m);
+            $("section[orderno='"+j+"']").find(".countdown .s").text(s<10?"0"+s:s);
 
+        } else {
+            clearInterval(interTimer);
+            $("section[orderno='"+j+"']").find(".countdown").remove();
+            $("section[orderno='"+j+"']").find(".btn-group").remove();
+            $("section[orderno='"+j+"']").find(".status").text("已取消");
+        }
+    }, 1000);
+}

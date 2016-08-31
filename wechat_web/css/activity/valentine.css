@@ -1,0 +1,242 @@
+/*七夕情人节activity*/
+.valentine-wrap{
+    padding: 0 0.29rem;
+    margin-bottom: 0.42rem;
+    display: none;
+}
+.valentine-content{
+    background: #fec1c7;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 0.31rem;
+    height:12.46rem;
+    overflow:hidden;
+}
+.valentine-wrap img{
+    width: 80%;
+    height: auto;
+    display: block;
+}
+.valentine-todetail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 65%;
+    height: 100%;
+}
+.valentine-tips{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28%;
+    height: 40%;
+    overflow: hidden;
+    background: rgba(255,255,255,0.7);
+    border-radius: 0.31rem;
+}
+.valentine-tips h4{
+    width: 100%;
+    line-height: 1.8rem;
+    background: #ff3777;
+    color: #ffffff;
+    text-align: center;
+}
+.valentine-tips time{
+    color: #ff0b5b;
+    text-align: center;
+    display: block;
+    line-height: 2rem;
+}
+.valentine-tips p{
+    color: #fb7689;
+    text-align: center;
+    font-size: .8rem;
+}
+.valentine-info{
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    -webkit-transform: translateY(-50%);
+}
+.valentine-info h4{
+    color: #ffffff;
+    text-align: right;
+}
+.valentine-info .info-text{
+    margin: .5rem 0;
+}
+.valentine-info .info-text span{
+    color: #ff3777;
+    background: rgba(255,167,183,0.6);
+    border: 1px solid #ff3777;
+    border-radius: .2rem;
+    padding: .2rem;
+    margin-left: .3rem;
+    font-size: .8rem;
+}
+.valentine-info .info-count{
+    color: #fa4d86;
+    font-size: .8rem;
+    text-align: right;
+    line-height: 1.2rem;
+}
+.valentine-info .info-price{
+    color: #ff0b5b;
+    font-size: .7rem;
+    text-align: right;
+    margin: 1.2rem 0 .4rem;
+}
+.valentine-info .info-price em{
+    font-size: 1rem;
+}
+.valentine-buy{
+    color: #ffffff;
+    display: block;
+    padding: .3rem 1rem;
+    background: #ff0b5b;
+    float: right;
+    border-radius: .5rem;
+}
+.alert-valentine-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.8);
+    z-index: 999999;
+    display: none;
+}
+.rose-buy-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    border-radius: .5rem;
+    background: #ffffff;
+    padding:0 2% 1rem;
+    -webkit-transform: translate(-50%,-50%);
+}
+.rose-buy-box h4{
+    line-height: 2rem;
+    color: #ff0b5b;
+    text-align: center;
+
+}
+.rose-buy-content{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+    border-top: 1px solid #ffedf1;
+    border-bottom: 1px solid #ffedf1;
+}
+.rose-buy-box section span{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url("/images/act/valentine/icon-get.png") left center no-repeat;
+    background-size: 1rem 1rem;
+}
+.rose-pic{
+    margin: 0 2%;
+    width: 46%;
+    height: auto;
+    display: block;
+}
+.rose-buy-count{
+    -webkit-box-flex: 1;
+    padding-top: 1rem;
+}
+.rose-buy-count div{
+    position: relative;
+}
+.rose-buy-count p{
+    text-align: right;
+    padding-right: 1.8rem;
+    color: #ff0b5b;
+}
+.rose-buy-count div i{
+    width: 4.83rem;
+    height: 3.33rem;
+    display: block;
+    float: right;
+}
+.rose-buy-count div .increase{
+    background: url("/images/act/valentine/icon-rose-add.png") center center no-repeat;
+    background-size: 1.08rem 1.04rem;
+}
+.rose-buy-count div .unincrease{
+    background: url("/images/act/valentine/icon-rose-add-off.png") center center no-repeat;
+    background-size: 1.08rem 1.04rem;
+}
+.rose-buy-count div .undecrease{
+    background: url("/images/act/valentine/icon-rose-remove.png") center center no-repeat;
+    background-size: 1.08rem 1.04rem;
+}
+.rose-buy-count div .decrease{
+    background: url("/images/act/valentine/icon-rose-remove-on.png") center center no-repeat;
+    background-size: 1.08rem 1.04rem;
+}
+.rose-buy-count div .num{
+    background: none;
+    color: #494949;
+    height: auto;
+    line-height: 3.33rem;
+    font-size: 1.17rem;
+    text-align: center;
+    width: 2rem;
+    position: absolute;
+    top: 0;
+    right: 3.83rem;
+    z-index: 1;
+}
+.rose-buy-tips{
+    background: url("/images/act/valentine/rose-tips-bg.png") right top no-repeat;
+    background-size: 16rem 3.6rem;
+    text-align: right;
+    padding-right: 2rem;
+    line-height: 5rem;
+    font-size: .8rem;
+    line-height: 3.6rem;
+    color: #ff4878;
+}
+.rose-all-price a{
+    float: right;
+    display: block;
+    background: #fe6076;
+    color: #ffffff;
+    text-align: center;
+    width: 5rem;
+    line-height: 1.6rem;
+    border-radius: 1rem;
+    margin-right: 2rem;
+}
+@media screen and (orientation:landscape) {
+    .rose-pic{
+        width: 26%;
+    }
+}
+
+/*玫瑰详情页*/
+.pro-price-rose{
+    border-bottom: 1px solid #dadada;
+    font-size: 1.25rem;
+    height: 3rem;
+    padding-right: 1rem;
+}
+.pro-price-rose span{
+    float: left;
+    width: 10rem;
+    height: 3rem;
+    line-height: 3rem;
+    display: block;
+    background: url("/images/act/valentine/rose-tips-bg.png") right center no-repeat;
+    background-size: 12rem auto;
+    color: #ff0b5b;
+    text-align: center;
+}
+.pro-price-rose span em{
+    font-size: .8rem;
+}

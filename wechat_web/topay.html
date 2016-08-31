@@ -1,0 +1,237 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>订单支付页</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+	<meta name="format-detection" content="telephone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+
+	<link rel="stylesheet" href="css/global.css?v=0">
+	<link rel="stylesheet" href="css/common.css?v=0">
+	<link rel="stylesheet" href="css/style.css?v=20">
+
+	<!-- js插件 -->
+	<script src="js/libary/jquery-1.9.1.min.js"></script>
+	<script src="/js/libary/jquery.md5.js"></script>
+	<script src="/js/libary/json.js"></script>
+	<!-- 自定义插件 -->
+	<script src="js/libary/common.js"></script>
+	<script src="js/libary/TouchSlide.1.1.js"></script>
+	<!--开发js-->
+	<script src="/js/dev/Global.js?v=12"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=4vuBIfKphVnNsf29k3ajGHceUtvnLOVf"></script>
+	<script src="/js/dev/BMapAPI.js?v=12"></script>
+	
+	<script src="/js/dev/city/city.js?v=308628864443282974830774319980817448984"></script>
+	<script src="/js/dev/city/loadcity.js?v=308628864443282974830774319980817448981"></script>
+</head>
+<body>
+	<article class="wrap container">
+		<section class="pay-section pay-contact clearfix">
+			<input type="hidden" id="address" value="0">
+			<i class="icon"></i>
+			<dl>
+				<dt><span></span>/<span></span></dt>
+				<dd><em></em><i class="label"></i></dd>
+			</dl>
+			<em class="enter-key"></em>
+		</section>
+		<section class="pay-section pay-model clearfix">
+			<i class="icon"></i>
+			<input type="hidden" id="delivermode" value="">
+			<dl>
+				<dt>配送日期</dt>
+				<!--<dd enabled="0"></dd>-->
+			</dl>
+			<!--<ul class="model-three">-->
+				<!--<li class="l1 on" >体验一次</li>-->
+				<!--<li class="l2">包月自选</li>-->
+				<!--<li class="l3">随心订购</li>-->
+			<!--</ul>-->
+			<em class="enter-key"></em>
+			<span class="pay-date" enabled="0"></span>
+		</section>
+		<section class="pay-section pay-order clearfix">
+			<h3>
+				<i class="icon"></i>订单详情
+				<i class="sign-pay-num" id="imgdelivercount"><strong>配送<span class="num">1</span>次</strong></i>
+			</h3>
+			<ul  class="order-list" cashAmount="0">
+
+			</ul>
+			<ul class="order-other">
+				<li>
+					邮费<i class="price">¥<em>0</em></i>
+				</li>
+				<li>
+					<a class="coupon-btn" href="javascript:void(0);" title="">
+						优惠券
+						<em class="enter-key"></em>
+						<input type="hidden" id="cashId" value="">
+						<span>已优惠<em>0</em>元</span>
+					</a>
+				</li>
+			</ul>
+			<section class="order-total">
+				共<em>0</em>件商品&emsp;合计<span>¥<em>0</em></span>
+			</section>
+		</section>
+		<section class="pay-section pay-topay-way">
+			<h3><i class="icon"></i>支付方式</h3>
+			<dl class="clearfix topay-way-list">
+				<dd class="topay-way" id="giftpay">
+					<div class="img-box"></div>
+					<h4>余额支付</h4>
+					<h5>余额:¥<span id="giftbalance1">0</span><span id="giftbalanceInfo"></span></h5>
+				</dd>
+				<dd class="topay-way" id="wechatpay">
+					<div class="img-box wx-box"></div>
+					<h4>微信支付</h4>
+				</dd>
+			</dl>
+		</section>
+		<section class="pay-section pay-notice">
+			<dl class="clearfix">
+				<dt>购买须知：</dt>
+				<dd class="first">＊配送时间：9:00－19:00</dd>
+				<dd>＊收到后请尽快食用或放入冰箱，冷藏条件下可存放15天，避免在常温下存放。</dd>
+			</dl>
+		</section>
+		<section class="pay-wechat">
+			<a class="return" href="/index.html" title="">&lt; 返回</a>
+			<a class="wechat-btn" href="#" title="">立即支付</a>
+			<dl>
+				<dt>合计：<span>¥<em>0</em></span></dt>
+				<dd>余额和优惠券已减¥<em>0</em></dd>
+			</dl>
+		</section>
+	</article>
+
+	<!-- 结算弹出层 -->
+	<section class="alert-bg"></section>
+
+	<!-- 配送模式 -->
+	<section class="alert model-alert">
+		<section class="close-alert"></section>
+		<!--体验一次提示-->
+		<section class="delivery-model-tips"><i class="icon-transport"></i>请选择配送模式和配送的时间<i class="icon-triangle"></i></section>
+		<section class="model-select-box clearfix">
+			<ul class="model-tit">
+				<li class="l1 on" >体验一次</li>
+				<li class="l2">包月自选</li>
+				<li class="l3">随心订购</li>
+			</ul>
+
+			<section class="model-select-con">
+				<section class="model-con on" id="l1">
+					<h3>请选择您希望送达的日期<span><em></em></span></h3>
+					<ul class="data-show data-two clearfix">
+					</ul>
+				</section>
+				<section class="model-con" id="l2">
+					<h3>连续配送<em>4</em>周：<span>可随时修改配送时间与口味</span></h3>
+					<ul class="data-show data-three clearfix">
+						<li class="dyclick " use="1" count="2">2周</li>
+						<li class="dyclick center"  use="1" count="3">3周</li>
+						<li class="dyclick on"  use="1" count="4">4周(月)</li>
+						<li class="dyclick"  use="1" count="12">12周(季)</li>
+						<li class="dyclick center"  use="1" count="24">24周(半年)</li>
+						<li class="dyclick custom"  use="1" count=""><i class="reduce-num1"></i>
+							<i class="dyclick add-num1"></i><span><input  value="自定义" type="tel" maxlength="2" id="definecount"></span></li>
+					</ul>
+					<section class="data-three-bottom">
+						<h3>第一次送达时间：</h3>
+						<section class="data-first clearfix">
+							<span class="data-btn-left reduce-date"></span>
+							<p class="data-first-time">&nbsp;<select name="sel_date"></select><i class="icon-default">默认</i></p>
+							<span class="data-btn-right add-date"></span>
+						</section>
+					</section>
+				</section>
+				<section class="model-con" id="l3">
+					<section class="distribution-num" id="pscount">
+						<h3>配送<em>3</em>次：</h3>
+						<section class="data-first clearfix">
+							<!--<span class="data-btn-left reduce-num"></span>-->
+							<input class="data-distribution" type="hidden" readonly="readonly" value="3">
+							<!--<span class="data-btn-right add-num"></span>-->
+							<select id="l3count">
+								<option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>
+								<option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+								<option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option>
+								<option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option>
+								<option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option>
+								<option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option>
+								<option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option>
+							</select>
+						</section>
+					</section>
+					<section class="distribution-num" id="pspinlv">
+						<h3>每次间隔<em>3</em>天：</h3>
+						<section class="data-first clearfix">
+							<!--<span class="data-btn-left reduce-num"></span>-->
+							<input class="data-distribution" type="hidden" readonly="readonly" value="3">
+							<!--<span class="data-btn-right add-num"></span>-->
+							<select id="l3period">
+								<option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>
+								<option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+								<option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option>
+								<option value="15">15</option>
+							</select>
+						</section>
+					</section>
+					<h3></h3>
+					<section class="data-first clearfix">
+						<span class="data-btn-left reduce-date"></span>
+						<p class="data-first-time">&nbsp;<select name="sel_date"></select><i class="icon-default">默认</i></p>
+						<span class="data-btn-right add-date"></span>
+					</section>
+				</section>
+			</section>
+			<section class="model-bottom">
+				<section class="total">
+					<section class="total-table">
+						<p class="total-num">合计：<span>¥<em>0</em></span></p>
+						<!--<p class="total-discount">已优惠¥<em></em></p>-->
+					</section>
+				</section>
+				<ul class="model-btn">
+					<li class="back" id="return">返回</li>
+					<li class="submit">确认</li>
+				</ul>
+			</section>
+		</section>
+	</section>
+	<!--#include file = "template/address.html" -->
+	<!-- 使用优惠券 -->
+	<section class="alert coupon-alert">
+		<section class="close-alert"></section>
+		<section class="coupon-box">
+			<h2 class="coupon-tit">
+				<i>选择你的优惠券哦</i>
+				<em class="close"></em>
+			</h2>
+			<section class="pay-wechat coupon-exchange">
+				<div class="get-coupons">
+					<input class="coupon-code" type="text" placeholder="手动输入优惠码兑换优惠券" />
+					<input class="btn btn-confirm btn-exchange" type="button" value="兑换" />
+				</div>
+			</section>
+			<section class="coupon-list-wrap">
+				<ul class="coupon-list">
+
+				</ul>
+			</section>
+		</section>
+	</section>
+	<!-- 弹框 -->
+	<!--#include file = "message.html" -->
+</body>
+<script type="text/javascript" src="/js/dev/Analysis.js?v=7"></script>
+<script src="js/dev/address.js?v=13"></script>
+<script src="js/dev/list/order.js?v=13"></script>
+</html>
