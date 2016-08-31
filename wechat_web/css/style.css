@@ -4138,19 +4138,19 @@ footer .content { padding:0; }
 	font-size: 0.00001rem;
 	width: 4.875rem;
 	margin: 0.41rem auto 0;
-	line-height: 1.05rem;
+	line-height: 1rem;
 }
 .monthly_box .gift{
 	width: 100%;
-	height: 21.375rem;
-	margin-top: 1.11rem;
+	height: 16.66rem;
+	margin-top: 1.14rem;
 }
 .year_box>p{
 	width: 100%;
 	background: #fff;
 	height:3.75rem ;
 	text-align: center;
-	line-height: 3.75rem;
+	line-height: 3.95rem;
 	font-size: 0.95rem;
 
 }
@@ -4173,7 +4173,7 @@ footer .content { padding:0; }
 	height: 100%;
 	background: #fefefd;
 	border-radius: 0.4rem;
-	padding: 1.25rem 2.01rem 0.83rem;
+	padding: 1.05rem 2.01rem 0.83rem;
 	box-sizing: border-box;
 
 }

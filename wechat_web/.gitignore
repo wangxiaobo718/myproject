@@ -1,0 +1,15 @@
+.idea/
+template/
+web.config
+/js/dev/Global.js
+/product
+/template
+.DS_Store
+images/.DS_Store
+img/.DS_Store
+img/singleImg/.DS_Store
+node_modules
+package.json
+gulpfile.js
+/js/dev/city/city.js
+/js/dev/city/cityactive.js
