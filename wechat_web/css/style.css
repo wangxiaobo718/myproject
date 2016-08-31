@@ -4876,10 +4876,11 @@ footer .content {
     background: #fff;
     height: 3.75rem;
     text-align: center;
-    /*line-height: 3.95rem;*/
-    padding-top: 1.7rem;
-    font-size: 0.95rem;
-    box-sizing: border-box;
+    line-height: 3.95rem;
+    /*padding-top: 1.7rem;*/
+    font-size: 0.75rem;
+    margin-top: 1.2rem;
+    /*box-sizing: border-box;*/
 }
 
 .year_box .season {
