@@ -4830,37 +4830,40 @@ footer .content {
     color: #fff;
     font-size: 1.375rem;
 }
-
-.monthly_box ul {
-    width: 24rem;
-    margin: 0 auto;
+.monthly_box .long_01{
+    width: 23.33rem;
+    margin: 4.16rem auto 0;
 }
+/*.monthly_box ul {*/
+    /*width: 24rem;*/
+    /*margin: 0 auto;*/
+/*}*/
 
-.monthly_box ul li {
-    width: 7.2rem;
-    height: 7.375rem;
-    background: #ffffff;
-    border-radius: 50%;
-    float: left;
-    margin: 4.16rem 0.4rem 0;
-}
+/*.monthly_box ul li {*/
+    /*width: 7.2rem;*/
+    /*height: 7.375rem;*/
+    /*background: #ffffff;*/
+    /*border-radius: 50%;*/
+    /*float: left;*/
+    /*margin: 4.16rem 0.4rem 0;*/
+/*}*/
 
-.monthly_box ul li img {
-    width: 1.25rem;
-    margin-top: 1rem;
-}
+/*.monthly_box ul li img {*/
+    /*width: 1.25rem;*/
+    /*margin-top: 1rem;*/
+/*}*/
 
-.monthly_box ul li p:nth-of-type(1) {
-    font-size: 0.75rem;
-    margin-top: 0.2rem;
-}
+/*.monthly_box ul li p:nth-of-type(1) {*/
+    /*font-size: 0.75rem;*/
+    /*margin-top: 0.2rem;*/
+/*}*/
 
-.monthly_box ul li p:nth-of-type(2) {
-    font-size: 0.00001rem;
-    width: 4.875rem;
-    margin: 0.41rem auto 0;
-    line-height: 1rem;
-}
+/*.monthly_box ul li p:nth-of-type(2) {*/
+    /*font-size: 0.00001rem;*/
+    /*width: 4.875rem;*/
+    /*margin: 0.41rem auto 0;*/
+    /*line-height: 1rem;*/
+/*}*/
 
 .monthly_box .gift {
     width: 100%;
@@ -4874,7 +4877,7 @@ footer .content {
     height: 3.75rem;
     text-align: center;
     /*line-height: 3.95rem;*/
-    padding-top: 1.5rem;
+    padding-top: 1.7rem;
     font-size: 0.95rem;
     box-sizing: border-box;
 }
