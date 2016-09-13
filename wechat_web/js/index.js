@@ -42,7 +42,7 @@ new Swiper(".swiper-container", {
                         item.id = "page5";
 
                         str+="<iframe class='ifr' src='05_long.html'></iframe>";
-                        $(".page5").append(str);
+                        $(".page5 div").append(str);
                         setTimeout(function () {
                             $(".next").css("opacity", 1);
                             $(".next").addClass("btn_next");
