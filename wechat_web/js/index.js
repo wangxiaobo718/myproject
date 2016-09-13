@@ -8,9 +8,10 @@ new Swiper(".swiper-container", {
     onSlideChangeEnd: function (swipe) {
         var n = swipe.activeIndex,//->获取当前活动块(当前展示的)的索引
             slideAry = swipe.slides;//->当前容器中所有的slider(包含loop模式下克隆的那两个)-它是一个类数组集合
-
+        var str="";
         //->让当前展示的那个有ID，其余的都移除ID
         [].forEach.call(slideAry, function (item, index) {
+
             if (index == n) {
                 //->这个就是当前这一块,需要设定ID
                 switch (index) {
@@ -31,7 +32,7 @@ new Swiper(".swiper-container", {
                         break;
                     case 4:
                         item.id = "page4";
-                        $(".page5").remove(".ifr");
+                        $("iframe").remove();
                         $(".next").removeClass("btn_next");
                         $(".pver").removeClass("btn_pver");
                         $(".next").css("opacity", 0);
@@ -39,7 +40,9 @@ new Swiper(".swiper-container", {
                         break;
                     case 5:
                         item.id = "page5";
-                        $(".page5").append("<iframe class='ifr' src='05_long.html'></iframe>");
+
+                        str+="<iframe class='ifr' src='05_long.html'></iframe>";
+                        $(".page5").append(str);
                         setTimeout(function () {
                             $(".next").css("opacity", 1);
                             $(".next").addClass("btn_next");
@@ -49,7 +52,7 @@ new Swiper(".swiper-container", {
                         break;
                     case 6:
                         item.id = "page6";
-                        $(".page5").remove(".ifr");
+                        $("iframe").remove();
                         $(".next").css("opacity", 0);
                         $(".pver").removeClass("btn_pver");
                         $(".next").removeClass("btn_next");

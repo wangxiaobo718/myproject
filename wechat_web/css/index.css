@@ -18,13 +18,12 @@ html {
 /*--第一屏幕--*/
 .page1 {
     position: relative;
-    background: url("../images/01_bg.png") no-repeat;
+    background:#d9eef4;
     background-size: 100% 100%;
 }
 
 .page1 img {
     position: absolute;
-    opacity: 0;
 }
 
 .page1 img:nth-child(1) {
@@ -32,9 +31,23 @@ html {
     right: 0;
     width: 2.825rem;
     height: 2.175rem;
-
+    opacity: 0;
 }
-
+.page1 img:nth-child(2) {
+    left: 0.375rem;
+    top: 0.25rem;
+    width: 0.78rem;
+}
+.page1 img:nth-child(3) {
+    right: 0.25rem;
+    top: 0.25rem;
+    width: 0.85rem;
+}
+.page1 img:nth-child(4) {
+    right: 0.25rem;
+    bottom: 0.25rem;
+    width: 0.915rem;
+}
 #page1 img:nth-child(1) {
     -webkit-animation: bounceInRight 2.1s both;
     animation: bounceInRight 2.1s both;
@@ -45,7 +58,6 @@ html {
     position: relative;
     background: #f6f5f5;
 }
-
 .page2 img {
     position: absolute;
 }
@@ -81,7 +93,6 @@ html {
     left: 0.17rem;
     top: 0;
 }
-
 .page2 img.img3 {
     top: 0.275rem;
     right: 0.25rem;
@@ -100,14 +111,12 @@ html {
     -webkit-animation: bounceInUp11 1.2s both;
     animation: bounceInUp11 1.2s both;
 }
-
 #page2 div {
     -webkit-animation: bounceInDleft 1s 0.3s  linear;
     animation: bounceInDleft 1s 0.3s  linear;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
-
 #page2 img#shang{
     -webkit-transform-origin:right;
     transform-origin:right;
@@ -473,14 +482,6 @@ html {
 .page5 img {
     position: absolute;
 }
-
-.page5 img.ee {
-    bottom: 1.5rem;
-    left: 0.2rem;
-    width: 1.9rem;
-    z-index: 5;
-    opacity:0;
-}
 .page5 .div1{
     position: absolute;
     width: 1.775rem;
@@ -533,7 +534,7 @@ html {
     opacity:0;
     z-index: 999;
 }
-.page5 img:nth-child(7) {
+.page5 img:nth-child(1) {
     top:4rem;
     left: 1.08rem;
     width: 0.13rem;
@@ -543,17 +544,19 @@ html {
 }
 
 .page5 iframe{
-    opacity: 0;
+    opacity: 0.5;
     position: absolute;
-    top: 1.344rem;
-    left: 0.258rem;
+    top: 1.05rem;
+    left: 0.2rem;
     border: none;
-    z-index: 9999;
+    z-index: 9;
     height: 2.54rem;
     width: 1.79rem;
-    padding: 0;
     margin: 0;
     overflow-x: hidden;
+    background: #ffdd35;
+    padding:0.3rem 0.06rem;
+    border-radius: 0.04rem;
 }
 /*第5页动画*/
 #page5 img.ee {
@@ -1141,3 +1144,77 @@ iframe::-webkit-scrollbar{
         opacity: 1;
     }
 }
+@media all and (max-height: 480px){
+    .page4 img:nth-child(4) {
+        top: 1.45rem;
+        left: 0.77rem;
+        width: 0.9rem;
+        z-index: 2;
+        opacity: 0;
+    }
+    .page6 img:nth-child(1) {
+        width: 2.2rem;
+        margin: 0.1rem auto 0;
+    }
+    .page6 img:nth-child(5) {
+        width: 1.8rem;
+        margin: 0.23rem auto 0;
+    }
+    .page4 img:nth-child(4) {
+        top: 1.45rem;
+        left: 0.77rem;
+        width: 0.9rem;
+        z-index: 2;
+        opacity: 0;
+    }
+    .page6 img:nth-child(6) {
+        position: absolute;
+        top: 2.22rem;
+        left: 1.06rem;
+        width:0.15rem;
+    }
+    .page6 img:nth-child(7) {
+        position: absolute;
+        top: 2.12rem;
+        left: 1.25rem;
+        width:0.075rem;
+    }
+    .page6 img:nth-child(8) {
+        position: absolute;
+        top: 2.15rem;
+        left: 1.93rem;
+        width:0.11rem;
+        /*opacity: 0;*/
+    }
+    .page6 img:nth-child(9) {
+        position: absolute;
+        top: 3.15rem;
+        left: 1.23rem;
+        width:0.11rem;
+    }
+    .page6 img:nth-child(10) {
+        position: absolute;
+        top: 3.1rem;
+        left: 1.37rem;
+        width:0.075rem;
+    }
+    .page6 img:nth-child(11) {
+        position: absolute;
+        top: 3.25rem;
+        left: 1.37rem;
+        width:0.055rem;
+    }
+    .page6 img:nth-child(12) {
+        position: absolute;
+        top: 3.21rem;
+        left: 1.8rem;
+        width:0.07rem;
+    }
+    .page6 img:nth-child(13) {
+        position: absolute;
+        top: 3.08rem;
+        left: 1.85rem;
+        width:0.15rem;
+    }
+}
+
