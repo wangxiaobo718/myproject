@@ -21,6 +21,13 @@
 </head>
 <body>
 <section class="swiper-container">
+    <div id="main">
+        <div id="loading">
+            <div class="loadBox">
+                <span class="progress"></span>
+            </div>
+        </div>
+    </div>
     <div class="swiper-wrapper">
         <!--第一屏幕-->
         <div class="swiper-slide page1">
@@ -66,9 +73,6 @@
             <img class="zhong" src="images/05_zhong.png" alt=""/>
             <img class="xia" src="images/05_xia.png" alt=""/>
             <img class="jiantou" src="images/05_jiantou.png" alt=""/>
-
-
-
         </div>
         <div class="swiper-slide page6">
             <img src="images/06_weixin.png" alt=""/>
@@ -92,5 +96,36 @@
 <script charset="utf-8" type="text/javascript" src="js/swiper.min.js"></script>
 <script charset="utf-8" type="text/javascript" src="js/fastclick.min.js"></script>
 <script charset="utf-8" type="text/javascript" src="js/index.js"></script>
+<script>
+    var main = $("#main");
+
+    var arr = ["01_bg.png","01_lechun.png","01_left.png","01xia.png","02_body.png","02_hill.png","02_left.png"];
+    var num = 0;
+    var progress = $(".progress");
+    var loading = $("#loading");
+    function fnLoad() {
+        for (var i = 0; i < arr.length; i++) {
+            var oImg = new Image();
+            /*创建图片实例*/
+            oImg.src = "img/" + arr[i];
+            oImg.onload = function () {/*图片加载成功就会触发onload事件*/
+                num++;
+                /*图片加载成功之后num累加*/
+                progress.style.width = num / arr.length * 100 + "%";
+                /*已经加载的图片占所有图片的百分比,这个和进度条是同步的*/
+                progress.addEventListener("webkitTransitionEnd", function () {
+                    if (num == arr.length && loading) {
+                        main.removeChild(loading);
+                        loading = null;
+
+                    }
+                }, false)
+
+            }
+        }
+    }
+    fnLoad();
+
+</script>
 </body>
 </html>
