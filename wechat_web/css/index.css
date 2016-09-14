@@ -48,7 +48,7 @@ html {
     bottom: 0.25rem;
     width: 0.915rem;
 }
-#page1 img:nth-child(1) {
+#page1 img.le {
     -webkit-animation: bounceInRight 2.1s both;
     animation: bounceInRight 2.1s both;
 }
@@ -1235,7 +1235,7 @@ iframe::-webkit-scrollbar{
     width:0;
     height:0.05rem;
     background-image: -webkit-linear-gradient(45deg,#5cb85c 25%,#74c274 50%,#5cb85c 75%,#74c274 100%);
-    background-size: 10px 10px;
+    background-size: 0.05rem 0.05rem;
     background-repeat: repeat-x;
     transition: 1s;
     -webkit-transition: 1s;

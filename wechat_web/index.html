@@ -31,7 +31,7 @@
     <div class="swiper-wrapper">
         <!--第一屏幕-->
         <div class="swiper-slide page1">
-            <img src="images/01_lechun.png" alt=""/>
+            <img class="lechun" src="images/01_lechun.png" alt=""/>
             <img src="images/01_left.png" alt=""/>
             <img src="images/01_right.png" alt=""/>
             <img src="images/01_xia.png" alt=""/>
@@ -40,6 +40,7 @@
         <div class="swiper-slide page2">
             <img class="img1" src="images/02_left.png" alt=""/>
             <img class="img2" src="images/02_hill.png" alt=""/>
+
             <div class="div1">
                 <img id="shang" class="naidi" src="images/02_naidi_shang.png" alt=""/>
                 <img id="xia" class="naidi" src="images/02_naidi_xia.png" alt=""/>
@@ -102,7 +103,8 @@
     }
     var main = getEle("#main");
 
-    var arr = ["01_bg.png","01_lechun.png","01_left.png","01_xia.png","02_body.png","02_hill.png","02_left.png","05_long.jpg"];
+    //    var arr = ["01_lechun.png","01_left.png","01_xia.png","02_body.png","02_hill.png","02_left.png","05_long.jpg"];
+    var arr = ["01_lechun.png", "02_body.png", "05_long.jpg"];
     var num = 0;
     var progress = getEle(".progress");
     var loading = getEle("#loading");
@@ -120,7 +122,7 @@
                     if (num == arr.length && loading) {
                         main.removeChild(loading);
                         loading = null;
-
+                        $(".lechun").addClass("le");
                     }
                 }, false)
             }

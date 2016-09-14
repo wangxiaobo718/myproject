@@ -23,6 +23,7 @@ $(function(){
                             break;
                         case 2:
                             item.id = "page2";
+                            $(".lechun").removeClass("le");
                             setTimeout(function () {
                                 $(".naidi").addClass("naidi1");
                             }, 1900);
@@ -59,6 +60,7 @@ $(function(){
                             $(".pver").removeClass("btn_pver");
                             $(".next").removeClass("btn_next");
                             $(".pver").css("opacity", 0);
+                            $(".lechun").removeClass("le");
                             break;
                         case 7:
                             item.id = "page1";
