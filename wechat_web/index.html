@@ -97,17 +97,20 @@
 <script charset="utf-8" type="text/javascript" src="js/fastclick.min.js"></script>
 <script charset="utf-8" type="text/javascript" src="js/index.js"></script>
 <script>
-    var main = $("#main");
+    function getEle(ele) {
+        return document.querySelector(ele);
+    }
+    var main = getEle("#main");
 
-    var arr = ["01_bg.png","01_lechun.png","01_left.png","01xia.png","02_body.png","02_hill.png","02_left.png"];
+    var arr = ["01_bg.png","01_lechun.png","01_left.png","01_xia.png","02_body.png","02_hill.png","02_left.png","05_long.jpg"];
     var num = 0;
-    var progress = $(".progress");
-    var loading = $("#loading");
+    var progress = getEle(".progress");
+    var loading = getEle("#loading");
     function fnLoad() {
         for (var i = 0; i < arr.length; i++) {
             var oImg = new Image();
             /*创建图片实例*/
-            oImg.src = "img/" + arr[i];
+            oImg.src = "images/" + arr[i];
             oImg.onload = function () {/*图片加载成功就会触发onload事件*/
                 num++;
                 /*图片加载成功之后num累加*/
@@ -120,7 +123,6 @@
 
                     }
                 }, false)
-
             }
         }
     }
