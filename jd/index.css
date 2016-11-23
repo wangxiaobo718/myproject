@@ -35,6 +35,9 @@
     margin: 0.05rem auto;
     font-family: "Æ»·½";
 }
+.p1 em{
+    color: #e5d09d;
+}
 .herd_box p:nth-of-type(2) {
     color: #8f8f8f;
     margin-top: 0.08rem;
