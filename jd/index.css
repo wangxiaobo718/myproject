@@ -19,16 +19,23 @@
     margin: 0.05rem auto 0;
     text-align: center;
 }
-.herd_box img:nth-of-type(1) {
-    width: 2.45rem;
-    margin-top: 0.1rem;
-}
+/*.herd_box img:nth-of-type(1) {*/
+    /*width: 2.45rem;*/
+    /*margin-top: 0.1rem;*/
+/*}*/
 
-.herd_box img:nth-of-type(2) {
+.herd_box img:nth-of-type(1) {
     width: 1.3rem;
     margin-top: 0.1rem;
 }
-.herd_box p:nth-of-type(1) {
+.p1{
+    font-size: 0.14rem;
+    width: 2.35rem;
+    line-height: 0.2rem;
+    margin: 0.05rem auto;
+    font-family: "Æ»·½";
+}
+.herd_box p:nth-of-type(2) {
     color: #8f8f8f;
     margin-top: 0.08rem;
     font-size: 0.12rem;
