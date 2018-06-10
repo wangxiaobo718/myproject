@@ -1,0 +1,195 @@
+body {
+    /*background: #f9f9f9;*/
+}
+.navbar .container{
+    background: #00535d;
+}
+.banner_box1{
+    width: 100%;
+    margin-top: 120px;
+    padding: 73px 377px;
+}
+.banner_box1 h2{
+    font-family: PingFangSC-Semibold;
+    font-size: 64px;
+    color: #FFFFFF;
+    line-height: 84px;
+}
+.banner_box1 p{
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 30px;
+    margin-top: 25px;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    text-align: left;
+    box-sizing: border-box;
+    color: #fff;
+    padding-bottom: 87px;
+}
+.banner_box{
+    padding-bottom: 100px;
+    border-bottom: 1px solid #DCDCDC;
+}
+.banner_box h1{
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #15CBA1;
+    letter-spacing: 0.43px;
+    margin: 80px 0 100px;
+}
+.swiper-slide h2{
+    font-family: AvenirNext-Bold;
+    font-size: 32px;
+    color: #15CBA1;
+    margin: 13px 0 25px ;
+}
+.swiper-slide h3{
+    font-family: AvenirNext-Bold;
+    font-size: 20px;
+    color: #65676D;
+    letter-spacing: 0;
+    margin-bottom: 40px;
+}
+.swiper-slide img {
+    width: 260px;
+    float: left;
+}
+.swiper-slide .right{
+    float: left;
+    width: 840px;
+    margin-left: 40px;
+}
+.swiper-slide p{
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #65676D;
+    line-height: 36px;
+
+}
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #5AD664;
+}
+
+.box {
+    position: relative;
+    margin: -155px auto 0;
+    padding: 110px 115px 0;
+    max-width: 1400px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.list {
+    /*padding: 0 115px;*/
+    border-bottom: 1px solid #dadada;
+}
+
+.list h2 {
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #15CBA1;
+    letter-spacing: 0.43px;
+}
+
+.list .row {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.list .row img {
+    margin-bottom: 25px;
+    height: 270px;
+}
+
+.list .row p {
+    margin-bottom: 13px;
+    font-family: AvenirNext-Bold;
+    font-size: 32px;
+    color: #15CBA1;
+}
+
+.list .row li {
+    margin-bottom: 95px;
+    font-family: AvenirNext-Bold;
+    font-size: 20px;
+    color: #65676D;
+}
+.list .row li  span{
+    font-family: AvenirNext-Bold;
+    font-size: 20px;
+    color: #65676D;
+    letter-spacing: 0;
+}
+.swiper-button-next{
+    left: 80px;
+    width: 75px;
+    height: 75px;
+    background:url("../images/team/right1.png") no-repeat;
+}
+.swiper-button-prev{
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background:url("../images/team/left1.png") no-repeat;
+
+}
+.swiper-button-next:hover{
+    background:url("../images/team/right2.png") no-repeat;
+
+}
+.swiper-button-prev:hover{
+    background:url("../images/team/left2.png") no-repeat;
+
+}
+
+.swiper-button-next, .swiper-button-prev {
+    top: auto;
+    bottom: 0;
+    z-index: 2;
+}
+.text p{
+    width: 250px;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 180px;
+    font-family: AvenirNext-Bold;
+    font-size: 20px;
+    color: #9B9B9B;
+    letter-spacing: 0.18px;
+    position: absolute;
+    z-index: 1;
+}
+.text{
+     position: absolute;
+     left: 300px;
+     bottom: 0;
+}
+/*合作伙伴*/
+.hezuo_box .container,.box .container{
+    padding: 0;
+}
+.hezuo_box img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.hezuo_box h2{
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #15CBA1;
+    letter-spacing: 0.43px;
+    padding: 100px 0 40px;
+}

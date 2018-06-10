@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background:#f9f9f9 ;
+}
+.navbar .container{
+    background: #00535d;
+}
+.banner_box{
+    width: 100%;
+    margin-top: 120px;
+    padding: 73px 377px;
+}
+.banner_box h2{
+    font-family: PingFangSC-Semibold;
+    font-size: 64px;
+    color: #FFFFFF;
+    line-height: 84px;
+}
+.banner_box p{
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 30px;
+    margin-top: 25px;
+}
+/* _wrapper.css */
+.wrapper {
+    padding-left: 18px;
+    padding-right: 18px;
+    max-width: 1236px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.wrapper .right {
+    text-align: right;
+}
+
+/* _timeline.css */
+.timeline {
+    position: relative;
+    margin: -155px auto 0;
+    padding: 105px 0 30px;
+    max-width: 1400px;
+    background: #fff;
+
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 125px;
+    left: 10%;
+    width: 1px;
+    background-color: #D7D7D7;
+}
+
+@media (min-width: 800px) {
+    .timeline::before {
+        left: 50%;
+        margin-left: -2px;
+    }
+}
+
+.timeline__item {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline__item::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.timeline__item:nth-child(2n) .timeline__item__content {
+    float: right;
+}
+
+@media (min-width: 800px) {
+
+    .timeline__item__station {
+        background-color: #13cca0;
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px;
+        top: 0;
+        left: 10%;
+        margin-left: -22px;
+        background: url("../images/fazhan/yuan.png") no-repeat center;
+    }
+
+    .timeline__item__station {
+        left: 50%;
+        margin-left: -22px;
+        width: 42px;
+        height: 42px;
+        padding: 15px;
+    }
+}
+
+.timeline__item__content {
+    width: 45%;
+    float: right;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+@media (min-width: 800px) {
+    .timeline__item__content {
+        max-width: 500px;
+        float: inherit;
+    }
+}
+
+.timeline__item__content__date {
+    font-family: AvenirNext-DemiBold;
+    font-size: 24px;
+    color: #15CBA1;
+    margin-bottom: 14px;
+}
+
+.timeline__item__content__description {
+    font-family: PingFangSC-Semibold;
+    font-size: 36px;
+    color: #65676D;
+    margin-bottom: 36px;
+}
+
+p.introduce {
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #65676D;
+    letter-spacing: 0;
+    line-height: 30px;
+    max-width: 500px;
+}
+
+@media (min-width: 800px) {
+    .timeline__item__content__description {
+        font-family: PingFangSC-Semibold;
+        font-size: 36px;
+        color: #65676D;
+        letter-spacing: 0;
+        line-height: 36px;
+    }
+}

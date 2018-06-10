@@ -1,0 +1,269 @@
+.navbar .container{
+    background: #00535d;
+}
+.banner_box{
+    width: 100%;
+    margin-top: 120px;
+    padding: 73px 377px;
+}
+.banner_box h2{
+    font-family: PingFangSC-Semibold;
+    font-size: 64px;
+    color: #FFFFFF;
+    line-height: 84px;
+}
+.banner_box p{
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 30px;
+    margin-top: 25px;
+}
+.wem_box{
+    background: #fff;
+    width: 1400px;
+    padding: 110px 117px;
+    margin: -140px auto 0;
+    border-bottom: 1px solid #dcdcdc;
+}
+.wem_box h2{
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #15CBA1;
+    line-height: 64px;
+    margin-bottom: 50px;
+}
+.wem_box h3{
+    font-family: STSongti-SC-Bold;
+    font-size: 48px;
+    color: #65676D;
+    line-height: 84px;
+    margin-bottom: 30px;
+}
+.wem_box h3 img{
+    margin: -80px 30px 0;
+}
+.wem_box p{
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #65676D;
+    line-height: 40px;
+    max-width: 912px;
+    margin-left: 100px;
+}
+.wem div{
+    margin-left: 100px;
+}
+.wem div img{
+    margin:47px 126px 0 0;
+}
+/*我们的优势*/
+.youshi_box {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 105px 117px 130px;
+}
+.youshi_box  .container{
+    padding: 0;
+}
+.youshi_box h2 {
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #15CBA1;
+    letter-spacing: 0.43px;
+    margin-bottom: 60px;
+}
+
+.youshi_box .row img {
+height: 100px;
+    margin-bottom: 50px;
+}
+
+.youshi_box .row p {
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    color: #15CBA1;
+    margin-bottom: 15px;
+    padding: 0 22px;
+}
+
+.youshi_box .row span {
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #65676D;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.youshi_box .row > div {
+    text-align: center;
+}
+
+.youshi_box .row div.box {
+    background: #F6F6F6;
+
+    padding: 70px 30px 50px;
+}
+/*我们的用户*/
+.yonghu_box {
+    margin: 0 auto;
+    padding: 60px 117px 0;
+    background: #00535D;
+}
+.yonghu_box  .container{
+    padding: 0;
+    width: 1140px;
+    margin: 0 auto;
+}
+.yonghu_box h2 {
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #15CBA1;
+    letter-spacing: 0.43px;
+    margin-bottom: 50px;
+}
+
+.yonghu_box .row img {
+    margin-bottom: 50px;
+}
+
+.yonghu_box .row p {
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    color: #15CBA1;
+    margin-bottom: 15px;
+    padding: 0 22px;
+}
+
+.yonghu_box .row span {
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.yonghu_box .row > div {
+    text-align: center;
+}
+
+.yonghu_box .row div.box {
+    padding: 0px 30px 60px;
+}
+/*我们的服务*/
+.fuwu_box {
+    margin: 0 auto;
+    padding: 100px 117px 0;
+    background: #f6f6f6;
+}
+.fuwu_box  .container{
+    padding: 0;
+    width: 1140px;
+    margin: 0 auto;
+}
+.fuwu_box h2 {
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #15CBA1;
+    letter-spacing: 0.43px;
+    margin-bottom: 90px;
+}
+
+.fuwu_box .row img {
+    margin-bottom: 50px;
+    height: 90px;
+}
+
+.fuwu_box .row p {
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    color: #15CBA1;
+    margin-bottom: 15px;
+}
+.fuwu_box .row > div {
+    text-align: center;
+}
+
+.fuwu_box .row div.box {
+    padding: 0 30px 100px;
+}
+/*合作流程*/
+.hezuo_box {
+    margin: 0 auto;
+    padding: 120px 117px 20px;
+    background: #fff;
+}
+.hezuo_box  .container{
+    padding: 0;
+    width: 1140px;
+    margin: 0 auto;
+}
+.hezuo_box h2 {
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #15CBA1;
+    letter-spacing: 0.43px;
+    margin-bottom: 90px;
+}
+
+.hezuo_box .row img {
+    margin-bottom: 50px;
+    height: 90px;
+}
+
+.hezuo_box .row p {
+    font-family: PingFangSC-Semibold;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.hezuo_box .row > div {
+    text-align: center;
+}
+
+.hezuo_box .row div.box {
+    padding:0 30px;
+    width: 220px;
+    height: 120px;
+    text-align: left;
+    display: table-cell;
+    vertical-align:middle
+}
+.hezuo_box .col-lg-3{
+    width: 20%;
+}
+.list1{
+    background: #d0f5ed;
+
+}
+.hezuo_box .row  .list1 p{
+    font-family: PingFangSC-Semibold;
+    font-size: 20px;
+    color: #989898;
+
+}
+.hezuo_box a{
+    font-family: AvenirNext-DemiBold;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-image: linear-gradient(90deg, #5AD664 0%, #15CBA1 100%);
+    box-shadow: 0 2px 8px 3px rgba(0,0,0,0.15);
+    border-radius: 100px;
+    text-align: center;
+    display: block;
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    margin: 80px auto 0;
+}
+.list2{
+    background: #a1ead9;
+}
+.list3{
+    background: #74e0c8;
+}
+.list4{
+    background: #42d6b4;
+}
+.list5{
+    background: #15cba2;
+}

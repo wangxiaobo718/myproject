@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <link href="css/nav_foot.css?v=113" rel="stylesheet">
     <link href="css/index.css?v=1" rel="stylesheet">
-
+    <!--<script src="js/public.js?v=10"></script>-->
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -30,17 +30,17 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html">
-                <img src="images/index/index_logo.png" alt="logo">
+                <img src="images/index/logoindex.png" alt="logo">
             </a>
-            <a class="index" href="index.html">主页</a>
+            <!--<a class="index" href="index.html">主页</a>-->
         </div>
         <div class="navbar_ul">
             <ul class="nav navbar-nav">
-                <li class="active fist"><a href="">关于我们</a></li>
-                <li><a href="">团队</a></li>
-                <li><a href="">发展前景</a></li>
-                <li><a href="">新闻和进度</a></li>
-                <li><a href="">联系我们</a></li>
+                <li class="active fist"><a href="index.html">关于我们</a></li>
+                <li><a href="team.html">团队</a></li>
+                <li><a href="fazhan.html">发展前景</a></li>
+                <li><a href="news.html">新闻和博客</a></li>
+                <li><a href="lianxiwomen.html">联系我们</a></li>
                 <li><a class="en">English <img src="images/index/sanjiao.png"></a></li>
                 <li><a class="last_a">
                     <img src="images/index/btn.png"></a>
@@ -49,20 +49,45 @@
         </div>
     </div>
 </div>
-<!--banner-->
-<div class="swiper-container">
+<!--pcbanner-->
+<div class="swiper-container pc_banner">
     <div class="swiper-wrapper">
         <div class="swiper-slide"
-             style="background: url(images/index/index_banner.jpg) no-repeat;background-size:100% 100%; height: 850px;">
+             style="background: url(images/index/index_banner.jpg) no-repeat;background-size: cover;background-position: 50% 50%;background-attachment: scroll; height: 850px;">
             <h2>解锁精准医疗大数据<br>创建智能区块链社区</h2>
+
             <p>HCT计划建立一个基于多社区的医疗生态链，以实现个人用户、医疗系统和第三方组织之间的可访问性、安全性和连接性。</p>
-            <img src="images/index/learnmore.png">
+            <a>了解更多</a>
         </div>
         <div class="swiper-slide"
-             style="background: url(images/index/index_banner.jpg) no-repeat;background-size:100% 100%; height: 850px;">
-            <h2>解锁精准医疗大数据<br>创建智能区块链社区</h2>
+             style="background: url(images/index/index_banner.jpg) no-repeat;background-size: cover;background-position: 50% 50%;background-attachment: scroll; height: 850px;">
+
+        <h2>解锁精准医疗大数据<br>创建智能区块链社区</h2>
+
             <p>HCT计划建立一个基于多社区的医疗生态链，以实现个人用户、医疗系统和第三方组织之间的可访问性、安全性和连接性。</p>
-            <img src="images/index/learnmore.png">
+            <a>了解更多</a>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<!--移动端-->
+<div class="swiper-container mobile_banner">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"
+             style="background: url(images/index/mobile_banner.png) no-repeat;background-size: cover;background-position: 50% 50%;background-attachment: scroll; height: 425px;">
+            <h2>解锁精准医疗大数据<br>创建智能区块链社区</h2>
+
+            <p>HCT计划建立一个基于多社区的医疗生态链，以实现个人用户、医疗系统和第三方组织之间的可访问性、安全性和连接性。</p>
+            <a>了解更多</a>
+        </div>
+        <div class="swiper-slide"
+             style="background: url(images/index/mobile_banner.png) no-repeat;background-size: cover;background-position: 50% 50%;background-attachment: scroll; height: 425px;">
+
+            <h2>解锁精准医疗大数据<br>创建智能区块链社区</h2>
+
+            <p>HCT计划建立一个基于多社区的医疗生态链，以实现个人用户、医疗系统和第三方组织之间的可访问性、安全性和连接性。</p>
+            <a>了解更多</a>
         </div>
     </div>
     <!-- Add Pagination -->
@@ -71,19 +96,116 @@
 <!--关于我们-->
 <div class="about_box">
     <div class="container">
-        <div class="left">
-            <h2>关于我们</h2>
-            <p>HCT计划建立一个基于多社区的医疗生态链，以实现个人用户、医疗系统和第三方组织之间的可访问性、安全性和连接性。</p>
-            <img src="images/index/downloadWhite.jpg">
-            <img src="images/index/downloadliucheng.jpg">
-            <a>注册白名单</a>
-        </div>
-        <div class="right">
-            <img src="images/index/yuan.jpg" >
-        </div>
+        <div class="row">
+            <div class="left col-lg-6">
+                <h2>关于我们</h2>
 
+                <p>HCT计划建立一个基于多社区的医疗生态链，以实现个人用户、医疗系统和第三方组织之间的可访问性、安全性和连接性。</p>
+                <img class="img1" src="images/index/downloadWhite.jpg">
+                <img class="img2" src="images/index/downloadliucheng.jpg">
+                <a>注册白名单</a>
+            </div>
+            <div class="right col-lg-6">
+                <img src="images/index/yuan.jpg">
+            </div>
+        </div>
     </div>
+</div>
+<!--我们的成果-->
+<div class="wem_box">
+    <div class="container">
+        <h2>我们的成果</h2>
 
+        <div class="row">
+            <div class=" col-lg-4">
+                <h3>15,000</h3>
+
+                <p>HCT的合作伙伴已经积累了近15000用户的身体数据</p>
+            </div>
+            <div class=" col-lg-4">
+                <h3>7+</h3>
+
+                <p>7家中国三级医院已经开始使用HCT</p>
+            </div>
+            <div class=" col-lg-4">
+                <h3>8+</h3>
+
+                <p>已有8种智能产品计划连接到HCT块链</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--team-->
+<div class="team_box">
+    <div class="container">
+        <div class="row">
+            <div class="left col-lg-7">
+                <div class="text">
+                    <h2>具有深厚经验的全球团队</h2>
+                    <p>我们的专业知识既广泛又深刻，反映了我们服务的市场和客户。分布在三个地区的五个办事处，我们的团队来自金融和技术，从大型机构到小型初创企业，并从功能编程、形式化方法、密码学和金融服务带来丰富的知识。</p>
+                    <a>阅读更多 <b>></b></a>
+                </div>
+
+            </div>
+            <div class="right col-lg-5">
+                <img src="images/index/Bitmap.png">
+            </div>
+        </div>
+    </div>
+</div>
+<!--新闻和博客-->
+<div class="new_box">
+    <div class="container">
+        <h2>新闻和博客 <a>查看更多</a></h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="box">
+                    <img src="images/index/BitmapCopy3.png">
+                    <p>多参数健康体征监测仪已经获得新加坡卫生部的定制化方案委托</p>
+                    <span>2018.04.07</span>
+                    <a>阅读更多 <b>></b></a>
+                </div>
+
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <img src="images/index/BitmapCopy3.png">
+                    <p>心电仪已经与印度医疗服务商签署独家协议并量产</p>
+                    <span>2018.04.07</span>
+                    <a>阅读更多 <b>></b></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <img src="images/index/BitmapCopy3.png">
+                    <p>智能听诊器已经签署加拿大独家代理协议</p>
+                    <span>2018.04.07</span>
+                    <a>阅读更多 <b>></b></a>
+                </div>
+            </div>
+        </div>
+        <a class="btn">联系我们</a>
+    </div>
+</div>
+<!--foot-->
+<div class="foot_box">
+    <ul class="icon">
+        <li class="a"></li>
+        <li class="b"></li>
+        <li class="c"></li>
+        <li class="d"></li>
+        <li class="e"></li>
+        <li class="f"></li>
+        <li class="g"></li>
+    </ul>
+    <ul class="nav_box">
+        <li><a>关于我们</a></li>
+        <li><a>团队</a></li>
+        <li><a>发展前景</a></li>
+        <li><a>新闻和博客</a></li>
+        <li><a>联系我们</a></li>
+    </ul>
+    <p>免责声明  ©Healthcare Chain Tech </p>
 </div>
 </body>
 <script src="./js/jquery-1.9.1.min.js"></script>
@@ -91,17 +213,4 @@
 <script src="./js/swiper.min.js"></script>
 <script src="./js/index.js"></script>
 <script src="./js/nav.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 1,
-        paginationClickable: true,
-        // spaceBetween: 30,
-        loop: true,
-        // autoplay: 2500,
-        autoplayDisableOnInteraction: false
-    });
-</script>
 </html>

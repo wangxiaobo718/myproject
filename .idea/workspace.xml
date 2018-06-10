@@ -2,94 +2,104 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="424aee70-7a0e-4648-88ce-12a70b6ebec9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/index.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/nav_foot.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/reset.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/swiper.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/btn.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/downloadWhite.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/downloadliucheng.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/index_banner.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/index_logo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/learnmore.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/sanjiao.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/yuan.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/html5shiv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/jquery-1.9.1.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/nav.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/swiper.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/fazhan.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/guanyu.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/lianxiwomen.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/news.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/news_details.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/css/team.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/fazhan.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/guanyuwomen.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/fazhan/banner.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/fazhan/yuan.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/a.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/a1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/b.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/b1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/c.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/c1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/d.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/d1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/e.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/e1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/f.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/f1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/g.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/foot/g1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/company.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/distribution.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/downloadWhite.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/downloadliucheng.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/guanyu_banner.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/hospital.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/kaifa.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/lianjie.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/maohaoL.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/medicine.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/send.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/technique.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/users.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/guanyu/yinhaoright.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/Bitmap.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/BitmapCopy3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/logoindex.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/index/mobile_banner.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/news_details/news_img1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/news_details/news_img2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/image1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/image2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/image3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/image4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/image6.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/image7.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/image8.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/image9.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/left1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/left2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/logo1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/logo2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/logo3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/logo4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/logo5.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/logo6.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/logo7.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/logo8.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/right1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/images/team/right2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/fazhan.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/guanyu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/jquery-1.12.4.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/lianxiwomen.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/news.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/news_details.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/public.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/js/team.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/lianxiwomen.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/news.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/news_details.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/shengming.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/qukuailian/team.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/iis/css/index.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/001.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/002.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/003.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/004.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/005.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/006.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/007.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/008.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/01.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/4bj.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/ba.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/ban.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/bang_fenxiang.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/bangfenxiang.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/benshi.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/bi_1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/bj_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/bj_3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/bobo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/bobode.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/ceshi.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/chunv.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/chuowo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/danshengou.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/foot.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/he_1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/he_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/he_3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/he_4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/he_5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/he_6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/he_7.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/he_8.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/he_9.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/jingli.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/kanzuopin.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/liaojie.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/maodun.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/p5-BJ.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/ren.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/shang.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/shang1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/shanghua.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/shendu.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/top.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/wu.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/xiaotou.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/yi.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/yibei.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/yinyue.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/you_1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/you_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/you_3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/youyuan_1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/yuewo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/yuexiaobo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/yun.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/zi_wo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/zuixin.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/zuopin_1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/img/zwpj.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/js/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/iis/js/zepto.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/.idea/dictionaries/wangxiaobo.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/.idea/qukuailian.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/css/index.css" afterPath="$PROJECT_DIR$/qukuailian/css/index.css" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/css/nav_foot.css" afterPath="$PROJECT_DIR$/qukuailian/css/nav_foot.css" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/images/index/btn.png" afterPath="$PROJECT_DIR$/qukuailian/images/index/btn.png" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/images/index/downloadWhite.jpg" afterPath="$PROJECT_DIR$/qukuailian/images/index/downloadWhite.jpg" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/images/index/downloadliucheng.jpg" afterPath="$PROJECT_DIR$/qukuailian/images/index/downloadliucheng.jpg" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/images/index/index_banner.jpg" afterPath="$PROJECT_DIR$/qukuailian/images/index/index_banner.jpg" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/images/index/index_logo.png" afterPath="$PROJECT_DIR$/qukuailian/images/index/index_logo.png" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/images/index/learnmore.png" afterPath="$PROJECT_DIR$/qukuailian/images/index/learnmore.png" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/images/index/sanjiao.png" afterPath="$PROJECT_DIR$/qukuailian/images/index/sanjiao.png" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/images/index/yuan.jpg" afterPath="$PROJECT_DIR$/qukuailian/images/index/yuan.jpg" />
       <change beforePath="$PROJECT_DIR$/qukuailian/index.html" afterPath="$PROJECT_DIR$/qukuailian/index.html" />
+      <change beforePath="$PROJECT_DIR$/qukuailian/js/index.js" afterPath="$PROJECT_DIR$/qukuailian/js/index.js" />
     </list>
     <ignored path="myproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,44 +117,114 @@
     <favorites_list name="myproject" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/qukuailian/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="680">
-                  <caret line="81" column="43" lean-forward="false" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/qukuailian/css/index.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="517">
-                  <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="news_details.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qukuailian/css/news_details.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qukuailian/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/qukuailian/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="268" column="24" lean-forward="false" selection-start-line="268" selection-start-column="24" selection-end-line="268" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="public.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qukuailian/js/public.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav_foot.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qukuailian/css/nav_foot.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3591">
+              <caret line="278" column="25" lean-forward="true" selection-start-line="278" selection-start-column="25" selection-end-line="278" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qukuailian/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shengming.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qukuailian/shengming.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="21" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fazhan.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qukuailian/fazhan.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news_details.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qukuailian/news_details.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -155,7 +235,34 @@
       <find>.navbar-brand</find>
       <find>swiper-container</find>
       <find>.swiper-pagination-bullet</find>
+      <find>timeline__item__station</find>
+      <find>timeline__item__content</find>
+      <find>.timeline__item__content</find>
+      <find>name</find>
+      <find>500px</find>
+      <find>foot_box</find>
+      <find>timeline</find>
+      <find>navbar-brand</find>
+      <find>right</find>
+      <find>banner_box</find>
+      <find>hezuo_box</find>
+      <find>container</find>
+      <find>新闻和进度</find>
+      <find>team_box</find>
+      <find>max-width: 791px</find>
+      <find>191</find>
+      <find>new_box</find>
+      <find>left</find>
+      <find>swiper-slide</find>
     </findStrings>
+    <replaceStrings>
+      <replace>introduce</replace>
+      <replace>新闻和博客</replace>
+      <replace>list</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/qukuailian/js</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -167,10 +274,29 @@
         <option value="$PROJECT_DIR$/jd/index.css" />
         <option value="$PROJECT_DIR$/jd/index.html" />
         <option value="$PROJECT_DIR$/qukuailian/.gitignore" />
+        <option value="$PROJECT_DIR$/qukuailian/js/lianxiwomen.js" />
+        <option value="$PROJECT_DIR$/qukuailian/shengming.html" />
+        <option value="$PROJECT_DIR$/qukuailian/js/fazhan.js" />
+        <option value="$PROJECT_DIR$/qukuailian/css/fazhan.css" />
+        <option value="$PROJECT_DIR$/qukuailian/js/guanyu.js" />
+        <option value="$PROJECT_DIR$/qukuailian/css/guanyu.css" />
+        <option value="$PROJECT_DIR$/qukuailian/js/team.js" />
+        <option value="$PROJECT_DIR$/qukuailian/css/team.css" />
+        <option value="$PROJECT_DIR$/qukuailian/css/lianxiwomen.css" />
+        <option value="$PROJECT_DIR$/qukuailian/js/news.js" />
+        <option value="$PROJECT_DIR$/qukuailian/css/news.css" />
+        <option value="$PROJECT_DIR$/qukuailian/news.html" />
+        <option value="$PROJECT_DIR$/qukuailian/team.html" />
+        <option value="$PROJECT_DIR$/qukuailian/guanyuwomen.html" />
+        <option value="$PROJECT_DIR$/qukuailian/lianxiwomen.html" />
+        <option value="$PROJECT_DIR$/qukuailian/news_details.html" />
+        <option value="$PROJECT_DIR$/qukuailian/js/news_details.js" />
+        <option value="$PROJECT_DIR$/qukuailian/css/news_details.css" />
+        <option value="$PROJECT_DIR$/qukuailian/fazhan.html" />
         <option value="$PROJECT_DIR$/qukuailian/js/index.js" />
         <option value="$PROJECT_DIR$/qukuailian/css/nav_foot.css" />
-        <option value="$PROJECT_DIR$/qukuailian/css/index.css" />
         <option value="$PROJECT_DIR$/qukuailian/index.html" />
+        <option value="$PROJECT_DIR$/qukuailian/css/index.css" />
       </list>
     </option>
   </component>
@@ -181,10 +307,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -219,14 +344,13 @@
               <item name="myproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="myproject" type="462c0819:PsiDirectoryNode" />
               <item name="qukuailian" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="myproject" type="462c0819:PsiDirectoryNode" />
               <item name="qukuailian" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myproject" type="b2602c69:ProjectViewProjectNode" />
@@ -245,17 +369,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/qukuailian/images/fazhan" />
       <recent name="E:\myproject\jd" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/qukuailian/images/index" />
-      <recent name="$PROJECT_DIR$/qukuailian" />
+      <recent name="$PROJECT_DIR$/qukuailian/js" />
+      <recent name="$PROJECT_DIR$/qukuailian/images/team" />
       <recent name="$PROJECT_DIR$/qukuailian/css" />
-      <recent name="E:\myproject" />
-      <recent name="E:\myproject\wechat_web" />
+      <recent name="$PROJECT_DIR$/qukuailian/images/guanyu" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -322,18 +448,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479131350615</updated>
-      <workItem from="1528253098782" duration="12590000" />
+      <workItem from="1528253098782" duration="64718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12590000" />
+    <option name="totallyTimeSpent" value="64718000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="268" y="0" width="1172" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.044368602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -364,54 +490,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jd/320flexbile.js" />
-    <entry file="file://$PROJECT_DIR$/jd/reset.min.css" />
-    <entry file="file://$PROJECT_DIR$/jd/index.css" />
-    <entry file="file://$PROJECT_DIR$/jd/index.html" />
-    <entry file="file://$PROJECT_DIR$/qukuailian/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qukuailian/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qukuailian/css/swiper.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qukuailian/js/buy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qukuailian/js/nav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qukuailian/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -429,10 +511,310 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qukuailian/css/nav_foot.css">
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/fazhan/banner.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/foot/feige.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/foot/d.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/foot/c.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/foot/b.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/foot/a1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/foot/a.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/js/lianxiwomen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/foot/g1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/foot/g.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/js/fazhan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="3" lean-forward="false" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/team/image3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/team/image9.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/team/image1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/team/image2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/css/fazhan.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="26" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/guanyu/guanyu_banner.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/guanyu/maohaoL.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/guanyu/yinhaoright.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/team/left1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/js/idangerous.swiper2.7.6.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/js/jquery-1.12.4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/css/idangerous.swiper2.7.6.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/js/team.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/css/team.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/css/guanyu.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/js/guanyu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/guanyuwomen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/lianxiwomen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/css/lianxiwomen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/js/news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/js/news_details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/css/news.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="84" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/index/Bitmap.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/team.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding>
+            <marker date="1528604675748" expanded="false" signature="5960:6058" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/shengming.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/index/index_logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/images/index/logoindex.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/js/public.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/fazhan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/news_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/css/news_details.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/css/nav_foot.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3591">
+          <caret line="278" column="25" lean-forward="true" selection-start-line="278" selection-start-column="25" selection-end-line="278" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -442,22 +824,24 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qukuailian/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qukuailian/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="81" column="43" lean-forward="false" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+        <state relative-caret-position="528">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qukuailian/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="268" column="24" lean-forward="false" selection-start-line="268" selection-start-column="24" selection-end-line="268" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

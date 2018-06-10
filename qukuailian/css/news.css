@@ -1,0 +1,120 @@
+.navbar .container{
+    background: #00535d;
+}
+.banner_box{
+    width: 100%;
+    margin-top: 120px;
+    padding: 73px 377px;
+}
+.banner_box h2{
+    font-family: PingFangSC-Semibold;
+    font-size: 64px;
+    color: #FFFFFF;
+    line-height: 84px;
+}
+.banner_box p{
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 30px;
+    margin-top: 25px;
+}
+/*新闻和博客*/
+.box{
+    cursor: pointer;
+}
+.new_box {
+    position: relative;
+    margin: -155px auto 0;
+    max-width: 1400px;
+    background: #fff;
+    overflow: hidden;
+    padding: 110px 115px 0;
+}
+.new_box .container{
+    padding: 0;
+}
+
+.new_box h2 {
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #15CBA1;
+    letter-spacing: 0.43px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.new_box h2 a {
+    font-family: PingFangSC-Semibold;
+    font-size: 20px;
+    color: #5AD664;
+    float: right;
+    margin-top: 25px;
+}
+
+.new_box .row img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.new_box .row p {
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    color: #65676D;
+    margin-bottom: 17px;
+    padding: 0 22px;
+}
+
+.new_box .row span {
+    font-family: Arial-BoldMT;
+    font-size: 20px;
+    color: #65676D;
+    display: block;
+    margin-bottom: 28px;
+    padding: 0 22px;
+}
+
+.new_box .row a {
+    font-family: AvenirNext-Bold;
+    font-size: 20px;
+    color: #5AD664;
+    display: block;
+    padding: 0 22px;
+    position: absolute;
+    bottom:40px;
+}
+.new_box .box.on p{
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    color: #15CBA1;
+    letter-spacing: 0;
+}
+.new_box .box.on span{
+    font-family: Arial-BoldMT;
+    font-size: 20px;
+    color: #15CBA1;
+    letter-spacing: 0;
+}
+.new_box .row > div {
+    margin-bottom: 40px;
+}
+
+.new_box .row div.box {
+    background: #F6F6F6;
+    padding: 0 0 50px;
+    position: relative;
+}
+
+.new_box .btn {
+    background-image: linear-gradient(90deg, #5AD664 0%, #15CBA1 100%);
+    font-family: AvenirNext-DemiBold;
+    font-size: 20px;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+    width: 240px;
+    margin: 40px auto 100px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px 3px rgba(0, 0, 0, 0.15);
+}
+

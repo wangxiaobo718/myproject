@@ -1,44 +1,5 @@
-/*html, body {*/
-/*position: relative;*/
-/*height: 100%;*/
-/*}*/
-.swiper-container {
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.swiper-slide {
-    text-align: left;
-    padding: 188px 280px ;
-    box-sizing: border-box;
-    color: #fff;
-}
-.swiper-slide h2{
-      font-size: 64px;
-    line-height: 84px;
-}
-.swiper-slide p{
-    font-size: 24px;
-    width: 940px;
-    margin-top: 38px;
-}
-.swiper-slide img {
-    width: 242px;
-    margin-top: 60px;
-    margin-left: -10px;
-}
-.swiper-pagination-bullet {
-    background: #fff;
-    opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-    background: #5AD664;
-}
 /*关于我们*/
-.about_box .left a{
+.about_box .left a {
     display: block;
     width: 292px;
     height: 50px;
@@ -49,16 +10,409 @@
     border-radius: 100px;
     text-align: center;
     background-image: linear-gradient(90deg, #5AD664 0%, #15CBA1 100%);
-    box-shadow: 0 2px 8px 3px rgba(0,0,0,0.15);
-}
-.navbar-brand img {
-    width: 203px;
+    box-shadow: 0 2px 8px 3px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 992px) {
-    .container {
-        padding-left: 120px;
-        padding-right: 120px;
-        width: auto;
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    text-align: left;
+    padding: 188px 280px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.swiper-slide a {
+    font-family: AvenirNext-DemiBold;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    background-image: linear-gradient(90deg, #5AD664 0%, #15CBA1 100%);
+    box-shadow: 0 2px 8px 3px rgba(0, 0, 0, 0.15);
+    display: block;
+    width: 220px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50px;
+    margin-top: 80px;
+}
+
+.swiper-slide h2 {
+    font-size: 64px;
+    line-height: 84px;
+}
+
+.swiper-slide p {
+    font-size: 24px;
+    max-width: 940px;
+    margin-top: 38px;
+}
+
+.mobile_banner {
+    display: none;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #5AD664;
+}
+
+@media (max-width: 767px) {
+    .swiper-slide h2 {
+        font-size: 32px;
+        color: #FFFFFF;
+        line-height: 40px;
+    }
+
+    .swiper-slide p {
+        font-size: 14px;
+        color: #FFFFFF;
+        line-height: 24px;
+    }
+
+    .swiper-slide {
+        padding: 55px 20px;
+    }
+
+    .swiper-container {
+        margin-top: 60px;
+    }
+
+    .mobile_banner {
+        display: block;
+    }
+
+    .pc_banner {
+        display: none;
+    }
+
+    .swiper-slide a {
+        font-family: PingFangSC-Semibold;
+        font-size: 12px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        background-image: linear-gradient(90deg, #5AD664 0%, #15CBA1 100%);
+        box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.15);
+        display: block;
+        width: 130px;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 35px;
+        margin-top: 30px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        border: 1px solid #FFFFFF;
     }
 }
+
+/*关于我们*/
+.about_box {
+    padding: 77px 400px 100px;
+}
+
+.about_box .container, .wem_box .container, .team_box .container, .new_box .container {
+    padding: 0 !important;
+}
+
+.about_box .left a {
+    display: block;
+    margin-top: 170px;
+    width: 292px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    border-radius: 100px;
+    text-align: center;
+    background-image: linear-gradient(90deg, #5AD664 0%, #15CBA1 100%);
+    box-shadow: 0 2px 8px 3px rgba(0, 0, 0, 0.15);
+}
+
+.about_box h2 {
+    font-size: 48px;
+    color: #17CB9F;
+    letter-spacing: 0.43px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.about_box p {
+    font-size: 20px;
+    color: #65676D;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.about_box img {
+    display: block;
+    margin-bottom: 22px;
+}
+
+.about_box .right {
+    padding-left: 20px;
+}
+
+@media (max-width: 767px) {
+    .about_box {
+        padding: 50px 20px 0;
+    }
+
+    .about_box h2 {
+        font-family: PingFangSC-Semibold;
+        font-size: 32px;
+        color: #17CB9F;
+        letter-spacing: 0.29px;
+        margin-bottom: 20px;
+    }
+
+    .about_box p {
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #65676D;
+        letter-spacing: 0;
+        line-height: 24px;
+    }
+
+    .img1 {
+        width: 140px;
+    }
+
+    .img2 {
+        width: 144px;
+    }
+
+    .about_box .left a {
+        font-family: PingFangSC-Semibold;
+        font-size: 12px;
+        width: 130px;
+        height: 35px;
+        line-height: 35px;
+        margin-top: 54px;
+    }
+
+    .about_box img {
+        width: 100%;
+        margin-top: 44px;
+    }
+
+    .about_box img {
+        margin-bottom: 90px;
+    }
+}
+
+.wem_box {
+    padding: 110px 400px 180px;
+    background: #F9F9F9;
+}
+
+.wem_box h2 {
+    font-size: 48px;
+    color: #15CBA1;
+    letter-spacing: 0.43px;
+    margin-bottom: 90px;
+}
+
+.wem_box h3 {
+    font-family: DINAlternate-Bold;
+    font-size: 64px;
+    color: #15CBA1;
+    letter-spacing: 0;
+    margin-bottom: 22px;
+}
+
+.wem_box .row div {
+    text-align: center;
+}
+
+.wem_box p {
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #292B00;
+    text-align: center;
+    line-height: 28px;
+}
+
+@media (max-width: 767px) {
+    .wem_box {
+        padding: 40px 20px;
+    }
+
+    .wem_box h2 {
+        font-size: 32px;
+        color: #17CB9F;
+        letter-spacing: 0.29px;
+        margin-bottom: 40px;
+    }
+
+    .wem_box h3 {
+        margin-bottom: 16px;
+    }
+
+    .wem_box p {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 50px;
+    }
+}
+
+.team_box h2 {
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.team_box p {
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 30px;
+    margin-bottom: 105px;
+    text-align: justify;
+
+}
+
+.team_box a {
+    font-family: AvenirNext-Bold;
+    font-size: 20px;
+    color: #5AD664;
+}
+
+.team_box .left {
+    overflow: hidden;
+    background-image: linear-gradient(-136deg, #15CBA1 0%, #14C39D 6%, #00535D 100%);
+}
+
+.left .text {
+    width: 529px;
+    float: right;
+    margin: 178px 144px 0 0;
+}
+
+.team_box .right {
+    padding: 0;
+}
+
+.team_box .col-lg-7 {
+    width: 55%;
+}
+
+.team_box .col-lg-5 {
+    width: 45%;
+}
+
+.team_box img {
+    max-width: 880px;
+    width: 100%;
+}
+
+.team_box .row {
+    margin: 0;
+}
+
+/*新闻和博客*/
+.new_box {
+    padding: 105px 400px 0;
+}
+
+.box {
+    cursor: pointer;
+}
+
+.new_box h2 {
+    font-family: PingFangSC-Semibold;
+    font-size: 48px;
+    color: #15CBA1;
+    letter-spacing: 0.43px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.new_box h2 a {
+    font-family: PingFangSC-Semibold;
+    font-size: 20px;
+    color: #5AD664;
+    float: right;
+    margin-top: 25px;
+}
+
+.new_box .row img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.new_box .row p {
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    color: #65676D;
+    margin-bottom: 17px;
+    padding: 0 22px;
+}
+
+.new_box .row span {
+    font-family: Arial-BoldMT;
+    font-size: 20px;
+    color: #65676D;
+    display: block;
+    margin-bottom: 28px;
+    padding: 0 22px;
+}
+
+.new_box .box.on p {
+    color: #15CBA1;
+}
+
+.new_box .box.on span {
+    color: #15CBA1;
+}
+
+.new_box .row a {
+    font-family: AvenirNext-Bold;
+    font-size: 20px;
+    color: #5AD664;
+    display: block;
+    padding: 0 22px;
+    position: absolute;
+    bottom: 40px;
+}
+
+.new_box .row > div {
+    margin-bottom: 66px;
+}
+
+.new_box .row div.box {
+    background: #F6F6F6;
+    padding: 0 0 50px;
+    position: relative;
+}
+
+.new_box .btn {
+    background-image: linear-gradient(90deg, #5AD664 0%, #15CBA1 100%);
+    font-family: AvenirNext-DemiBold;
+    font-size: 20px;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+    width: 240px;
+    margin: 0 auto;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px 3px rgba(0, 0, 0, 0.15);
+}
+
